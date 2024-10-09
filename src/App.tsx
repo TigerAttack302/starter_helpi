@@ -39,7 +39,7 @@ function App() {
         >
           Learn React
         </a>
-        <p>Randolph Stokes <code>ResRandy</code> </p>
+        <p>By Randolph Stokes</p>
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
