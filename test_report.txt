@@ -6,7 +6,7 @@
     Warning: The tag <text> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter.
         at text
         at div
-        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:15:33)
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:13:33)
 
       4 |
       5 | test('renders learn react link', () => {
@@ -38,20 +38,20 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 PASS src/App.test.tsx
-  ✓ renders learn react link (65 ms)
+  ✓ renders learn react link (70 ms)
 
 --------------------|---------|----------|---------|---------|-------------------
 File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------|---------|----------|---------|---------|-------------------
 All files           |   28.57 |    16.66 |      20 |   28.57 |                   
- App.tsx            |      60 |       50 |   33.33 |      60 | 11,19-25          
+ App.tsx            |      60 |       50 |   33.33 |      60 | 10,17-22          
  index.tsx          |       0 |      100 |     100 |       0 | 7-19              
  reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
 --------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.598 s
+Time:        2.62 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
