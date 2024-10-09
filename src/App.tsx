@@ -37,7 +37,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <text>Balamurugan Saravanan</text>
+      <text>Names: Jared Murray, Randolph Stokes, Balamurugan Saravanan</text>
       <Form>
         <Form.Label>API Key:</Form.Label>
         <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
