@@ -39,6 +39,8 @@ function App() {
         >
           Learn React
         </a>
+        
+        <text>Randolph Stokes,</text>
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
