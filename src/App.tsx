@@ -39,7 +39,8 @@ function App() {
         >
           Learn React
         </a>
-        <p>By Randolph Stokes</p>
+        
+        <text>Randolph Stokes,</text>
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
