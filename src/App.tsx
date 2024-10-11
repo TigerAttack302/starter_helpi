@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
+import { HashRouter, Route } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { BasicQuestions } from './pages/BasicQuestions';
+import { DetailedQuestions } from './pages/DetailedQuestions';
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
 const saveKeyData = "MYKEY";
@@ -44,6 +48,11 @@ function App() {
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
+      <HashRouter>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/basic-questions" element={<BasicQuestions/>}/>
+        <Route path="/detailed-questions" element={<DetailedQuestions/>}/>
+      </HashRouter>
     </div>
   );
 }
