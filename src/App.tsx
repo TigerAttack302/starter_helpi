@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
-import { HashRouter, Route } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { BasicQuestions } from './pages/BasicQuestions';
 import { DetailedQuestions } from './pages/DetailedQuestions';
@@ -49,9 +49,11 @@ function App() {
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
       <HashRouter>
+        <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/basic-questions" element={<BasicQuestions/>}/>
         <Route path="/detailed-questions" element={<DetailedQuestions/>}/>
+        </Routes>
       </HashRouter>
     </div>
   );
