@@ -5,3 +5,21 @@
 .column {
     flex: 50%
 }
+
+.home {
+    background-color: darkolivegreen;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.description {
+    font-size: 18px;
+    border-style: solid;
+    border-color: darkgrey;
+    border-radius: 25px;
+}
