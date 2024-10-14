@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
 import { HashRouter, Route, Routes } from 'react-router-dom';
@@ -43,7 +42,6 @@ function App() {
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
       </footer>
-      
     </div>
   );
 }
