@@ -7,12 +7,16 @@ export function Home():JSX.Element {
     const navigate = useNavigate();
     return (
         <div className='home'>
+            <h1> <b> Career Assessment Test </b> </h1>
             <div className="row">
                 <div className='column'>
                     <h1 className="header">Basic Questions</h1>
                     <br />
                     <div className="description">
-                        <p>This is the content of the Basic Questions page.</p>
+                        <p>This basic career questionaire gives you a short, concise quiz with quick and simple questions.
+                            The design of this quiz is to give you an easy, generalized way to figure out the best career choice
+                            for you.
+                        </p>
                         <Button onClick={() => navigate('/basic-questions')}>Go to Basic Questions</Button>
                     </div>   
                 </div>
@@ -20,7 +24,10 @@ export function Home():JSX.Element {
                     <h1 className="header">Detailed Questions</h1>
                     <br />
                     <div  className="description">
-                        <p>This is the content of the Detailed Questions page.</p>
+                        <p>This detailed career questionaire delves deeper into your personality and interest. The questions offered
+                            here will be more elaborate and more in-depth to better accurately figure out the best career choice 
+                            for you.
+                        </p>
                         <Button onClick={() => navigate('/detailed-questions')}>Go to Detailed Questions</Button>
                     </div>
                 </div>
