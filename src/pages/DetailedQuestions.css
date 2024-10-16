@@ -11,13 +11,17 @@
 }
 /* This focuses on the top of the screen and making the buttons work together */
 .compass{
-    height: 10px;
+    height: 1%;
     display: flex;
-    padding: 20px 25px;
+    padding: 2% 1%;
 }
 /* Below focuses on the text for the list of questions (listOQues) */
 .listOQues Form{
     padding: 10px 20px;
+}
+.title{
+    text-align: left;
+    padding: 2% 1%;
 }
 /* This is working with the size of the textbox --- Later I want to implement the horizontal scrolling */
 .textbox{
@@ -34,7 +38,7 @@
     
     flex: 50%;
     position:absolute;
-    top: 2%;
+    top: 3%;
     left: 50%;
     transform: translate(-50%, -50%);
 

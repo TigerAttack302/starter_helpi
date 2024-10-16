@@ -40,12 +40,13 @@ export function DetailedQuestions():JSX.Element {
     return <div className='detailedQuestions'>
       <header className='compass'>
         <Form.Group className='top'>
-        <Button onClick={() => navigate('/detailed-questions')}>DDetailed Questions</Button>
-        <Button onClick={() => navigate('/')}>HHome</Button>
-        <Button onClick={() => navigate('/basic-questions')}>DBasic Questions</Button>
+        <Button onClick={() => navigate('/detailed-questions')}>Detailed Questions</Button>
+        <Button onClick={() => navigate('/')}>Home</Button>
+        <Button onClick={() => navigate('/basic-questions')}>Basic Questions</Button>
         </Form.Group>
       </header>
         <div className='ListOQues'>
+          <h1 className='title'>Detailed Questions</h1>
         <Form.Group className="DetailedQues" controlId="DQlist">
           <text>
             Q1: If you were to be given an elephant as well as access to take care of the elephant, How would you use the elephant for business purposes?
