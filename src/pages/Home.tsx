@@ -1,15 +1,37 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import './Home.css';
 
-export function Home(): JSX.Element {
-  const navigate = useNavigate(); // This is the hook used for navigation
-
-  return (
-    <div>
-      <h1>Home Page</h1>
-      <button onClick={() => navigate('/basic-questions')}>Go to Basic Questions</button>
-      <button onClick={() => navigate('/detailed-questions')}>Go to Detailed Questions</button>
-
-    </div>
-  );
+export function Home():JSX.Element {
+    const navigate = useNavigate();
+    return (
+        <div className='home'>
+            <h1> <b> Career Assessment Test </b> </h1>
+            <div className="row">
+                <div className='column'>
+                    <h1 className="header">Basic Questions</h1>
+                    <br />
+                    <div className="description">
+                        <p>This basic career questionaire gives you a short, concise quiz with quick and simple questions.
+                            The design of this quiz is to give you an easy, generalized way to figure out the best career choice
+                            for you.
+                        </p>
+                        <Button onClick={() => navigate('/basic-questions')}>Go to Basic Questions</Button>
+                    </div>   
+                </div>
+                <div className='column'>
+                    <h1 className="header">Detailed Questions</h1>
+                    <br />
+                    <div  className="description">
+                        <p>This detailed career questionaire delves deeper into your personality and interest. The questions offered
+                            here will be more elaborate and more in-depth to better accurately figure out the best career choice 
+                            for you.
+                        </p>
+                        <Button onClick={() => navigate('/detailed-questions')}>Go to Detailed Questions</Button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      );
 }

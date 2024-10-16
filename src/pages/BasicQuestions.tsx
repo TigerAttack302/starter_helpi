@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 //import { Button, Form } from 'react-bootstrap';
-//import { HashRouter, Route } from 'react-router-dom';
 
 export function BasicQuestions(): JSX.Element {
     const navigate = useNavigate();
