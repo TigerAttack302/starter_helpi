@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 import './DetailedQuestions.css';
-//import { HashRouter, Route } from 'react-router-dom';
 
 export function DetailedQuestions():JSX.Element {
     const navigate = useNavigate();
