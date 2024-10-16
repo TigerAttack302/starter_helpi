@@ -1,0 +1,49 @@
+.top button{
+    /*You need to specify the class name the App.css file*/
+    /*below does pointer hand icon*/
+    cursor: pointer;
+    /* This floats the buttons side by side*/
+    float:left;
+}
+.top button:not(:last-child){
+    /* This prevents double borders from the right button*/
+    border-right:none;
+}
+/* This focuses on the top of the screen and making the buttons work together */
+.compass{
+    height: 10px;
+    display: flex;
+    padding: 20px 25px;
+}
+/* Below focuses on the text for the list of questions (listOQues) */
+.listOQues Form{
+    padding: 10px 20px;
+}
+/* This is working with the size of the textbox --- Later I want to implement the horizontal scrolling */
+.textbox{
+    width: 40%; /* Change width as needed */
+    height: 15%; /* Change height for <input>, or use min-height for <textarea> */
+    padding: 20px; /* Inner spacing */
+    font-size: 11px; /* Text size */
+    text-align:left;
+}
+.listOQues text{
+    font-size: x-large;
+}
+.top{
+    
+    flex: 50%;
+    position:absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.submitButton{
+    padding: 20px 25px;
+}
+.top:after{
+    content: "";
+    clear:both;
+    display: table;
+}
