@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (53 ms)
+  ✕ renders learn react link (54 ms)
 
   ● renders learn react link
 
@@ -18,6 +18,13 @@ FAIL src/App.test.tsx
           [36m<div[39m
             [33mclass[39m=[32m"home"[39m
           [36m>[39m
+            [36m<h1>[39m
+              [0m [0m
+              [36m<b>[39m
+                [0m Career Assessment Test [0m
+              [36m</b>[39m
+              [0m [0m
+            [36m</h1>[39m
             [36m<div[39m
               [33mclass[39m=[32m"row"[39m
             [36m>[39m
@@ -34,7 +41,7 @@ FAIL src/App.test.tsx
                   [33mclass[39m=[32m"description"[39m
                 [36m>[39m
                   [36m<p>[39m
-                    [0mThis is the content of the Basic Questions page.[0m
+                    [0mThis basic career questionaire gives you a short, concise quiz with quick and simple questions. The design of this quiz is to give you an easy, generalized way to figure out the best career choice for you.[0m
                   [36m</p>[39m
                   [36m<button[39m
                     [33mclass[39m=[32m"btn btn-primary"[39m
@@ -57,7 +64,7 @@ FAIL src/App.test.tsx
                   [33mclass[39m=[32m"description"[39m
                 [36m>[39m
                   [36m<p>[39m
-                    [0mThis is the content of the Detailed Questions page.[0m
+                    [0mThis detailed career questionaire delves deeper into your personality and interest. The questions offered here will be more elaborate and more in-depth to better accurately figure out the best career choice for you.[0m
                   [36m</p>[39m
                   [36m<button[39m
                     [33mclass[39m=[32m"btn btn-primary"[39m
@@ -123,14 +130,14 @@ All files               |   17.77 |    16.66 |      10 |   17.77 |
   index.tsx             |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts    |       0 |        0 |       0 |       0 | 3-10              
  src/pages              |    8.33 |      100 |    6.66 |    8.33 |                   
-  BasicQuestions.tsx    |       0 |      100 |       0 |       0 | 6                 
-  DetailedQuestions.tsx |       0 |      100 |       0 |       0 | 8-45              
-  Home.tsx              |      50 |      100 |   33.33 |      50 | 16-24             
+  BasicQuestions.tsx    |       0 |      100 |       0 |       0 | 5                 
+  DetailedQuestions.tsx |       0 |      100 |       0 |       0 | 7-44              
+  Home.tsx              |      50 |      100 |   33.33 |      50 | 20-31             
 ------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.85 s
+Time:        2.871 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
