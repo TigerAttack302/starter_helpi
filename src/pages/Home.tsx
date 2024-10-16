@@ -7,6 +7,7 @@ export function Home():JSX.Element {
     const navigate = useNavigate();
     return (
         <div className='home'>
+            <h1> <b> Career Assessment Test </b> </h1>
             <div className="row">
                 <div className='column'>
                     <h1 className="header">Basic Questions</h1>
