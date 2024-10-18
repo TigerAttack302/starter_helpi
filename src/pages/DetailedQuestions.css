@@ -25,11 +25,14 @@
 }
 /* This is working with the size of the textbox --- Later I want to implement the horizontal scrolling */
 .textbox{
-    width: 40%; /* Change width as needed */
-    height: 15%; /* Change height for <input>, or use min-height for <textarea> */
+    width: 40%; /* not changeable width */
+    height: 15%; /*  */
     padding: 20px; /* Inner spacing */
     font-size: 11px; /* Text size */
     text-align:left;
+    overflow-x: none;
+    overflow-y: scroll;
+    border: 1px solid black;
 }
 .listOQues text{
     font-size: x-large;
