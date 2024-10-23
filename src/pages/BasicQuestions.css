@@ -1,6 +1,5 @@
-.container {
-    text-align: left;
-    margin: 20px;
+.home-button {
+    background-color: red;
 }
 
 .question {
@@ -21,4 +20,8 @@
     max-width: 500px;
     align-items: left;
     padding: 8px 20px, 
+}
+
+.progress-section {
+    position: fixed;
 }

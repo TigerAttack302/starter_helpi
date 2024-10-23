@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-//import { Button, Form } from 'react-bootstrap';
+import './BasicQuestions.css';
 
 export function BasicQuestions(): JSX.Element {
     const navigate = useNavigate();
@@ -65,10 +65,14 @@ export function BasicQuestions(): JSX.Element {
     }
 
     return (
-        <div className='container'>
-            <button onClick={() => navigate('/')}>Go to Home</button>
+        <div>
+            <div className='home-button'>
+                <button onClick={() => navigate('/')}>Go to Home</button>
+            </div>
             <h1>Basic Questions</h1>
-            <h2>Progress<progress value={progress}/></h2>
+            <div className='progress-section'>
+                <progress value={progress}/>
+            </div>
             <div className='questions'>
                 <div>
                     <h3>Question 1 out of 7</h3>
@@ -189,7 +193,6 @@ export function BasicQuestions(): JSX.Element {
                     </div>
                 </div>
             </div>
-            <p>This is the content of the Basic Questions page.</p>
         </div>
     );
 }
