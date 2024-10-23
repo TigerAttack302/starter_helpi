@@ -1,0 +1,24 @@
+.container {
+    text-align: left;
+    margin: 20px;
+}
+
+.question {
+    text-align: left;
+    margin-bottom: 20px, 
+}
+
+.buttonGroup {
+    display: flex;
+    text-align: left;
+    align-items: left;
+    flex-direction: column;
+    gap: 10px; 
+    margin-bottom: 30px
+}
+
+.button {
+    max-width: 500px;
+    align-items: left;
+    padding: 8px 20px, 
+}
