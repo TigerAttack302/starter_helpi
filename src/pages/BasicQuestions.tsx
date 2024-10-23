@@ -75,10 +75,12 @@ export function BasicQuestions(): JSX.Element {
                 <progress value={progress}/>
             </div></h1>
             
-            <div className='questions'>
+            <div>
                 <div>
                     <h3>Question 1 out of 7</h3>
-                    <h3>Which one of these best describes you?</h3>
+                    <div className='question'>
+                        <h3>Which one of these best describes you?</h3>
+                    </div>
                     <div className='buttonGroup'>
                         {q1Arr.map((a: string) => (
                             <Form.Check
@@ -95,7 +97,8 @@ export function BasicQuestions(): JSX.Element {
 
                 <div>
                     <h3>Question 2 out of 7</h3>
-                    <h3>What do you find as your favorite subject?</h3>
+                    <div className='question'>
+                    <h3>What do you find as your favorite subject?</h3></div>
                     <div className='buttonGroup'>
                     {q2Arr.map((a: string) => (
                             <Form.Check
@@ -112,7 +115,8 @@ export function BasicQuestions(): JSX.Element {
 
                 <div>
                     <h3>Question 3 of 7</h3>
-                    <h3>What do you enjoy doing the most?</h3>
+                    <div className='question'>
+                    <h3>What do you enjoy doing the most?</h3></div>
                     <div className='buttonGroup'>
                     {q3Arr.map((a: string) => (
                             <Form.Check
@@ -129,7 +133,8 @@ export function BasicQuestions(): JSX.Element {
 
                 <div>
                     <h3>Question 4 out of 7</h3>
-                    <h3>Which role do you find yourself in a job?</h3>
+                    <div className='question'>
+                    <h3>Which role do you find yourself in a job?</h3></div>
                     <div className='buttonGroup'>
                         {q4Arr.map((a: string) => (
                             <Form.Check
@@ -146,7 +151,8 @@ export function BasicQuestions(): JSX.Element {
 
                 <div>
                     <h3>Question 5 out of 7</h3>
-                    <h3>What Best Describes yourself?</h3>
+                    <div className='question'>
+                    <h3>What Best Describes yourself?</h3></div>
                     <div className='buttonGroup'>
                         {q5Arr.map((a: string) => (
                             <Form.Check
@@ -163,7 +169,8 @@ export function BasicQuestions(): JSX.Element {
 
                 <div>
                     <h3>Question 6 out of 7</h3>
-                    <h3>What type of work environment would you thrive in?</h3>
+                    <div className='question'>
+                    <h3>What type of work environment would you thrive in?</h3></div>
                     <div className='buttonGroup'>
                         {q6Arr.map((a: string) => (
                             <Form.Check
@@ -180,7 +187,8 @@ export function BasicQuestions(): JSX.Element {
 
                 <div>
                     <h3>Question 7 out of 7</h3>
-                    <h3>What is your first priority in a job?</h3>
+                    <div className='question'>
+                    <h3>What is your first priority in a job?</h3></div>
                     <div className='buttonGroup'>
                         {q7Arr.map((a: string) => (
                             <Form.Check
@@ -195,6 +203,7 @@ export function BasicQuestions(): JSX.Element {
                     </div>
                 </div>
             </div>
+            <hr/>
         </div>
     );
 }

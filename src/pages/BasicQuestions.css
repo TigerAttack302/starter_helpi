@@ -1,6 +1,7 @@
 .home-button {
     background-color: lightcoral;
     padding: 1%;
+    text-align: left;
 }
 
 .h1 {
@@ -9,7 +10,8 @@
 
 .question {
     text-align: left;
-    margin-bottom: 20px, 
+    margin-bottom: 20px;
+    padding-left: 2%;
 }
 
 .buttonGroup {
@@ -18,7 +20,8 @@
     align-items: left;
     flex-direction: column;
     gap: 10px; 
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    padding-left: 8%;
 }
 
 .button {
