@@ -1,5 +1,10 @@
 .home-button {
-    background-color: red;
+    background-color: lightcoral;
+    padding: 1%;
+}
+
+.h1 {
+    padding: 1%;
 }
 
 .question {
@@ -24,4 +29,13 @@
 
 .progress-section {
     position: fixed;
+    text-align: center;
+    font-size: 20px;
+    right: 1%;
+    padding-top: 0.5%;
+    padding: 1%;
+    background-color: lightblue;
+    border-color: lightblue;
+    border-style: solid;
+    border-radius: 15px;
 }
