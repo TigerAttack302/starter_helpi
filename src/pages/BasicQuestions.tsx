@@ -1,115 +1,209 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-//import { Button, Form } from 'react-bootstrap';
+import './BasicQuestions.css';
 
 export function BasicQuestions(): JSX.Element {
     const navigate = useNavigate();
+    const [progress, setProgress] = useState<number>(0)
+    const [q1, setq1] = useState<boolean>(false)
+    const [q2, setq2] = useState<boolean>(false)
+    const [q3, setq3] = useState<boolean>(false)
+    const [q4, setq4] = useState<boolean>(false)
+    const [q5, setq5] = useState<boolean>(false)
+    const [q6, setq6] = useState<boolean>(false)
+    const [q7, setq7] = useState<boolean>(false)
+    const q1Arr = ["High School Student", "College Student", "Graduated", "None of the Above"];
+    const q2Arr = ["Math/Science","Arts/Creative Thinking", "Computer Science", "Business/Economics"];
+    const q3Arr = ["Solving complex problems","Helping Others","Designing / Creative Thinking", "Analyzing data"];
+    const q4Arr = ["Leading/Managing", "Providing support", "Innovating new ideas", "Communication"];
+    const q5Arr = ["Hardworker", "Smart", "Accountable", "Versatile"];
+    const q6Arr = ["Collaborative team setting", "Quiet and independent", "Structures / Organized setting", "Fast / Dynamic setting"];
+    const q7Arr = ["Career Development", "Salary / Benefits", "Work Environment", "Company's Reputation"];
 
-    const containerStyle = {
-      textAlign: 'left' as const, 
-      margin: '20px', 
-  };
-
-  const questionStyle = {
-      marginBottom: '20px', 
-  };
-
-  const buttonGroupStyle = {
-      display: 'flex',
-      flexDirection: 'column' as const, 
-      gap: '10px', 
-      marginBottom: '30px', 
-  };
-//hi
-  const buttonStyle = {
-      maxWidth: '500px', 
-      padding: '8px 20px', 
-  };
+    function updateAnswer1() {
+        if (!q1) {
+            setq1(true);
+            setProgress(progress+(1/7));
+        }
+    }
+    function updateAnswer2() {
+        if (!q2) {
+            setq2(true);
+            setProgress(progress+(1/7));
+        }
+    }
+    function updateAnswer3() {
+        if (!q3) {
+            setq3(true);
+            setProgress(progress+(1/7));
+        }
+    }
+    function updateAnswer4() {
+        if (!q4) {
+            setq4(true);
+            setProgress(progress+(1/7));
+        }
+    }
+    function updateAnswer5() {
+        if (!q5) {
+            setq5(true);
+            setProgress(progress+(1/7));
+        }
+    }
+    function updateAnswer6() {
+        if (!q6) {
+            setq6(true);
+            setProgress(progress+(1/7));
+        }
+    }
+    function updateAnswer7() {
+        if (!q7) {
+            setq7(true);
+            setProgress(progress+(1/7));
+        }
+    }
 
     return (
-        <div style={containerStyle}>
-            <button onClick={() => navigate('/')}>Go to Home</button>
-            <h1>Basic Questions</h1>
-            <h2>Progress</h2>
-            <div className="Questions">
-                <div style={questionStyle}>
+        <div>
+            <div className='home-button'>
+                <button onClick={() => navigate('/')}>Go to Home</button>
+            </div>
+            <h1 className="h1">Basic Questions
+                <div className='progress-section'>
+                    <text>Progress:  </text>
+                <progress value={progress}/>
+            </div></h1>
+            
+            <div>
+                <div>
                     <h3>Question 1 out of 7</h3>
-                    <h3>Which one of these best describes you?</h3>
-                    <div style={buttonGroupStyle}>
-                        <button type="button" style={buttonStyle}>High School Student</button>
-                        <button type="button" style={buttonStyle}>College Student</button>
-                        <button type="button" style={buttonStyle}>Graduated</button>
-                        <button type="button" style={buttonStyle}>None of the Above</button>
+                    <div className='question'>
+                        <h3>Which one of these best describes you?</h3>
+                    </div>
+                    <div className='buttonGroup'>
+                        {q1Arr.map((a: string) => (
+                            <Form.Check
+                                type="radio"
+                                name="q1"
+                                onChange={updateAnswer1}
+                                label={a}
+                                key={a}
+                                value={a}
+                            />
+                        ))}
                     </div>
                 </div>
 
-                <div style={questionStyle}>
+                <div>
                     <h3>Question 2 out of 7</h3>
-                    <h3>What do you find as your favorite subject?</h3>
-                    <div style={buttonGroupStyle}>
-                        <button type="button" style={buttonStyle}>Math/Science</button>
-                        <button type="button" style={buttonStyle}>Arts/Creative Thinking</button>
-                        <button type="button" style={buttonStyle}>Computer Science</button>
-                        <button type="button" style={buttonStyle}>Business/Economics</button>
+                    <div className='question'>
+                    <h3>What do you find as your favorite subject?</h3></div>
+                    <div className='buttonGroup'>
+                    {q2Arr.map((a: string) => (
+                            <Form.Check
+                                type="radio"
+                                name="q2"
+                                onChange={updateAnswer2}
+                                label={a}
+                                key={a}
+                                value={a}
+                            />
+                        ))}
                     </div>
                 </div>
 
-                <div style={questionStyle}>
+                <div>
                     <h3>Question 3 of 7</h3>
-                    <h3>What do you enjoy doing the most?</h3>
-                    <div style={buttonGroupStyle}>
-                        <button type="button" style={buttonStyle}>Solving complex problems</button>
-                        <button type="button" style={buttonStyle}>Helping Others</button>
-                        <button type="button" style={buttonStyle}>Designing, Creative Thinking</button>
-                        <button type="button" style={buttonStyle}>Analyzing data</button>
+                    <div className='question'>
+                    <h3>What do you enjoy doing the most?</h3></div>
+                    <div className='buttonGroup'>
+                    {q3Arr.map((a: string) => (
+                            <Form.Check
+                                type="radio"
+                                name="q3"
+                                onChange={updateAnswer3}
+                                label={a}
+                                key={a}
+                                value={a}
+                            />
+                        ))}
                     </div>
                 </div>
 
-                <div style={questionStyle}>
+                <div>
                     <h3>Question 4 out of 7</h3>
-                    <h3>Which role do you find yourself in a job?</h3>
-                    <div style={buttonGroupStyle}>
-                        <button type="button" style={buttonStyle}>Leading/Managing</button>
-                        <button type="button" style={buttonStyle}>Providing Support</button>
-                        <button type="button" style={buttonStyle}>Innovating new ideas</button>
-                        <button type="button" style={buttonStyle}>Communication</button>
+                    <div className='question'>
+                    <h3>Which role do you find yourself in a job?</h3></div>
+                    <div className='buttonGroup'>
+                        {q4Arr.map((a: string) => (
+                            <Form.Check
+                                type="radio"
+                                name="q4"
+                                onChange={updateAnswer4}
+                                label={a}
+                                key={a}
+                                value={a}
+                            />
+                        ))}
                     </div>
                 </div>
 
-                <div style={questionStyle}>
+                <div>
                     <h3>Question 5 out of 7</h3>
-                    <h3>What Best Describes yourself?</h3>
-                    <div style={buttonGroupStyle}>
-                        <button type="button" style={buttonStyle}>Hardworker</button>
-                        <button type="button" style={buttonStyle}>Smart</button>
-                        <button type="button" style={buttonStyle}>Accountable</button>
-                        <button type="button" style={buttonStyle}>Versatile</button>
+                    <div className='question'>
+                    <h3>What Best Describes yourself?</h3></div>
+                    <div className='buttonGroup'>
+                        {q5Arr.map((a: string) => (
+                            <Form.Check
+                                type="radio"
+                                name="q5"
+                                onChange={updateAnswer5}
+                                label={a}
+                                key={a}
+                                value={a}
+                            />
+                        ))}
                     </div>
                 </div>
 
-                <div style={questionStyle}>
+                <div>
                     <h3>Question 6 out of 7</h3>
-                    <h3>What type of work environment would you thrive in?</h3>
-                    <div style={buttonGroupStyle}>
-                        <button type="button" style={buttonStyle}>Collaborative team setting</button>
-                        <button type="button" style={buttonStyle}>Quiet and independent</button>
-                        <button type="button" style={buttonStyle}>Structured/Organized setting</button>
-                        <button type="button" style={buttonStyle}>Fast/Dynamic</button>
+                    <div className='question'>
+                    <h3>What type of work environment would you thrive in?</h3></div>
+                    <div className='buttonGroup'>
+                        {q6Arr.map((a: string) => (
+                            <Form.Check
+                                type="radio"
+                                name="q6"
+                                onChange={updateAnswer6}
+                                label={a}
+                                key={a}
+                                value={a}
+                            />
+                        ))}
                     </div>
                 </div>
 
-                <div style={questionStyle}>
+                <div>
                     <h3>Question 7 out of 7</h3>
-                    <h3>What is your first priority in a job?</h3>
-                    <div style={buttonGroupStyle}>
-                        <button type="button" style={buttonStyle}>Career Development</button>
-                        <button type="button" style={buttonStyle}>Salary/Benefits</button>
-                        <button type="button" style={buttonStyle}>Work Environment</button>
-                        <button type="button" style={buttonStyle}>The company's reputation</button>
+                    <div className='question'>
+                    <h3>What is your first priority in a job?</h3></div>
+                    <div className='buttonGroup'>
+                        {q7Arr.map((a: string) => (
+                            <Form.Check
+                                type="radio"
+                                name="q7"
+                                onChange={updateAnswer7}
+                                label={a}
+                                key={a}
+                                value={a}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
-            <p>This is the content of the Basic Questions page.</p>
+            <hr/>
         </div>
     );
 }

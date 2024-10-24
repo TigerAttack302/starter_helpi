@@ -1,0 +1,44 @@
+.home-button {
+    background-color: lightcoral;
+    padding: 1%;
+    text-align: left;
+}
+
+.h1 {
+    padding: 1%;
+}
+
+.question {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 2%;
+}
+
+.buttonGroup {
+    display: flex;
+    text-align: left;
+    align-items: left;
+    flex-direction: column;
+    gap: 10px; 
+    margin-bottom: 30px;
+    padding-left: 8%;
+}
+
+.button {
+    max-width: 500px;
+    align-items: left;
+    padding: 8px 20px, 
+}
+
+.progress-section {
+    position: fixed;
+    text-align: center;
+    font-size: 20px;
+    right: 1%;
+    padding-top: 0.5%;
+    padding: 1%;
+    background-color: lightblue;
+    border-color: lightblue;
+    border-style: solid;
+    border-radius: 15px;
+}
