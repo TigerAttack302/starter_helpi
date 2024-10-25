@@ -47,7 +47,7 @@ export function DetailedQuestions():JSX.Element {
           <h1 className='title'>Detailed Questions</h1>
         <Form.Group className="DetailedQues" controlId="DQlist">
           <text>
-            Q1: If you were to be given an elephant as well as access to take care of the elephant, How would you use the elephant for business purposes?
+          Q1. What activities or tasks make you feel the most energized and fulfilled, and why?
           </text>
           <Form.Control
             className='textbox'
@@ -58,7 +58,7 @@ export function DetailedQuestions():JSX.Element {
             as="textarea"
             />
             <text>
-            Q2: Lets say that you work with a part of government which plant trees. The government wants to make planting trees efficient and healthy for the environment as well as gather funding from wealthy investors. What would you and a group you are leading going to do?
+            Q2. What are your top three strengths or skills, and how do you apply them in your daily life?
             </text>
           <Form.Control
             className='textbox'
@@ -70,7 +70,7 @@ export function DetailedQuestions():JSX.Element {
             />
 
             <text>
-              Q3: Lets say that there was a company that is having a lawsuit because one of their products they had been selling had been causing a new form of cancer because of the new type of ink that they put in their pens. What do you see yourself doing in the courtroom?
+            Q3. What are the values or principles that are most important to you in a work environment?
             </text>
             <Form.Control
               as="textarea"
@@ -82,7 +82,7 @@ export function DetailedQuestions():JSX.Element {
               />
 
             <text>
-            Q4: Lets say that you are a manager. You start to see that during this quartile the amount of work that is being completed per week is decreasing. What would you look at and question to make sure that the efficiency is staying the same and explain why.
+            Q4. What types of challenges or problems do you enjoy solving, and what makes them appealing?
             </text>
             <Form.Control
               className='textbox'
@@ -93,7 +93,7 @@ export function DetailedQuestions():JSX.Element {
               />
 
             <text>
-            Q5: Lets say that there is a group of people who are getting taken advantage of, without their permission, and there is a way that would help these people already known but, it costs lots of money and attention. If you were a manager and you and your team were tasked with helping these people what would you do and why?
+            Q5. What kind of impact do you want your work to have on others or the world?
             </text>
             <Form.Control
               className='textbox'
@@ -105,7 +105,7 @@ export function DetailedQuestions():JSX.Element {
               />
 
             <text>
-            Q6: Lets say that you are one of the managers inside of a company that works on retrieving golf balls from inside of ponds and lakes on golf courses. What way would you work on this job?
+            Q6. What are your financial goals and lifestyle preferences, and how do they influence your career choices?
             </text>
             <Form.Control
               className='textbox'
@@ -117,7 +117,7 @@ export function DetailedQuestions():JSX.Element {
               />
 
             <text>
-            Q7: You are a city planner and there is a well known orchestra that is going to play in your city but the issue is that there isn't a venue big enough to hold the orchestra. How would you allow a large audience to hear the music including in-person.
+            Q7. How do you define success in your career, and what will make you feel you’ve achieved it?
             </text>
             <Form.Control
               className='textbox'
