@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './BasicQuestions.css';
 
 export function BasicQuestions(): JSX.Element {
     const navigate = useNavigate();
-    const [progress, setProgress] = useState<number>(0)
-    const [q1, setq1] = useState<boolean>(false)
-    const [q2, setq2] = useState<boolean>(false)
-    const [q3, setq3] = useState<boolean>(false)
-    const [q4, setq4] = useState<boolean>(false)
-    const [q5, setq5] = useState<boolean>(false)
-    const [q6, setq6] = useState<boolean>(false)
-    const [q7, setq7] = useState<boolean>(false)
+    const [progress, setProgress] = useState<number>(0);
+    const [completion, setCompletion] = useState<boolean>(false);
+    const [q1, setq1] = useState<boolean>(false);
+    const [q2, setq2] = useState<boolean>(false);
+    const [q3, setq3] = useState<boolean>(false);
+    const [q4, setq4] = useState<boolean>(false);
+    const [q5, setq5] = useState<boolean>(false);
+    const [q6, setq6] = useState<boolean>(false);
+    const [q7, setq7] = useState<boolean>(false);
     const q1Arr = ["High School Student", "College Student", "Graduated", "None of the Above"];
     const q2Arr = ["Math/Science","Arts/Creative Thinking", "Computer Science", "Business/Economics"];
     const q3Arr = ["Solving complex problems","Helping Others","Designing / Creative Thinking", "Analyzing data"];
@@ -25,42 +26,63 @@ export function BasicQuestions(): JSX.Element {
         if (!q1) {
             setq1(true);
             setProgress(progress+(1/7));
+            if (progress === 1) {
+                setCompletion(true);
+            }
         }
     }
     function updateAnswer2() {
         if (!q2) {
             setq2(true);
             setProgress(progress+(1/7));
+            if (progress === 1) {
+                setCompletion(true);
+            }
         }
     }
     function updateAnswer3() {
         if (!q3) {
             setq3(true);
             setProgress(progress+(1/7));
+            if (progress === 1) {
+                setCompletion(true);
+            }
         }
     }
     function updateAnswer4() {
         if (!q4) {
             setq4(true);
             setProgress(progress+(1/7));
+            if (progress === 1) {
+                setCompletion(true);
+            }
         }
     }
     function updateAnswer5() {
         if (!q5) {
             setq5(true);
             setProgress(progress+(1/7));
+            if (progress === 1) {
+                setCompletion(true);
+            }
         }
     }
     function updateAnswer6() {
         if (!q6) {
             setq6(true);
             setProgress(progress+(1/7));
+            if (progress === 1) {
+                setCompletion(true);
+            }
         }
     }
     function updateAnswer7() {
         if (!q7) {
             setq7(true);
             setProgress(progress+(1/7));
+            if (progress === 1) {
+                setCompletion(true);
+            }
         }
     }
 
@@ -203,6 +225,7 @@ export function BasicQuestions(): JSX.Element {
                     </div>
                 </div>
             </div>
+            <Button disabled={!completion}>Submit</Button>
             <hr/>
         </div>
     );
