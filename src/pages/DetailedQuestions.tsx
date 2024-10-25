@@ -6,35 +6,87 @@ import './DetailedQuestions.css';
 export function DetailedQuestions():JSX.Element {
     const navigate = useNavigate();
     const [ans1, setAns1] = useState<string>("");
+    const [progress, setProgress] = useState<number>(0);
+    const [completion, setCompletion] = useState<boolean>(false);
+    const [q1, setq1] = useState<boolean>(false);
+    const [q2, setq2] = useState<boolean>(false);
+    const [q3, setq3] = useState<boolean>(false);
+    const [q4, setq4] = useState<boolean>(false);
+    const [q5, setq5] = useState<boolean>(false);
+    const [q6, setq6] = useState<boolean>(false);
+    const [q7, setq7] = useState<boolean>(false);
+
     function UpdateAns1(event: React.ChangeEvent<HTMLInputElement>){
         setAns1(event.target.value);
-      }
+        if (!q1) {
+          setq1(true);
+          setProgress(progress+14);
+        }
+        updateCompletion();
+    }
 
     const [ans2, setAns2] = useState<string>("");
     function UpdateAns2(event: React.ChangeEvent<HTMLInputElement>){
         setAns2(event.target.value);
-      }
+        if (!q2) {
+          setq2(true);
+          setProgress(progress+14);
+        }
+        updateCompletion();
+    }
 
-      const [ans3, setAns3] = useState<string>("");
+    const [ans3, setAns3] = useState<string>("");
     function UpdateAns3(event: React.ChangeEvent<HTMLInputElement>){
         setAns3(event.target.value);
-      }
-      const [ans4, setAns4] = useState<string>("");
+        if (!q3) {
+          setq3(true);
+          setProgress(progress+14);
+        }
+        updateCompletion();
+    }
+    const [ans4, setAns4] = useState<string>("");
     function UpdateAns4(event: React.ChangeEvent<HTMLInputElement>){
         setAns4(event.target.value);
-      }
-      const [ans5, setAns5] = useState<string>("");
+        if (!q4) {
+          setq4(true);
+          setProgress(progress+14);
+        }
+        updateCompletion();
+    }
+    const [ans5, setAns5] = useState<string>("");
     function UpdateAns5(event: React.ChangeEvent<HTMLInputElement>){
         setAns5(event.target.value);
-      }
-      const [ans6, setAns6] = useState<string>("");
+        if (!q5) {
+          setq5(true);
+          setProgress(progress+14);
+        }
+        updateCompletion();
+    }
+    const [ans6, setAns6] = useState<string>("");
     function UpdateAns6(event: React.ChangeEvent<HTMLInputElement>){
         setAns6(event.target.value);
-      }
-      const [ans7, setAns7] = useState<string>("");
+        if (!q6) {
+          setq6(true);
+          setProgress(progress+15);
+        }
+        updateCompletion();
+    }
+    const [ans7, setAns7] = useState<string>("");
     function UpdateAns7(event: React.ChangeEvent<HTMLInputElement>){
         setAns7(event.target.value);
+        if (!q7) {
+          setq7(true);
+          setProgress(progress+15);
+        }
+        updateCompletion();
+    }
+      
+    function updateCompletion() {
+      if (progress >= 85) {
+          setCompletion(true);
       }
+    }
+    
     return <div className='detailedQuestions'>
       <header className='compass'>
         <Form.Group className='top'>
@@ -44,7 +96,12 @@ export function DetailedQuestions():JSX.Element {
         </Form.Group>
       </header>
         <div className='ListOQues'>
-          <h1 className='title'>Detailed Questions</h1>
+          <h1 className='title'>Detailed Questions
+            <div className='progress-section'>
+                <text>Progress:  </text>
+                <progress value={progress} max={100}/>
+            </div>
+          </h1>
         <Form.Group className="DetailedQues" controlId="DQlist">
           <text>
           Q1. What activities or tasks make you feel the most energized and fulfilled, and why?
@@ -132,7 +189,8 @@ export function DetailedQuestions():JSX.Element {
         
 
         <div className='submitButton'>
-        <button >Submit answers</button>
+        <button disabled={!completion}>Get Your Results Here!</button>
         </div>
+        <hr/>
     </div>;
 }
