@@ -25,64 +25,56 @@ export function BasicQuestions(): JSX.Element {
     function updateAnswer1() {
         if (!q1) {
             setq1(true);
-            setProgress(progress+(1/7));
-            if (progress === 1) {
-                setCompletion(true);
-            }
+            setProgress(progress+14);
+            updateCompletion();
         }
     }
     function updateAnswer2() {
         if (!q2) {
             setq2(true);
-            setProgress(progress+(1/7));
-            if (progress === 1) {
-                setCompletion(true);
-            }
+            setProgress(progress+14);
+            updateCompletion();
         }
     }
     function updateAnswer3() {
         if (!q3) {
             setq3(true);
-            setProgress(progress+(1/7));
-            if (progress === 1) {
-                setCompletion(true);
-            }
+            setProgress(progress+14);
+            updateCompletion();
         }
     }
     function updateAnswer4() {
         if (!q4) {
             setq4(true);
-            setProgress(progress+(1/7));
-            if (progress === 1) {
-                setCompletion(true);
-            }
+            setProgress(progress+14);
+            updateCompletion();
         }
     }
     function updateAnswer5() {
         if (!q5) {
             setq5(true);
-            setProgress(progress+(1/7));
-            if (progress === 1) {
-                setCompletion(true);
-            }
+            setProgress(progress+14);
+            updateCompletion();
         }
     }
     function updateAnswer6() {
         if (!q6) {
             setq6(true);
-            setProgress(progress+(1/7));
-            if (progress === 1) {
-                setCompletion(true);
-            }
+            setProgress(progress+15);
+            updateCompletion();
         }
     }
     function updateAnswer7() {
         if (!q7) {
             setq7(true);
-            setProgress(progress+(1/7));
-            if (progress === 1) {
-                setCompletion(true);
-            }
+            setProgress(progress+15);
+            updateCompletion();
+        }
+    }
+
+    function updateCompletion() {
+        if (progress >= 85) {
+            setCompletion(true);
         }
     }
 
@@ -94,7 +86,7 @@ export function BasicQuestions(): JSX.Element {
             <h1 className="h1">Basic Questions
                 <div className='progress-section'>
                     <text>Progress:  </text>
-                <progress value={progress}/>
+                <progress value={progress} max={100}/>
             </div></h1>
             
             <div>
@@ -225,7 +217,7 @@ export function BasicQuestions(): JSX.Element {
                     </div>
                 </div>
             </div>
-            <Button disabled={!completion}>Submit</Button>
+            <button disabled={!completion}>Get Your Results Here!</button>
             <hr/>
         </div>
     );
