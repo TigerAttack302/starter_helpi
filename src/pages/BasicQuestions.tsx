@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import Confetti from 'react-confetti'
+
 import './BasicQuestions.css';
 
 export function BasicQuestions(): JSX.Element {
@@ -80,6 +82,7 @@ export function BasicQuestions(): JSX.Element {
 
     return (
         <div>
+            {completion && <Confetti width={window.innerWidth} height={3 * window.innerHeight}/>}
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Go to Home</button>
             </div>
