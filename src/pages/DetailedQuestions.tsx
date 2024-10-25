@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
+import Confetti from 'react-confetti'
 import './DetailedQuestions.css';
 
 export function DetailedQuestions():JSX.Element {
@@ -87,14 +88,12 @@ export function DetailedQuestions():JSX.Element {
       }
     }
     
-    return <div className='detailedQuestions'>
-      <header className='compass'>
-        <Form.Group className='top'>
-        <button onClick={() => navigate('/detailed-questions')}>Detailed Questions</button>
-        <button onClick={() => navigate('/')}>Home</button>
-        <button onClick={() => navigate('/basic-questions')}>Basic Questions</button>
-        </Form.Group>
-      </header>
+    return (
+    <div className='detailedQuestions'>
+      {completion && <Confetti width={window.innerWidth} height={3 * window.innerHeight}/>}
+            <div className='home-button'>
+                <button onClick={() => navigate('/')}>Go to Home</button>
+            </div>
         <div className='ListOQues'>
           <h1 className='title'>Detailed Questions
             <div className='progress-section'>
@@ -192,5 +191,5 @@ export function DetailedQuestions():JSX.Element {
         <button disabled={!completion}>Get Your Results Here!</button>
         </div>
         <hr/>
-    </div>;
-}
+    </div>
+)}
