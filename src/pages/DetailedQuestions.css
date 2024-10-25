@@ -1,3 +1,9 @@
+.home-button {
+    background-color: lightcoral;
+    padding: 1%;
+    text-align: left;
+}
+
 .top button{
     /*You need to specify the class name the App.css file*/
     /*below does pointer hand icon*/
@@ -20,8 +26,7 @@
     padding: 10px 20px;
 }
 .title{
-    text-align: left;
-    padding: 2% 1%;
+    padding: 1%;
 }
 /* This is working with the size of the textbox --- Later I want to implement the horizontal scrolling */
 .textbox{
