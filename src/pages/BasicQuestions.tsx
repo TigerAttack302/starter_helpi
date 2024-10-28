@@ -82,7 +82,7 @@ export function BasicQuestions(): JSX.Element {
 
     return (
         <div>
-            {completion && <Confetti width={window.innerWidth} height={3 * window.innerHeight}/>}
+            {completion && <Confetti width={window.innerWidth*.95} height={3 * window.innerHeight}/>}
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Go to Home</button>
             </div>
