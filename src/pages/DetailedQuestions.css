@@ -30,14 +30,16 @@
 }
 /* This is working with the size of the textbox --- Later I want to implement the horizontal scrolling */
 .textbox{
-    width: 40%; /* not changeable width */
-    height: 15%; /*  */
+    width: 100%; /* not changeable width */
+    height: 100%; /*  */
     padding: 20px; /* Inner spacing */
     font-size: 11px; /* Text size */
     text-align:left;
     overflow-x: none;
     overflow-y: scroll;
     border: 1px solid black;
+    border-radius: 4px;
+    margin-left: 50px;
 }
 .listOQues text{
     font-size: x-large;
@@ -71,4 +73,23 @@
     border-color: lightblue;
     border-style: solid;
     border-radius: 15px;
+}
+
+.lowerContainer{
+    display:flex;
+    align-items: center;
+    width: 90%;
+    height: 14%;
+
+
+}
+
+.lowerContainer row{
+    border: 1px solid black;
+}
+
+.IMG{
+    width: 50%;
+    height: 100%;
+    transform: translate( 100%, -1%);
 }
