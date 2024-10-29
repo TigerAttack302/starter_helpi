@@ -281,7 +281,7 @@ export function DetailedQuestions():JSX.Element {
         
 
         <div className='submitButton'>
-        <button disabled={!completion}>Get Your Results Here!</button>
+        <button onClick={() => navigate('/results')} disabled={!completion}>Get Your Results Here!</button>
         </div>
         <hr/>
     </div>

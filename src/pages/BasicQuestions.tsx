@@ -220,7 +220,7 @@ export function BasicQuestions(): JSX.Element {
                     </div>
                 </div>
             </div>
-            <button disabled={!completion}>Get Your Results Here!</button>
+            <button onClick={() => navigate('/results')} disabled={!completion}>Get Your Results Here!</button>
             <hr/>
         </div>
     );
