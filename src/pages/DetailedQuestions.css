@@ -1,3 +1,9 @@
+.home-button {
+    background-color: lightcoral;
+    padding: 1%;
+    text-align: left;
+}
+
 .top button{
     /*You need to specify the class name the App.css file*/
     /*below does pointer hand icon*/
@@ -20,8 +26,7 @@
     padding: 10px 20px;
 }
 .title{
-    text-align: left;
-    padding: 2% 1%;
+    padding: 1%;
 }
 /* This is working with the size of the textbox --- Later I want to implement the horizontal scrolling */
 .textbox{
@@ -55,6 +60,19 @@
     content: "";
     clear:both;
     display: table;
+}
+
+.progress-section {
+    position: fixed;
+    text-align: center;
+    font-size: 20px;
+    right: 1%;
+    padding-top: 0.5%;
+    padding: 1%;
+    background-color: lightblue;
+    border-color: lightblue;
+    border-style: solid;
+    border-radius: 15px;
 }
 
 .lowerContainer{
