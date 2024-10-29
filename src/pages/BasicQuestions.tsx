@@ -87,7 +87,7 @@ export function BasicQuestions(): JSX.Element {
                 <button onClick={() => navigate('/')}>Go to Home</button>
             </div>
             <h1 className="h1">Basic Questions
-                <div className='progress-section'>
+                <div className='progress-section-b'>
                     <text>Progress:  </text>
                 <progress value={progress} max={100}/>
             </div></h1>

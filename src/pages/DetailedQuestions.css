@@ -62,11 +62,11 @@
     display: table;
 }
 
-.progress-section {
+.progress-section-d {
     position: fixed;
     text-align: center;
     font-size: 20px;
-    right: 1%;
+    left: 1%;
     padding-top: 0.5%;
     padding: 1%;
     background-color: lightblue;

@@ -108,7 +108,7 @@ export function DetailedQuestions():JSX.Element {
             </div>
         <div className='ListOQues'>
           <h1 className='title'>Detailed Questions
-            <div className='progress-section'>
+            <div className='progress-section-d'>
                 <text>Progress:  </text>
                 <progress value={progress} max={100}/>
             </div>
