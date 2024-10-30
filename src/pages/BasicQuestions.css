@@ -13,7 +13,12 @@
     margin-bottom: 20px;
     padding-left: 2%;
 }
-
+.question-image {
+    width: 100px; 
+    height: auto;
+    margin-left: 20px;
+    float: right;
+}
 .buttonGroup {
     display: flex;
     text-align: left;

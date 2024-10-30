@@ -1,9 +1,18 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import Confetti from 'react-confetti'
+import Confetti from 'react-confetti';
 
 import './BasicQuestions.css';
+
+// Import images with specified names and paths
+import image1 from 'src/early-college-high-school-placeholder.jpg';
+import image2 from 'src/college-classes.webp';
+import image3 from 'src/images.jpg';
+import image4 from 'src/20230729_BLP505.webp';
+import image5 from 'src/images (1).jpg';
+import image6 from 'src/shutterstock_1464234134-1024x684.jpg';
+import image7 from 'src/1703323776064.jpg';
 
 export function BasicQuestions(): JSX.Element {
     const navigate = useNavigate();
@@ -27,49 +36,49 @@ export function BasicQuestions(): JSX.Element {
     function updateAnswer1() {
         if (!q1) {
             setq1(true);
-            setProgress(progress+14);
+            setProgress(progress + 14);
             updateCompletion();
         }
     }
     function updateAnswer2() {
         if (!q2) {
             setq2(true);
-            setProgress(progress+14);
+            setProgress(progress + 14);
             updateCompletion();
         }
     }
     function updateAnswer3() {
         if (!q3) {
             setq3(true);
-            setProgress(progress+14);
+            setProgress(progress + 14);
             updateCompletion();
         }
     }
     function updateAnswer4() {
         if (!q4) {
             setq4(true);
-            setProgress(progress+14);
+            setProgress(progress + 14);
             updateCompletion();
         }
     }
     function updateAnswer5() {
         if (!q5) {
             setq5(true);
-            setProgress(progress+14);
+            setProgress(progress + 14);
             updateCompletion();
         }
     }
     function updateAnswer6() {
         if (!q6) {
             setq6(true);
-            setProgress(progress+15);
+            setProgress(progress + 15);
             updateCompletion();
         }
     }
     function updateAnswer7() {
         if (!q7) {
             setq7(true);
-            setProgress(progress+15);
+            setProgress(progress + 15);
             updateCompletion();
         }
     }
@@ -82,21 +91,23 @@ export function BasicQuestions(): JSX.Element {
 
     return (
         <div>
-            {completion && <Confetti width={window.innerWidth*.95} height={3 * window.innerHeight}/>}
+            {completion && <Confetti width={window.innerWidth * 0.95} height={3 * window.innerHeight} />}
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Go to Home</button>
             </div>
             <h1 className="h1">Basic Questions
                 <div className='progress-section-b'>
-                    <text>Progress:  </text>
-                <progress value={progress} max={100}/>
-            </div></h1>
+                    <text>Progress: </text>
+                    <progress value={progress} max={100} />
+                </div>
+            </h1>
             
             <div>
                 <div>
                     <h3>Question 1 out of 7</h3>
                     <div className='question'>
                         <h3>Which one of these best describes you?</h3>
+                        <img src={image1} alt="Question 1" className="question-image"/>
                     </div>
                     <div className='buttonGroup'>
                         {q1Arr.map((a: string) => (
@@ -115,9 +126,11 @@ export function BasicQuestions(): JSX.Element {
                 <div>
                     <h3>Question 2 out of 7</h3>
                     <div className='question'>
-                    <h3>What do you find as your favorite subject?</h3></div>
+                        <h3>What do you find as your favorite subject?</h3>
+                        <img src={image2} alt="Question 2" className="question-image"/>
+                    </div>
                     <div className='buttonGroup'>
-                    {q2Arr.map((a: string) => (
+                        {q2Arr.map((a: string) => (
                             <Form.Check
                                 type="radio"
                                 name="q2"
@@ -133,9 +146,11 @@ export function BasicQuestions(): JSX.Element {
                 <div>
                     <h3>Question 3 of 7</h3>
                     <div className='question'>
-                    <h3>What do you enjoy doing the most?</h3></div>
+                        <h3>What do you enjoy doing the most?</h3>
+                        <img src={image3} alt="Question 3" className="question-image"/>
+                    </div>
                     <div className='buttonGroup'>
-                    {q3Arr.map((a: string) => (
+                        {q3Arr.map((a: string) => (
                             <Form.Check
                                 type="radio"
                                 name="q3"
@@ -151,7 +166,9 @@ export function BasicQuestions(): JSX.Element {
                 <div>
                     <h3>Question 4 out of 7</h3>
                     <div className='question'>
-                    <h3>Which role do you find yourself in a job?</h3></div>
+                        <h3>Which role do you find yourself in a job?</h3>
+                        <img src={image4} alt="Question 4" className="question-image"/>
+                    </div>
                     <div className='buttonGroup'>
                         {q4Arr.map((a: string) => (
                             <Form.Check
@@ -169,7 +186,9 @@ export function BasicQuestions(): JSX.Element {
                 <div>
                     <h3>Question 5 out of 7</h3>
                     <div className='question'>
-                    <h3>What Best Describes yourself?</h3></div>
+                        <h3>What best describes yourself?</h3>
+                        <img src={image5} alt="Question 5" className="question-image"/>
+                    </div>
                     <div className='buttonGroup'>
                         {q5Arr.map((a: string) => (
                             <Form.Check
@@ -187,7 +206,9 @@ export function BasicQuestions(): JSX.Element {
                 <div>
                     <h3>Question 6 out of 7</h3>
                     <div className='question'>
-                    <h3>What type of work environment would you thrive in?</h3></div>
+                        <h3>What type of work environment would you thrive in?</h3>
+                        <img src={image6} alt="Question 6" className="question-image"/>
+                    </div>
                     <div className='buttonGroup'>
                         {q6Arr.map((a: string) => (
                             <Form.Check
@@ -205,7 +226,9 @@ export function BasicQuestions(): JSX.Element {
                 <div>
                     <h3>Question 7 out of 7</h3>
                     <div className='question'>
-                    <h3>What is your first priority in a job?</h3></div>
+                        <h3>What is your first priority in a job?</h3>
+                        <img src={image7} alt="Question 7" className="question-image"/>
+                    </div>
                     <div className='buttonGroup'>
                         {q7Arr.map((a: string) => (
                             <Form.Check
@@ -220,8 +243,9 @@ export function BasicQuestions(): JSX.Element {
                     </div>
                 </div>
             </div>
+
             <button onClick={() => navigate('/results')} disabled={!completion}>Get Your Results Here!</button>
-            <hr/>
+            <hr />
         </div>
     );
 }
