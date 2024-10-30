@@ -50,6 +50,9 @@
   padding-left: 3%;
   padding-right: 3%;
   text-align: left;
+  border-color: lightslategray;
+  border-radius: 5%;
+  border-style: solid;
 }
 
 .column-api-input {
