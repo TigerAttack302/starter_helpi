@@ -42,7 +42,7 @@
 }
 
 .row-api {
-  display: flex
+  display: flex;
 }
 
 .column-api {
@@ -51,8 +51,9 @@
   padding-right: 3%;
   text-align: left;
   border-color: lightslategray;
-  border-radius: 5%;
+  border-radius: 8%;
   border-style: solid;
+  background-color: rgb(210, 236, 244);
 }
 
 .column-api-input {
