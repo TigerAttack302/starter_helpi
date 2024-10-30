@@ -1,126 +1,288 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button, Form } from 'react-bootstrap';
+
+
+import Confetti from 'react-confetti'
+
+import { Col, Container, Form, Row } from 'react-bootstrap';
+//import f0f from './DetailedQuestionPictures/IMG.png';
+import full from './DetailedQuestionPictures/images.jpg';
+import principles from './DetailedQuestionPictures/download.jpg';
+import inspire from './DetailedQuestionPictures/inspirejpg.jpg';
+import strong from './DetailedQuestionPictures/stronk.jpg';
+import earth from './DetailedQuestionPictures/earth.jpg';
+import success from './DetailedQuestionPictures/images (1).jpg';
+import goal from './DetailedQuestionPictures/goal.png';
+
 import './DetailedQuestions.css';
 
 export function DetailedQuestions():JSX.Element {
     const navigate = useNavigate();
-    const [ans1, setAns1] = useState<string>("Input Answer");
+    const [ans1, setAns1] = useState<string>("");
+    const [progress, setProgress] = useState<number>(0);
+    const [completion, setCompletion] = useState<boolean>(false);
+    const [q1, setq1] = useState<boolean>(false);
+    const [q2, setq2] = useState<boolean>(false);
+    const [q3, setq3] = useState<boolean>(false);
+    const [q4, setq4] = useState<boolean>(false);
+    const [q5, setq5] = useState<boolean>(false);
+    const [q6, setq6] = useState<boolean>(false);
+    const [q7, setq7] = useState<boolean>(false);
+
     function UpdateAns1(event: React.ChangeEvent<HTMLInputElement>){
         setAns1(event.target.value);
-      }
-    
+        if (!q1) {
+          setq1(true);
+          setProgress(progress+14);
+        }
+        updateCompletion();
+    }
 
-      const [ans2, setAns2] = useState<string>("Input Answer");
+    const [ans2, setAns2] = useState<string>("");
     function UpdateAns2(event: React.ChangeEvent<HTMLInputElement>){
         setAns2(event.target.value);
-      }
+        if (!q2) {
+          setq2(true);
+          setProgress(progress+14);
+        }
+        updateCompletion();
+    }
 
-      const [ans3, setAns3] = useState<string>("Input Answer");
+    const [ans3, setAns3] = useState<string>("");
     function UpdateAns3(event: React.ChangeEvent<HTMLInputElement>){
         setAns3(event.target.value);
-      }
-      const [ans4, setAns4] = useState<string>("Input Answer");
+        if (!q3) {
+          setq3(true);
+          setProgress(progress+14);
+        }
+        updateCompletion();
+    }
+    const [ans4, setAns4] = useState<string>("");
     function UpdateAns4(event: React.ChangeEvent<HTMLInputElement>){
         setAns4(event.target.value);
-      }
-      const [ans5, setAns5] = useState<string>("Input Answer");
+        if (!q4) {
+          setq4(true);
+          setProgress(progress+14);
+        }
+        updateCompletion();
+    }
+    const [ans5, setAns5] = useState<string>("");
     function UpdateAns5(event: React.ChangeEvent<HTMLInputElement>){
         setAns5(event.target.value);
-      }
-      const [ans6, setAns6] = useState<string>("Input Answer");
+        if (!q5) {
+          setq5(true);
+          setProgress(progress+14);
+        }
+        updateCompletion();
+    }
+    const [ans6, setAns6] = useState<string>("");
     function UpdateAns6(event: React.ChangeEvent<HTMLInputElement>){
         setAns6(event.target.value);
-      }
-      const [ans7, setAns7] = useState<string>("Input Answer");
+        if (!q6) {
+          setq6(true);
+          setProgress(progress+15);
+        }
+        updateCompletion();
+    }
+    const [ans7, setAns7] = useState<string>("");
     function UpdateAns7(event: React.ChangeEvent<HTMLInputElement>){
         setAns7(event.target.value);
+        if (!q7) {
+          setq7(true);
+          setProgress(progress+15);
+        }
+        updateCompletion();
+    }
+      
+    function updateCompletion() {
+      if (progress >= 85) {
+          setCompletion(true);
       }
-    return <div className='detailedQuestions'>
-      <header className='compass'>
-        <Form.Group className='top'>
-        <Button onClick={() => navigate('/detailed-questions')}>Detailed Questions</Button>
-        <Button onClick={() => navigate('/')}>Home</Button>
-        <Button onClick={() => navigate('/basic-questions')}>Basic Questions</Button>
-        </Form.Group>
-      </header>
+    }
+    
+    return (
+    <div className='detailedQuestions'>
+      {completion && <Confetti width={window.innerWidth*.95} height={window.innerHeight*1.1}/>}
+            <div className='home-button'>
+                <button onClick={() => navigate('/')}>Go to Home</button>
+            </div>
         <div className='ListOQues'>
-          <h1 className='title'>Detailed Questions</h1>
+          <h1 className='title'>Detailed Questions
+            <div className='progress-section-d'>
+                <text>Progress:  </text>
+                <progress value={progress} max={100}/>
+            </div>
+          </h1>
         <Form.Group className="DetailedQues" controlId="DQlist">
+        <Container className='lowercontainer'>
+        <hr/>
+          <Row>
           <text>
-            Q1: If you were to be given an elephant as well as access to take care of the elephant, How would you use the elephant for business purposes?
+          Q1. What activities or tasks make you feel the most energized and fulfilled, and why?
           </text>
+                <Col>
           <Form.Control
             className='textbox'
             value={ans1}
             onChange={UpdateAns1}
             role="textbox"
+            placeholder='Input Text'
+            as="textarea"
             />
+            </Col>
+                <Col>
+                <img
+                  src={full}
+                  alt="img not found"
+                  className='IMG'
+                />
+                </Col> 
+              </Row>
+            <hr/>
             <text>
-            Q2: Lets say that you work with a part of government which plant trees. The government wants to make planting trees efficient and healthy for the environment as well as gather funding from wealthy investors. What would you and a group you are leading going to do?
+            Q2. What are your top three strengths or skills, and how do you apply them in your daily life?
             </text>
-          <Form.Control
-            className='textbox'
-            value={ans2}
-            onChange={UpdateAns2}
-            role="textbox"
-            />
-
+              <Row>
+                <Col>
+                  <Form.Control
+                    className='textbox'
+                    as="textarea"
+                    value={ans2}
+                    onChange={UpdateAns2}
+                    role="textbox"
+                    placeholder='Input Text'
+                  />
+                </Col>
+                <Col>
+                <img
+                  src={strong}
+                  alt="img not found"
+                  className='IMG'
+                />
+                </Col> 
+              </Row>
+          
+          <hr />
             <text>
-              Q3: Lets say that there was a company that is having a lawsuit because one of their products they had been selling had been causing a new form of cancer because of the new type of ink that they put in their pens. What do you see yourself doing in the courtroom?
+            Q3. What are the values or principles that are most important to you in a work environment?
             </text>
+            <Row>
+                <Col>
             <Form.Control
+              as="textarea"
               className='textbox'
               value={ans3}
               onChange={UpdateAns3}
-              role="textbox"
+              placeholder='Input Text'
               />
-
+            </Col>
+                <Col>
+                <img
+                  src={principles}
+                  alt="img not found"
+                  className='IMG'
+                />
+                </Col> 
+            </Row>
+            <hr/>
             <text>
-            Q4: Lets say that you are a manager. You start to see that during this quartile the amount of work that is being completed per week is decreasing. What would you look at and question to make sure that the efficiency is staying the same and explain why.
+            Q4. What types of challenges or problems do you enjoy solving, and what makes them appealing?
             </text>
+            <Row>
+                <Col>
             <Form.Control
               className='textbox'
               value={ans4}
               onChange={UpdateAns4}
-              role="textbox"
+              as="textarea"
+              placeholder='Input Text'
               />
-
+              </Col>
+                <Col>
+                <img
+                  src={inspire}
+                  alt="img not found"
+                  className='IMG'
+                />
+                </Col> 
+            </Row>
+            <hr/>
             <text>
-            Q5: Lets say that there is a group of people who are getting taken advantage of, without their permission, and there is a way that would help these people already known but, it costs lots of money and attention. If you were a manager and you and your team were tasked with helping these people what would you do and why?
+            Q5. What kind of impact do you want your work to have on others or the world?
             </text>
+            <Row>
+                <Col>
             <Form.Control
               className='textbox'
               value={ans5}
               onChange={UpdateAns5}
               role="textbox"
+              placeholder='Input Text'
+              as="textarea"
               />
-
+              </Col>
+                <Col>
+                <img
+                  src={earth}
+                  alt="img not found"
+                  className='IMG'
+                />
+                </Col> 
+            </Row>
+            <hr/>
             <text>
-            Q6: Lets say that you are one of the managers inside of a company that works on retrieving golf balls from inside of ponds and lakes on golf courses. What way would you work on this job?
+            Q6. What are your financial goals and lifestyle preferences, and how do they influence your career choices?
             </text>
+            <Row>
+                <Col>
             <Form.Control
               className='textbox'
               value={ans6}
               onChange={UpdateAns6}
               role="textbox"
+              as="textarea"
+              placeholder='Input Text'
               />
-
+              </Col>
+                <Col>
+                <img
+                  src={goal}
+                  alt="img not found"
+                  className='IMG'
+                />
+                </Col> 
+            </Row>
+            <hr/>
             <text>
-            Q7: You are a city planner and there is a well known orchestra that is going to play in your city but the issue is that there isn't a venue big enough to hold the orchestra. How would you allow a large audience to hear the music including in-person.
+            Q7. How do you define success in your career, and what will make you feel you’ve achieved it?
             </text>
+            <Row>
+                <Col>
             <Form.Control
               className='textbox'
               value={ans7}
               onChange={UpdateAns7}
               role="textbox"
+              as="textarea"
+              placeholder='Input Text'
               />
+              </Col>
+                <Col>
+                <img
+                  src={success}
+                  alt="img not found"
+                  className='IMG'
+                />
+                </Col> 
+            </Row>
+          </Container>
       </Form.Group>
         </div>
         
 
         <div className='submitButton'>
-        <Button >Submit answers</Button>
+        <button onClick={() => navigate('/results')} disabled={!completion}>Get Your Results Here!</button>
         </div>
-    </div>;
-}
+        <hr/>
+    </div>
+)}

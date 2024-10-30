@@ -1,3 +1,9 @@
+.home-button {
+    background-color: lightcoral;
+    padding: 1%;
+    text-align: left;
+}
+
 .top button{
     /*You need to specify the class name the App.css file*/
     /*below does pointer hand icon*/
@@ -20,16 +26,20 @@
     padding: 10px 20px;
 }
 .title{
-    text-align: left;
-    padding: 2% 1%;
+    padding: 1%;
 }
 /* This is working with the size of the textbox --- Later I want to implement the horizontal scrolling */
 .textbox{
-    width: 40%; /* Change width as needed */
-    height: 15%; /* Change height for <input>, or use min-height for <textarea> */
+    width: 100%; /* not changeable width */
+    height: 100%; /*  */
     padding: 20px; /* Inner spacing */
     font-size: 11px; /* Text size */
     text-align:left;
+    overflow-x: none;
+    overflow-y: scroll;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-left: 50px;
 }
 .listOQues text{
     font-size: x-large;
@@ -50,4 +60,36 @@
     content: "";
     clear:both;
     display: table;
+}
+
+.progress-section-d {
+    position: fixed;
+    text-align: center;
+    font-size: 20px;
+    left: 1%;
+    padding-top: 0.5%;
+    padding: 1%;
+    background-color: lightblue;
+    border-color: lightblue;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.lowerContainer{
+    display:flex;
+    align-items: center;
+    width: 90%;
+    height: 14%;
+
+
+}
+
+.lowerContainer row{
+    border: 1px solid black;
+}
+
+.IMG{
+    width: 50%;
+    height: 100%;
+    transform: translate( 100%, -1%);
 }
