@@ -22,10 +22,12 @@ function App() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
     window.location.reload(); //when making a mistake and changing the key again, I found that I have to reload the whole site before openai refreshes what it has stores for the local storage variable
   }
+
   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
+
   return (
     <div className="App">
       <HashRouter>
@@ -37,13 +39,26 @@ function App() {
         </Routes>
       </HashRouter>
       <footer className='footer'>
-      <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
-        <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
-      </Form>
+        <div className='row-api'>
+          <div className='column-api'>
+            <p>
+              <br/>
+              Our questions use ChatGPT in order to maximize the accuracy of our assessment and to pick out the perfect
+              career for you. Make sure to input your API key before taking our assessment to ensure ChatGPT can utilize
+              your results.
+            </p>
+          </div>
+          <div className='column-api-input'>
+            <Form>
+              <Form.Label>API Key:</Form.Label>
+              <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+              <br/>
+              <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+            </Form>
+          </div>
+        </div>
       </footer>
+      
     </div>
   );
 }
