@@ -16,6 +16,13 @@ export function BasicQuestions(): JSX.Element {
     const [q5, setq5] = useState<boolean>(false);
     const [q6, setq6] = useState<boolean>(false);
     const [q7, setq7] = useState<boolean>(false);
+    const [q1ans, setq1ans] = useState<string>("");
+    const [q2ans, setq2ans] = useState<string>("");
+    const [q3ans, setq3ans] = useState<string>("");
+    const [q4ans, setq4ans] = useState<string>("");
+    const [q5ans, setq5ans] = useState<string>("");
+    const [q6ans, setq6ans] = useState<string>("");
+    const [q7ans, setq7ans] = useState<string>("");
     const q1Arr = ["High School Student", "College Student", "Graduated", "None of the Above"];
     const q2Arr = ["Math/Science","Arts/Creative Thinking", "Computer Science", "Business/Economics"];
     const q3Arr = ["Solving complex problems","Helping Others","Designing / Creative Thinking", "Analyzing data"];
@@ -23,6 +30,8 @@ export function BasicQuestions(): JSX.Element {
     const q5Arr = ["Hardworker", "Smart", "Accountable", "Versatile"];
     const q6Arr = ["Collaborative team setting", "Quiet and independent", "Structures / Organized setting", "Fast / Dynamic setting"];
     const q7Arr = ["Career Development", "Salary / Benefits", "Work Environment", "Company's Reputation"];
+    const [response, setResponse] = useState<string>("I'm taking a career assessment test. Here are my questions and answers. Based on these questions and answers, what is the best career for me? ");
+
 
     function updateAnswer1() {
         if (!q1) {
@@ -78,6 +87,10 @@ export function BasicQuestions(): JSX.Element {
         if (progress >= 85) {
             setCompletion(true);
         }
+    }
+
+    function updateResponse() {
+        setResponse();
     }
 
     return (
