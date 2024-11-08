@@ -86,7 +86,7 @@ export function BasicQuestions(): JSX.Element {
         setResponse(response
             + "Level of education: " + q1
             + "; Favorite subject: " + q2
-            + "; I enjoy: " + q3 + "\n"
+            + "; I enjoy: " + q3
             + "; Preferred job role: " + q4
             + "; I'd describe myself as: " + q5
             + "; Preferred work environment: " + q6
@@ -234,9 +234,9 @@ export function BasicQuestions(): JSX.Element {
                     </div>
                 </div>
             </div>
-            <button onClick={() => submitResults()} disabled={!completion}>Get Your Results Here!</button>
-            <hr/>
+            <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>
             {response}
+            <hr/>
         </div>
     );
 }
