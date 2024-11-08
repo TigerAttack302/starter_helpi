@@ -23,7 +23,7 @@ export function BasicQuestions(): JSX.Element {
     const q5Arr = ["Hardworker", "Smart", "Accountable", "Versatile"];
     const q6Arr = ["Collaborative team setting", "Quiet and independent", "Structures / Organized setting", "Fast / Dynamic setting"];
     const q7Arr = ["Career Development", "Salary / Benefits", "Work Environment", "Company's Reputation"];
-    const [response, setResponse] = useState<string>("I'm taking a career assessment test. Here are my questions and answers. Based on these questions and answers, what is the best career for me? ");
+    const [response, setResponse] = useState<string>("Given the following prompts and answers, what is the best career for me? ");
 
 
     function updateAnswer1(a: string) {
@@ -80,6 +80,18 @@ export function BasicQuestions(): JSX.Element {
         if (progress >= 85) {
             setCompletion(true);
         }
+    }
+
+    function submitResults() {
+        setResponse(response
+            + "Level of education: " + q1
+            + "; Favorite subject: " + q2
+            + "; I enjoy: " + q3 + "\n"
+            + "; Preferred job role: " + q4
+            + "; I'd describe myself as: " + q5
+            + "; Preferred work environment: " + q6
+            + "; First priority when choosing a job: " + q7)
+        //navigate('/results')
     }
 
     return (
@@ -222,8 +234,9 @@ export function BasicQuestions(): JSX.Element {
                     </div>
                 </div>
             </div>
-            <button onClick={() => navigate('/results')} disabled={!completion}>Get Your Results Here!</button>
+            <button onClick={() => submitResults()} disabled={!completion}>Get Your Results Here!</button>
             <hr/>
+            {response}
         </div>
     );
 }
