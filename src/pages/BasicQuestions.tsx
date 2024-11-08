@@ -91,7 +91,7 @@ export function BasicQuestions(): JSX.Element {
             + "; I'd describe myself as: " + q5
             + "; Preferred work environment: " + q6
             + "; First priority when choosing a job: " + q7)
-        //navigate('/results')
+        navigate('/results')
     }
 
     return (
@@ -235,7 +235,6 @@ export function BasicQuestions(): JSX.Element {
                 </div>
             </div>
             <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>
-            {response}
             <hr/>
         </div>
     );

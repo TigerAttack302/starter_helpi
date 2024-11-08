@@ -20,7 +20,7 @@ export function DetailedQuestions():JSX.Element {
     const navigate = useNavigate();
     const [progress, setProgress] = useState<number>(0);
     const [completion, setCompletion] = useState<boolean>(false);
-    const [response, setResponse] = useState<string>("Given the following prompts and answers, what is the best career for me? ");
+    const [response, setResponse] = useState<string>("Given the following questions and answers, what is the best career for me? ");
 
     const [ans1, setAns1] = useState<string>("");
     function UpdateAns1(event: React.ChangeEvent<HTMLInputElement>){
@@ -90,13 +90,13 @@ export function DetailedQuestions():JSX.Element {
     function submitResults() {
       setResponse(response
           + "What activities or tasks make you feel the most energized and fulfilled, and why? " + ans1
-          + ";  " + ans2
-          + ";  " + ans3
-          + ";  " + ans4
-          + ";  " + ans5
-          + ";  " + ans6
-          + ";  " + ans7)
-      //navigate('/results')
+          + "; What are your top three strengths or skills, and how do you apply them in your daily life? " + ans2
+          + "; What are the values or principles that are most important to you in a work environment? " + ans3
+          + "; What types of challenges or problems do you enjoy solving, and what makes them appealing? " + ans4
+          + "; What kind of impact do you want your work to have on others or the world? " + ans5
+          + "; What are your financial goals and lifestyle preferences, and how do they influence your career choices? " + ans6
+          + "; How do you define success in your career, and what will make you feel you’ve achieved it? " + ans7)
+      navigate('/results')
   }
     
     return (
@@ -282,7 +282,6 @@ export function DetailedQuestions():JSX.Element {
         <div className='submitButton'>
         <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>
         </div>
-        {response}
         <hr/>
     </div>
 )}
