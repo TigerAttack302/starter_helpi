@@ -9,20 +9,13 @@ export function BasicQuestions(): JSX.Element {
     const navigate = useNavigate();
     const [progress, setProgress] = useState<number>(0);
     const [completion, setCompletion] = useState<boolean>(false);
-    const [q1, setq1] = useState<boolean>(false);
-    const [q2, setq2] = useState<boolean>(false);
-    const [q3, setq3] = useState<boolean>(false);
-    const [q4, setq4] = useState<boolean>(false);
-    const [q5, setq5] = useState<boolean>(false);
-    const [q6, setq6] = useState<boolean>(false);
-    const [q7, setq7] = useState<boolean>(false);
-    const [q1ans, setq1ans] = useState<string>("");
-    const [q2ans, setq2ans] = useState<string>("");
-    const [q3ans, setq3ans] = useState<string>("");
-    const [q4ans, setq4ans] = useState<string>("");
-    const [q5ans, setq5ans] = useState<string>("");
-    const [q6ans, setq6ans] = useState<string>("");
-    const [q7ans, setq7ans] = useState<string>("");
+    const [q1, setq1] = useState<string>("");
+    const [q2, setq2] = useState<string>("");
+    const [q3, setq3] = useState<string>("");
+    const [q4, setq4] = useState<string>("");
+    const [q5, setq5] = useState<string>("");
+    const [q6, setq6] = useState<string>("");
+    const [q7, setq7] = useState<string>("");
     const q1Arr = ["High School Student", "College Student", "Graduated", "None of the Above"];
     const q2Arr = ["Math/Science","Arts/Creative Thinking", "Computer Science", "Business/Economics"];
     const q3Arr = ["Solving complex problems","Helping Others","Designing / Creative Thinking", "Analyzing data"];
@@ -33,64 +26,60 @@ export function BasicQuestions(): JSX.Element {
     const [response, setResponse] = useState<string>("I'm taking a career assessment test. Here are my questions and answers. Based on these questions and answers, what is the best career for me? ");
 
 
-    function updateAnswer1() {
+    function updateAnswer1(a: string) {
         if (!q1) {
-            setq1(true);
             setProgress(progress+14);
             updateCompletion();
         }
+        setq1(a);
     }
-    function updateAnswer2() {
+    function updateAnswer2(a: string) {
         if (!q2) {
-            setq2(true);
             setProgress(progress+14);
             updateCompletion();
         }
+        setq2(a);
     }
-    function updateAnswer3() {
+    function updateAnswer3(a: string) {
         if (!q3) {
-            setq3(true);
             setProgress(progress+14);
             updateCompletion();
         }
+        setq3(a);
     }
-    function updateAnswer4() {
+    function updateAnswer4(a: string) {
         if (!q4) {
-            setq4(true);
             setProgress(progress+14);
             updateCompletion();
         }
+        setq4(a);
     }
-    function updateAnswer5() {
+    function updateAnswer5(a: string) {
         if (!q5) {
-            setq5(true);
             setProgress(progress+14);
             updateCompletion();
         }
+        setq5(a);
     }
-    function updateAnswer6() {
+    function updateAnswer6(a: string) {
         if (!q6) {
-            setq6(true);
             setProgress(progress+15);
             updateCompletion();
         }
+        setq6(a);
     }
-    function updateAnswer7() {
+    function updateAnswer7(a: string) {
         if (!q7) {
-            setq7(true);
             setProgress(progress+15);
             updateCompletion();
         }
+        setq7(a);
     }
 
     function updateCompletion() {
         if (progress >= 85) {
             setCompletion(true);
         }
-    }
-
-    function updateResponse() {
-        setResponse();
     }
 
     return (
@@ -116,7 +105,7 @@ export function BasicQuestions(): JSX.Element {
                             <Form.Check
                                 type="radio"
                                 name="q1"
-                                onChange={updateAnswer1}
+                                onChange={() => updateAnswer1(a)}
                                 label={a}
                                 key={a}
                                 value={a}
@@ -134,7 +123,7 @@ export function BasicQuestions(): JSX.Element {
                             <Form.Check
                                 type="radio"
                                 name="q2"
-                                onChange={updateAnswer2}
+                                onChange={() => updateAnswer2(a)}
                                 label={a}
                                 key={a}
                                 value={a}
@@ -152,7 +141,7 @@ export function BasicQuestions(): JSX.Element {
                             <Form.Check
                                 type="radio"
                                 name="q3"
-                                onChange={updateAnswer3}
+                                onChange={() => updateAnswer3(a)}
                                 label={a}
                                 key={a}
                                 value={a}
@@ -170,7 +159,7 @@ export function BasicQuestions(): JSX.Element {
                             <Form.Check
                                 type="radio"
                                 name="q4"
-                                onChange={updateAnswer4}
+                                onChange={() => updateAnswer4(a)}
                                 label={a}
                                 key={a}
                                 value={a}
@@ -188,7 +177,7 @@ export function BasicQuestions(): JSX.Element {
                             <Form.Check
                                 type="radio"
                                 name="q5"
-                                onChange={updateAnswer5}
+                                onChange={() => updateAnswer5(a)}
                                 label={a}
                                 key={a}
                                 value={a}
@@ -206,7 +195,7 @@ export function BasicQuestions(): JSX.Element {
                             <Form.Check
                                 type="radio"
                                 name="q6"
-                                onChange={updateAnswer6}
+                                onChange={() => updateAnswer6(a)}
                                 label={a}
                                 key={a}
                                 value={a}
@@ -224,7 +213,7 @@ export function BasicQuestions(): JSX.Element {
                             <Form.Check
                                 type="radio"
                                 name="q7"
-                                onChange={updateAnswer7}
+                                onChange={() => updateAnswer7(a)}
                                 label={a}
                                 key={a}
                                 value={a}
