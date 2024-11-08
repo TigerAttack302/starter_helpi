@@ -102,7 +102,7 @@ export function DetailedQuestions():JSX.Element {
     
     return (
     <div className='detailedQuestions'>
-      {completion && <Confetti width={window.innerWidth*.95} height={window.innerHeight*1.1}/>}
+      {completion && <Confetti width={window.innerWidth} height={document.body.scrollHeight}/>}
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Go to Home</button>
             </div>
