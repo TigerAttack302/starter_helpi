@@ -18,21 +18,14 @@ import './DetailedQuestions.css';
 
 export function DetailedQuestions():JSX.Element {
     const navigate = useNavigate();
-    const [ans1, setAns1] = useState<string>("");
     const [progress, setProgress] = useState<number>(0);
     const [completion, setCompletion] = useState<boolean>(false);
-    const [q1, setq1] = useState<boolean>(false);
-    const [q2, setq2] = useState<boolean>(false);
-    const [q3, setq3] = useState<boolean>(false);
-    const [q4, setq4] = useState<boolean>(false);
-    const [q5, setq5] = useState<boolean>(false);
-    const [q6, setq6] = useState<boolean>(false);
-    const [q7, setq7] = useState<boolean>(false);
+    const [response, setResponse] = useState<string>("Given the following questions and answers, what is the best career for me? ");
 
+    const [ans1, setAns1] = useState<string>("");
     function UpdateAns1(event: React.ChangeEvent<HTMLInputElement>){
         setAns1(event.target.value);
-        if (!q1) {
-          setq1(true);
+        if (!ans1) {
           setProgress(progress+14);
         }
         updateCompletion();
@@ -41,8 +34,7 @@ export function DetailedQuestions():JSX.Element {
     const [ans2, setAns2] = useState<string>("");
     function UpdateAns2(event: React.ChangeEvent<HTMLInputElement>){
         setAns2(event.target.value);
-        if (!q2) {
-          setq2(true);
+        if (!ans2) {
           setProgress(progress+14);
         }
         updateCompletion();
@@ -51,8 +43,7 @@ export function DetailedQuestions():JSX.Element {
     const [ans3, setAns3] = useState<string>("");
     function UpdateAns3(event: React.ChangeEvent<HTMLInputElement>){
         setAns3(event.target.value);
-        if (!q3) {
-          setq3(true);
+        if (!ans3) {
           setProgress(progress+14);
         }
         updateCompletion();
@@ -60,8 +51,7 @@ export function DetailedQuestions():JSX.Element {
     const [ans4, setAns4] = useState<string>("");
     function UpdateAns4(event: React.ChangeEvent<HTMLInputElement>){
         setAns4(event.target.value);
-        if (!q4) {
-          setq4(true);
+        if (!ans4) {
           setProgress(progress+14);
         }
         updateCompletion();
@@ -69,8 +59,7 @@ export function DetailedQuestions():JSX.Element {
     const [ans5, setAns5] = useState<string>("");
     function UpdateAns5(event: React.ChangeEvent<HTMLInputElement>){
         setAns5(event.target.value);
-        if (!q5) {
-          setq5(true);
+        if (!ans5) {
           setProgress(progress+14);
         }
         updateCompletion();
@@ -78,8 +67,7 @@ export function DetailedQuestions():JSX.Element {
     const [ans6, setAns6] = useState<string>("");
     function UpdateAns6(event: React.ChangeEvent<HTMLInputElement>){
         setAns6(event.target.value);
-        if (!q6) {
-          setq6(true);
+        if (!ans6) {
           setProgress(progress+15);
         }
         updateCompletion();
@@ -87,8 +75,7 @@ export function DetailedQuestions():JSX.Element {
     const [ans7, setAns7] = useState<string>("");
     function UpdateAns7(event: React.ChangeEvent<HTMLInputElement>){
         setAns7(event.target.value);
-        if (!q7) {
-          setq7(true);
+        if (!ans7) {
           setProgress(progress+15);
         }
         updateCompletion();
@@ -99,10 +86,22 @@ export function DetailedQuestions():JSX.Element {
           setCompletion(true);
       }
     }
+
+    function submitResults() {
+      setResponse(response
+          + "What activities or tasks make you feel the most energized and fulfilled, and why? " + ans1
+          + "; What are your top three strengths or skills, and how do you apply them in your daily life? " + ans2
+          + "; What are the values or principles that are most important to you in a work environment? " + ans3
+          + "; What types of challenges or problems do you enjoy solving, and what makes them appealing? " + ans4
+          + "; What kind of impact do you want your work to have on others or the world? " + ans5
+          + "; What are your financial goals and lifestyle preferences, and how do they influence your career choices? " + ans6
+          + "; How do you define success in your career, and what will make you feel you’ve achieved it? " + ans7)
+      navigate('/results')
+  }
     
     return (
     <div className='detailedQuestions'>
-      {completion && <Confetti width={window.innerWidth*.95} height={window.innerHeight*1.1}/>}
+      {completion && <Confetti width={window.innerWidth} height={document.body.scrollHeight}/>}
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Go to Home</button>
             </div>
@@ -281,7 +280,7 @@ export function DetailedQuestions():JSX.Element {
         
 
         <div className='submitButton'>
-        <button onClick={() => navigate('/results')} disabled={!completion}>Get Your Results Here!</button>
+        <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>
         </div>
         <hr/>
     </div>
