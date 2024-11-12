@@ -1,9 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Results.css';
+import './Results-Detailed.css';
 
 import {Form} from 'react-bootstrap';
-import './Results.css';
 
 import './DetailedQuestions';
 
@@ -94,7 +93,7 @@ export async function sendAnswers(Input:string): Promise<void> {
 
 //------------------------------------------------------------------
 
-export function Results():JSX.Element {
+export function ResultsDetailed():JSX.Element {
     const navigate = useNavigate();
 
     return (

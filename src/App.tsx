@@ -5,7 +5,8 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { BasicQuestions } from './pages/BasicQuestions';
 import { DetailedQuestions } from './pages/DetailedQuestions';
-import { Results } from './pages/Results';
+import { ResultsDetailed } from './pages/Results-Detailed';
+import { ResultsBasic } from './pages/Results-Basic';
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 export let keyData = "";
@@ -36,7 +37,8 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/basic-questions" element={<BasicQuestions/>}/>
         <Route path="/detailed-questions" element={<DetailedQuestions/>}/>
-        <Route path="/results" element={<Results/>}/>
+        <Route path="/results-detailed" element={<ResultsDetailed/>}/>
+        <Route path="/results-basic" element={<ResultsBasic/>}/>
         </Routes>
       </HashRouter>
       <footer className='footer'>
