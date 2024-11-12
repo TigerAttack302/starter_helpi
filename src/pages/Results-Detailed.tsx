@@ -1,18 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Results-Detailed.css';
-
-import {Form} from 'react-bootstrap';
-
-import './DetailedQuestions';
-
-//-------------------------------------------------------------------------------------------------
 import axios from 'axios';
-import { keyData } from '../App';
+
+import { useNavigate } from 'react-router-dom';
+import { Form } from 'react-bootstrap';
+
 import { getResponse } from './DetailedQuestions';
+import { keyData } from '../App';
 
-
-
+import './Results-Detailed.css';
+import './DetailedQuestions';
 
 async function sendMessage(): Promise<void> {
     const userInput = (document.getElementById('user-input') as HTMLInputElement).value;
@@ -86,10 +82,8 @@ export async function sendAnswers(Input:string): Promise<void> {
     }
 }
 
-
-// Make the sendMessage function available globally
+// Make the sendAnswers function available globally
 (window as any).sendAnswers = sendAnswers;
-
 
 //------------------------------------------------------------------
 
@@ -105,10 +99,12 @@ export function ResultsDetailed():JSX.Element {
         <text>{getResponse()}</text>
         <button onClick= {() => sendAnswers(getResponse())} >Send</button>
         <div id="response"></div>
+        <hr/>
         <Form.Control type="textarea" id="user-input" placeholder="Type your message here..."/>
         <div id="response1"></div>
         <button onClick= {() => sendMessage()} >Send</button>
         <script src="script.js" defer></script>
+        <hr/>
         </div>
     )
 }

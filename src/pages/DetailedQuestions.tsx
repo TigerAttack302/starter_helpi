@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
-
-
-import Confetti from 'react-confetti'
-
 import { Col, Container, Form, Row } from 'react-bootstrap';
+
 import full from './DetailedQuestionPictures/images.jpg';
 import principles from './DetailedQuestionPictures/download.jpg';
 import inspire from './DetailedQuestionPictures/inspirejpg.jpg';
@@ -12,6 +10,7 @@ import strong from './DetailedQuestionPictures/stronk.jpg';
 import earth from './DetailedQuestionPictures/earth.jpg';
 import success from './DetailedQuestionPictures/images (1).jpg';
 import goal from './DetailedQuestionPictures/goal.png';
+import Confetti from 'react-confetti'
 
 import './DetailedQuestions.css';
 

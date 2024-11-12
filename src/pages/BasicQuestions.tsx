@@ -5,6 +5,11 @@ import Confetti from 'react-confetti'
 
 import './BasicQuestions.css';
 
+let finalResponses: string;
+export function getResponse(){
+    return finalResponses;
+}
+
 export function BasicQuestions(): JSX.Element {
     const navigate = useNavigate();
     const [progress, setProgress] = useState<number>(0);
@@ -90,8 +95,17 @@ export function BasicQuestions(): JSX.Element {
             + "; Preferred job role: " + q4
             + "; I'd describe myself as: " + q5
             + "; Preferred work environment: " + q6
-            + "; First priority when choosing a job: " + q7)
-        navigate('/results-basic')
+            + "; First priority when choosing a job: " + q7);
+        finalResponses = (
+            response
+            + "Level of education: " + q1
+            + "; Favorite subject: " + q2
+            + "; I enjoy: " + q3
+            + "; Preferred job role: " + q4
+            + "; I'd describe myself as: " + q5
+            + "; Preferred work environment: " + q6
+            + "; First priority when choosing a job: " + q7);
+        navigate('/results-basic');
     }
 
     return (

@@ -13,7 +13,7 @@ export function Home():JSX.Element {
                     <h1 className="header">Basic Questions</h1>
                     <br />
                     <div className="description">
-                        <p>This basic career questionaire gives you a short, concise quiz with quick and simple questions.
+                        <p>This basic career questionaire gives you a short, concise quiz with quick and easy-to-answer questions.
                             The design of this quiz is to give you an easy, generalized way to figure out the best career choice
                             for you.
                         </p>
