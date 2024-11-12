@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
 
 import { useNavigate } from 'react-router-dom';
@@ -90,14 +90,16 @@ export async function sendAnswers(Input:string): Promise<void> {
 export function ResultsDetailed():JSX.Element {
     const navigate = useNavigate();
 
+    useEffect(() => {
+        sendAnswers(getResponse());
+    }, [])
+
     return (
         <div>
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Back to Home</button>
             </div>
             <hr/>
-        <text>{getResponse()}</text>
-        <button onClick= {() => sendAnswers(getResponse())} >Send</button>
         <div id="response"></div>
         <hr/>
         <Form.Control type="textarea" id="user-input" placeholder="Type your message here..."/>
