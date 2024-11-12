@@ -108,7 +108,7 @@ export function DetailedQuestions():JSX.Element {
       + "; What kind of impact do you want your work to have on others or the world? " + ans5
       + "; What are your financial goals and lifestyle preferences, and how do they influence your career choices? " + ans6
       + "; How do you define success in your career, and what will make you feel you’ve achieved it? " + ans7);
-      navigate('/results');
+      navigate('/results-detailed');
   }
     return (
     <div className='detailedQuestions'>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Results-Detailed.css';
+import './Results-Basic.css';
 import './BasicQuestions';
 
 export function ResultsBasic():JSX.Element {

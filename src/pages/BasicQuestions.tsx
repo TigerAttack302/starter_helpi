@@ -91,7 +91,7 @@ export function BasicQuestions(): JSX.Element {
             + "; I'd describe myself as: " + q5
             + "; Preferred work environment: " + q6
             + "; First priority when choosing a job: " + q7)
-        navigate('/results')
+        navigate('/results-basic')
     }
 
     return (
