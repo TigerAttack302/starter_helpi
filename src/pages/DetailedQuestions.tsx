@@ -127,7 +127,9 @@ export function DetailedQuestions():JSX.Element {
             role="textbox"
             placeholder='Input Text'
             as="textarea"
+            maxLength={450}
             />
+            <text className='textboxIndicator'>{ans1.length}/450</text>
             </Col>
                 <Col>
                 <img
@@ -150,7 +152,9 @@ export function DetailedQuestions():JSX.Element {
                     onChange={UpdateAns2}
                     role="textbox"
                     placeholder='Input Text'
+                    maxLength={450}
                   />
+                  <text className='textboxIndicator'>{ans2.length}/450</text>
                 </Col>
                 <Col>
                 <img
@@ -173,7 +177,9 @@ export function DetailedQuestions():JSX.Element {
               value={ans3}
               onChange={UpdateAns3}
               placeholder='Input Text'
+              maxLength={450}
               />
+              <text className='textboxIndicator'>{ans3.length}/450</text>
             </Col>
                 <Col>
                 <img
@@ -195,7 +201,9 @@ export function DetailedQuestions():JSX.Element {
               onChange={UpdateAns4}
               as="textarea"
               placeholder='Input Text'
+              maxLength={450}
               />
+              <text className='textboxIndicator'>{ans4.length}/450</text>
               </Col>
                 <Col>
                 <img
@@ -218,7 +226,9 @@ export function DetailedQuestions():JSX.Element {
               role="textbox"
               placeholder='Input Text'
               as="textarea"
+              maxLength={450}
               />
+              <text className='textboxIndicator'>{ans5.length}/450</text>
               </Col>
                 <Col>
                 <img
@@ -241,7 +251,9 @@ export function DetailedQuestions():JSX.Element {
               role="textbox"
               as="textarea"
               placeholder='Input Text'
+              maxLength={450}
               />
+              <text className='textboxIndicator'>{ans6.length}/450</text>
               </Col>
                 <Col>
                 <img
@@ -264,7 +276,9 @@ export function DetailedQuestions():JSX.Element {
               role="textbox"
               as="textarea"
               placeholder='Input Text'
+              maxLength={450}
               />
+              <text className='textboxIndicator'>{ans7.length}/450</text>
               </Col>
                 <Col>
                 <img
