@@ -14,6 +14,7 @@ const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: 
 if (prevKey !== null) {
   keyData = JSON.parse(prevKey);
 }
+export const DQResponses:string = "Given the questions and the reponses to the questions generate a career for the individual.";
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
   

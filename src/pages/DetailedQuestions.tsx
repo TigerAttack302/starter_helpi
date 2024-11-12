@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import Confetti from 'react-confetti'
 
 import { Col, Container, Form, Row } from 'react-bootstrap';
-//import f0f from './DetailedQuestionPictures/IMG.png';
 import full from './DetailedQuestionPictures/images.jpg';
 import principles from './DetailedQuestionPictures/download.jpg';
 import inspire from './DetailedQuestionPictures/inspirejpg.jpg';
@@ -16,6 +15,11 @@ import goal from './DetailedQuestionPictures/goal.png';
 
 import './DetailedQuestions.css';
 
+
+let finalResponses: string;
+export function getResponse(){
+    return finalResponses;
+}
 export function DetailedQuestions():JSX.Element {
     const navigate = useNavigate();
     const [progress, setProgress] = useState<number>(0);
@@ -95,10 +99,17 @@ export function DetailedQuestions():JSX.Element {
           + "; What types of challenges or problems do you enjoy solving, and what makes them appealing? " + ans4
           + "; What kind of impact do you want your work to have on others or the world? " + ans5
           + "; What are your financial goals and lifestyle preferences, and how do they influence your career choices? " + ans6
-          + "; How do you define success in your career, and what will make you feel you’ve achieved it? " + ans7)
-      navigate('/results')
+          + "; How do you define success in your career, and what will make you feel you’ve achieved it? " + ans7);
+      finalResponses = (response
+      + "What activities or tasks make you feel the most energized and fulfilled, and why? " + ans1
+      + "; What are your top three strengths or skills, and how do you apply them in your daily life? " + ans2
+      + "; What are the values or principles that are most important to you in a work environment? " + ans3
+      + "; What types of challenges or problems do you enjoy solving, and what makes them appealing? " + ans4
+      + "; What kind of impact do you want your work to have on others or the world? " + ans5
+      + "; What are your financial goals and lifestyle preferences, and how do they influence your career choices? " + ans6
+      + "; How do you define success in your career, and what will make you feel you’ve achieved it? " + ans7);
+      navigate('/results');
   }
-    
     return (
     <div className='detailedQuestions'>
       {completion && <Confetti width={window.innerWidth} height={document.body.scrollHeight}/>}
