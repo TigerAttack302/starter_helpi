@@ -98,7 +98,7 @@ export function ResultsDetailed():JSX.Element {
         <div>
             <div className='home-button-results'>
                 <button onClick={() => navigate('/')}>Back to Home</button>
-                <div className='results-header'><h1 className='results-header-text'>Results</h1></div>
+                <div className='results-header'><h1>Results</h1></div>
             </div>
         <div className='response'>
             <h3>ChatGPT response:</h3>

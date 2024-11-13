@@ -4,6 +4,17 @@
     text-align: left;
 }
 
+.detailed-header {
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+    color: rgb(0, 119, 255);
+    border-color: rgb(62, 152, 255);
+    border-style: solid;
+    padding: 0.5%;
+    background-color: white;
+}
+
 .top button{
     /*You need to specify the class name the App.css file*/
     /*below does pointer hand icon*/
@@ -25,9 +36,8 @@
 .listOQues Form{
     padding: 10px 20px;
 }
-.title{
-    padding: 1%;
-}
+
+
 /* This is working with the size of the textbox --- Later I want to implement the horizontal scrolling */
 .textbox{
     width: 100%; /* not changeable width */

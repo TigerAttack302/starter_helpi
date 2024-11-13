@@ -114,14 +114,13 @@ export function DetailedQuestions():JSX.Element {
       {completion && <Confetti width={window.innerWidth} height={document.body.scrollHeight}/>}
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Go to Home</button>
+                <div className='detailed-header'><h1>Detailed Questions</h1></div>
             </div>
         <div className='ListOQues'>
-          <h1 className='title'>Detailed Questions
             <div className='progress-section-d'>
                 <text>Progress:  </text>
                 <progress value={progress} max={100}/>
             </div>
-          </h1>
         <Form.Group className="DetailedQues" controlId="DQlist">
         <Container className='lowercontainer'>
         <hr/>

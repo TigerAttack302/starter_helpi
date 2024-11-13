@@ -113,13 +113,12 @@ export function BasicQuestions(): JSX.Element {
             {completion && <Confetti width={window.innerWidth} height={document.body.scrollHeight}/>}
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Go to Home</button>
+                <div className='basic-header'><h1>Basic Questions</h1></div>
             </div>
-            <h1 className="h1">Basic Questions
-                <div className='progress-section-b'>
+            <div className='progress-section-b'>
                     <text>Progress:  </text>
                 <progress value={progress} max={100}/>
-            </div></h1>
-            
+            </div>
             <div>
                 <div>
                     <h3>Question 1 out of 7</h3>
