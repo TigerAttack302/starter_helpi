@@ -1,0 +1,37 @@
+.home-button-results {
+    background-color: lightcoral;
+    padding: 1%;
+    text-align: left;
+}
+
+.results-header {
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+    color: rgb(0, 119, 255);
+    border-color: rgb(62, 152, 255);
+    border-style: solid;
+    padding: 0.5%;
+    background-color: white;
+}
+
+.response {
+    margin: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2%;
+    background-color: lightblue;
+    border-style: double;
+}
+
+.communication {
+    margin-left: 5%;
+    padding-top: 1%;
+    padding-right: 40%;
+    display: flex;
+    align-items: left;
+}
+
+.send-message {
+    margin-left: 1%
+}

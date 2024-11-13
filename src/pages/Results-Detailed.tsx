@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 
 import { useNavigate } from 'react-router-dom';
-import { Form } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 
 import { getResponse } from './DetailedQuestions';
 import { keyData } from '../App';
 
-import './Results-Detailed.css';
+import './Results.css';
 import './DetailedQuestions';
 
 async function sendMessage(): Promise<void> {
@@ -96,15 +96,19 @@ export function ResultsDetailed():JSX.Element {
 
     return (
         <div>
-            <div className='home-button'>
+            <div className='home-button-results'>
                 <button onClick={() => navigate('/')}>Back to Home</button>
+                <div className='results-header'><h1 className='results-header-text'>Results</h1></div>
             </div>
-            <hr/>
-        <div id="response"></div>
-        <hr/>
-        <Form.Control type="textarea" id="user-input" placeholder="Type your message here..."/>
+        <div className='response'>
+            <h3>ChatGPT response:</h3>
+            <div id="response"></div>
+        </div>
         <div id="response1"></div>
-        <button onClick= {() => sendMessage()} >Send</button>
+        <div className='communication'>
+            <Form.Control type="textarea" id="user-input" placeholder="Communicate with ChatGPT here..."/>
+            <Button onClick= {() => sendMessage()} className='send-message' >Send</Button>
+        </div>
         <script src="script.js" defer></script>
         <hr/>
         </div>
