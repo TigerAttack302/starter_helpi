@@ -73,9 +73,13 @@
 }
 
 .header1 {
-    color: rgb(185, 83, 83);
+    color: rgb(181, 75, 75);
 }
 
 .header2 {
     color: rgb(156, 35, 35);
+}
+
+.fancy-desc {
+    font-family: 'Dancing Script', cursive;
 }

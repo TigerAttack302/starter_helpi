@@ -17,8 +17,7 @@ export function Home():JSX.Element {
             <div className="row">
                 <div className='blurb'>
                     <text>Here at the Career Cafe, we hope to brew up the perfect career for you.</text> 
-                </div>
-                <div className='blurb'>
+                    <br></br>
                     <text>Take a look at one of our two selections below, and pick the one to your taste!</text>
                 </div>
                 <div className='column1'>
@@ -29,8 +28,13 @@ export function Home():JSX.Element {
                             <p>The Quick Brew career questionaire gives you a short, concise quiz with quick and easy-to-answer questions.
                             The design of this quiz is to give you an easy, generalized way to figure out the best career choice
                             for you.</p>
-                            <Button onClick={() => navigate('/basic-questions')}>Go to Basic Questions</Button>
+                            <br></br>
+                            <div className='fancy-desc'> 
+                                <p>Recommended for those who want their coffee as quick as possible.</p>
+                                <Button onClick={() => navigate('/basic-questions')}>Go to Basic Questions</Button>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
                 <div className='column2'>
@@ -38,10 +42,14 @@ export function Home():JSX.Element {
                         <h1 className="header2">A Full Roast</h1>
                         <br />
                         <div  className="description">
-                            <p>The Full Roast career questionaire delves deeper into your personality and interest. The questions offered
+                            <p>The Full Roast career questionaire delves deeper into your personality and interests. The questions offered
                             here will be more elaborate and more in-depth to better accurately figure out the best career choice 
                             for you.</p>
-                            <Button onClick={() => navigate('/detailed-questions')}>Go to Detailed Questions</Button>
+                            <br></br>
+                            <div className='fancy-desc'>
+                                <p>Recommended for those who want their coffee as cultivated as possible.</p>
+                                <Button onClick={() => navigate('/detailed-questions')}>Go to Detailed Questions</Button>
+                            </div>
                         </div>
                     </div>
                 </div>
