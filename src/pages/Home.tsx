@@ -2,12 +2,17 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import './Home.css';
+import CareerCafe from '../CareerCafe.png'
 
 export function Home():JSX.Element {
     const navigate = useNavigate();
     return (
         <div className='home'>
-            <h1> <b> Career Assessment Test </b> </h1>
+            <div className='home-header'>
+                <img src={CareerCafe} alt="img not found" className='logo'/>
+                <h1> <b> CareerCafe </b> </h1> 
+                <img src={CareerCafe} alt="img not found" className='logo'/>
+            </div>
             <div className="row">
                 <div className='column'>
                     <h1 className="header">Basic Questions</h1>

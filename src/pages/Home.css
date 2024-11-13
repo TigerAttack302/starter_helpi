@@ -1,5 +1,24 @@
+.home-header {
+    background-color: rgb(18, 197, 252);
+    padding: 1%;
+    text-align: left;
+    display: flex;
+    align-items: left;
+}
+
+.logo {
+    height: auto;
+    width: auto;
+    max-height: 5%;
+    max-width: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
 .row {
-    display: flex
+    display: flex;
+    border-color: black;
+    border-style: solid;
 }
 
 .column {
@@ -8,9 +27,6 @@
 }
 
 .home {
-    background-color: darkolivegreen;
-    min-height: 80vh;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
