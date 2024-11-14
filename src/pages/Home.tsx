@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import './Home.css';
-import CareerCafe from '../CareerCafe.png'
+import CareerCafe from './HomePictures/CareerCafe.png'
 
 export function Home():JSX.Element {
     const navigate = useNavigate();
