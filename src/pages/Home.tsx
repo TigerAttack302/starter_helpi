@@ -32,7 +32,7 @@ export function Home():JSX.Element {
                             <br></br>
                             <div className='fancy-desc'> 
                                 <p>Recommended for those who want their coffee as quick as possible.</p>
-                                <Button onClick={() => navigate('/basic-questions')}>Go to Basic Questions</Button>
+                                <Button onClick={() => navigate('/basic-questions')}>Have a Quick Brew</Button>
                             </div>
                         </div>
                         
@@ -49,7 +49,7 @@ export function Home():JSX.Element {
                             <br></br>
                             <div className='fancy-desc'>
                                 <p>Recommended for those who want their coffee as cultivated as possible.</p>
-                                <Button onClick={() => navigate('/detailed-questions')}>Go to Detailed Questions</Button>
+                                <Button onClick={() => navigate('/detailed-questions')}>Have a Full Roast</Button>
                             </div>
                         </div>
                     </div>

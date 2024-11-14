@@ -31,7 +31,8 @@
 
 .blurb {
     color: black;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, cursive;
+    font-style: italic;
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 2%;
