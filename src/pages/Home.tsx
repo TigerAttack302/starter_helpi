@@ -10,7 +10,7 @@ export function Home():JSX.Element {
         <div className='home'>
             <div className='home-header'>
                 <img src={CareerCafe} alt="img not found" className='logo'/>
-                <h1> <b> The Career Cafe </b> </h1> 
+                <h1 className='brand-name'> <b> The Career Cafe </b> </h1> 
                 <img src={CareerCafe} alt="img not found" className='logo'/>
             </div>
             
@@ -32,7 +32,7 @@ export function Home():JSX.Element {
                             <br></br>
                             <div className='fancy-desc'> 
                                 <p>Recommended for those who want their coffee as quick as possible.</p>
-                                <Button onClick={() => navigate('/basic-questions')}>Have a Quick Brew</Button>
+                                <Button className='basic-button' onClick={() => navigate('/basic-questions')}>Have a Quick Brew</Button>
                             </div>
                         </div>
                         
@@ -49,7 +49,7 @@ export function Home():JSX.Element {
                             <br></br>
                             <div className='fancy-desc'>
                                 <p>Recommended for those who want their coffee as cultivated as possible.</p>
-                                <Button onClick={() => navigate('/detailed-questions')}>Have a Full Roast</Button>
+                                <Button className='detailed-button' onClick={() => navigate('/detailed-questions')}>Have a Full Roast</Button>
                             </div>
                         </div>
                     </div>

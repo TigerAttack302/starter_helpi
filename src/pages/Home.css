@@ -20,6 +20,12 @@
     align-items: left;
 }
 
+.brand-name {
+    font-size: 50px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, cursive;
+    font-style: italic;
+}
+
 .logo {
     height: auto;
     width: auto;
@@ -106,6 +112,28 @@
 
 .fancy-desc {
     font-family: 'Dancing Script', cursive;
+}
+
+.basic-button {
+    background-color: #3498db;
+    border-color: black;
+}
+
+.basic-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
+    background-color: #2980b9;
+}
+
+.detailed-button {
+    background-color: #3498db;
+    border-color: black;
+}
+
+.detailed-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
+    background-color: #2980b9;
 }
 
 .home-bottom {
