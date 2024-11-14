@@ -15,6 +15,7 @@ export function Home():JSX.Element {
             </div>
             
             <div className="row">
+                <h1 className='menu'>Menu</h1>
                 <div className='blurb'>
                     <text>Here at the Career Cafe, we hope to brew up the perfect career for you.</text> 
                     <br></br>
@@ -54,6 +55,7 @@ export function Home():JSX.Element {
                     </div>
                 </div>
             </div>
+            <div className='home-bottom'></div>
         </div>
       );
 }
