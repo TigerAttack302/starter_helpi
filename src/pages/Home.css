@@ -96,6 +96,7 @@
     padding: 3%;
     background-color: white;
     color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .header1 {
@@ -113,25 +114,27 @@
 }
 
 .basic-button {
-    background-color: #3498db;
+    background-color: rgb(181, 75, 75);
     border-color: black;
 }
 
 .basic-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
-    background-color: #2980b9;
+    box-shadow: 0 0 20px rgba(199, 87, 87, 0.8);
+    background-color: rgb(192, 88, 88);
+    border-color: black;
 }
 
 .detailed-button {
-    background-color: #3498db;
+    background-color: rgb(156, 35, 35);
     border-color: black;
 }
 
 .detailed-button:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
-    background-color: #2980b9;
+    box-shadow: 0 0 20px rgba(136, 28, 28, 0.8);
+    background-color: rgb(134, 22, 22);
+    border-color: black;
 }
 
 .home-bottom {
