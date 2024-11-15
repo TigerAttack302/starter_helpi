@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import './Home.css';
-import CareerCafe from '../CareerCafe.png'
+import CareerCafe from './HomePictures/CareerCafe.png'
 
 export function Home():JSX.Element {
     const navigate = useNavigate();
@@ -10,11 +10,12 @@ export function Home():JSX.Element {
         <div className='home'>
             <div className='home-header'>
                 <img src={CareerCafe} alt="img not found" className='logo'/>
-                <h1> <b> The Career Cafe </b> </h1> 
+                <h1 className='brand-name'> <b> The Career Cafe </b> </h1> 
                 <img src={CareerCafe} alt="img not found" className='logo'/>
             </div>
             
             <div className="row">
+                <h1 className='menu'>Menu</h1>
                 <div className='blurb'>
                     <text>Here at the Career Cafe, we hope to brew up the perfect career for you.</text> 
                     <br></br>
@@ -31,7 +32,7 @@ export function Home():JSX.Element {
                             <br></br>
                             <div className='fancy-desc'> 
                                 <p>Recommended for those who want their coffee as quick as possible.</p>
-                                <Button onClick={() => navigate('/basic-questions')}>Go to Basic Questions</Button>
+                                <Button className='basic-button' onClick={() => navigate('/basic-questions')}>Have a Quick Brew</Button>
                             </div>
                         </div>
                         
@@ -48,12 +49,13 @@ export function Home():JSX.Element {
                             <br></br>
                             <div className='fancy-desc'>
                                 <p>Recommended for those who want their coffee as cultivated as possible.</p>
-                                <Button onClick={() => navigate('/detailed-questions')}>Go to Detailed Questions</Button>
+                                <Button className='detailed-button' onClick={() => navigate('/detailed-questions')}>Have a Full Roast</Button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div className='home-bottom'></div>
         </div>
       );
 }

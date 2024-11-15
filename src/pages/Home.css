@@ -1,9 +1,29 @@
+.home {
+    background-image: url('./HomePictures/CoffeeBG.jpg');
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
 .home-header {
-    background-color: rgb(18, 197, 252);
+    background-color: rgba(18, 197, 252, 80%);
     padding: 1%;
     text-align: left;
     display: flex;
     align-items: left;
+}
+
+.brand-name {
+    font-size: 50px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, cursive;
+    font-style: italic;
 }
 
 .logo {
@@ -17,49 +37,55 @@
 
 .blurb {
     color: black;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, cursive;
+    font-style: italic;
     padding-top: 2%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .row {
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
     display: flex;
+    background-color: rgb(245, 245, 245, 85%);
+    border-style:groove;
     border-color: black;
-    border-style: solid;
+    border-radius: 3%;
+}
+
+.menu {
+    padding-top: 2%;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .column1 {
     flex: 50%;
     padding-top: 2%;
-    padding-left: 20%;
-    padding-right: 5%;
-    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 3%;
+    padding-bottom: 2%;
 }
 
 .column2 {
     flex: 50%;
     padding-top: 2%;
-    padding-left: 5%;
-    padding-right: 20%;
-    padding-bottom: 1%;
+    padding-left: 3%;
+    padding-right: 5%;
+    padding-bottom: 2%;
 }
 
 .desc-bubble {
     display: inline-block;
-    background-color: rgb(0, 133, 177);
+    background-color: beige;
     border-color: brown;
     border-style: inset;
     border-radius: 10%;
     padding: 5%;
-}
-
-.home {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
 }
 
 .description {
@@ -67,19 +93,50 @@
     border-style: solid;
     border-color: brown;
     border-radius: 25px;
-    padding: 20px;
+    padding: 3%;
     background-color: white;
     color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .header1 {
     color: rgb(181, 75, 75);
+    font-family: 'Dancing Script', cursive;
 }
 
 .header2 {
     color: rgb(156, 35, 35);
+    font-family: 'Dancing Script', cursive;
 }
 
 .fancy-desc {
     font-family: 'Dancing Script', cursive;
+}
+
+.basic-button {
+    background-color: rgb(181, 75, 75);
+    border-color: black;
+}
+
+.basic-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(199, 87, 87, 0.8);
+    background-color: rgb(192, 88, 88);
+    border-color: black;
+}
+
+.detailed-button {
+    background-color: rgb(156, 35, 35);
+    border-color: black;
+}
+
+.detailed-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(136, 28, 28, 0.8);
+    background-color: rgb(134, 22, 22);
+    border-color: black;
+}
+
+.home-bottom {
+    padding: 1%;
 }

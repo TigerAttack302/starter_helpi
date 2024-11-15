@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: antiquewhite;
 }
 
 .App-logo {
@@ -54,6 +55,7 @@
   border-radius: 8%;
   border-style: solid;
   background-color: rgb(210, 236, 244);
+  font-family: 'Dancing Script', cursive;
 }
 
 .column-api-input {
