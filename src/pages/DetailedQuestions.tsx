@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Col, Container, Form, Row } from 'react-bootstrap';
 
@@ -10,7 +9,6 @@ import strong from './DetailedQuestionPictures/stronk.jpg';
 import earth from './DetailedQuestionPictures/earth.jpg';
 import success from './DetailedQuestionPictures/images (1).jpg';
 import goal from './DetailedQuestionPictures/goal.png';
-import Confetti from 'react-confetti'
 
 import './DetailedQuestions.css';
 
@@ -33,7 +31,6 @@ export function DetailedQuestions():JSX.Element {
         setProgress(progress+14);
       }
       setAns1(event.target.value);
-      updateCompletion();
     }
 
     const [ans2, setAns2] = useState<string>("");
@@ -44,7 +41,6 @@ export function DetailedQuestions():JSX.Element {
         setProgress(progress+14);
       }
       setAns2(event.target.value);
-      updateCompletion();
     }
 
     const [ans3, setAns3] = useState<string>("");
@@ -55,7 +51,6 @@ export function DetailedQuestions():JSX.Element {
         setProgress(progress+14);
       }
       setAns3(event.target.value);
-      updateCompletion();
     }
     const [ans4, setAns4] = useState<string>("");
     function UpdateAns4(event: React.ChangeEvent<HTMLInputElement>){
@@ -65,7 +60,6 @@ export function DetailedQuestions():JSX.Element {
         setProgress(progress+14);
       }
       setAns4(event.target.value);
-      updateCompletion();
     }
     const [ans5, setAns5] = useState<string>("");
     function UpdateAns5(event: React.ChangeEvent<HTMLInputElement>){
@@ -75,7 +69,6 @@ export function DetailedQuestions():JSX.Element {
         setProgress(progress+14);
       }
       setAns5(event.target.value);
-      updateCompletion();
     }
     const [ans6, setAns6] = useState<string>("");
     function UpdateAns6(event: React.ChangeEvent<HTMLInputElement>){
@@ -85,7 +78,6 @@ export function DetailedQuestions():JSX.Element {
         setProgress(progress+15);
       }
       setAns6(event.target.value);
-      updateCompletion();
     }
     const [ans7, setAns7] = useState<string>("");
     function UpdateAns7(event: React.ChangeEvent<HTMLInputElement>){
@@ -95,16 +87,15 @@ export function DetailedQuestions():JSX.Element {
         setProgress(progress+15);
       }
       setAns7(event.target.value);
-      updateCompletion();
     }
       
-    function updateCompletion() {
-      if (ans1 && ans2 && ans3 && ans4 && ans5 && ans6 && ans7) {
+    useEffect(() => {
+      if (progress === 100) {
         setCompletion(true);
-      } else if (!ans1 || !ans2 || !ans3 || !ans4 || !ans5 || !ans6 || !ans7) {
+      } else {
         setCompletion(false);
       }
-    }
+    }, [progress]);
 
     function submitResults() {
       setResponse(response
@@ -125,15 +116,17 @@ export function DetailedQuestions():JSX.Element {
       + "; How do you define success in your career, and what will make you feel you’ve achieved it? " + ans7);
       navigate('/results-detailed');
   }
-    return (
+
+  const progressSectionClassName = progress === 100 ? 'progress-section-d-completed' : 'progress-section-d';
+
+  return (
     <div className='detailedQuestions'>
-      {completion && <Confetti width={window.innerWidth} height={document.body.scrollHeight}/>}
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Go to Home</button>
                 <div className='detailed-header'><h1>Detailed Questions</h1></div>
             </div>
         <div className='ListOQues'>
-            <div className='progress-section-d'>
+            <div className={progressSectionClassName}>
                 <text>Progress:  </text>
                 <progress value={progress} max={100}/>
             </div>

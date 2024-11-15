@@ -108,6 +108,8 @@ export function BasicQuestions(): JSX.Element {
         navigate('/results-basic');
     }
 
+    const progressSectionClassName = progress === 100 ? 'progress-section-b-completed' : 'progress-section-b';
+
     return (
         <div>
             {completion && <Confetti width={window.innerWidth} height={document.body.scrollHeight}/>}
@@ -115,7 +117,7 @@ export function BasicQuestions(): JSX.Element {
                 <button onClick={() => navigate('/')}>Go to Home</button>
                 <div className='basic-header'><h1>Basic Questions</h1></div>
             </div>
-            <div className='progress-section-b'>
+            <div className={progressSectionClassName}>
                     <text>Progress:  </text>
                 <progress value={progress} max={100}/>
             </div>
