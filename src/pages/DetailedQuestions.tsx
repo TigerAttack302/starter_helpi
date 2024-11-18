@@ -124,10 +124,10 @@ export function DetailedQuestions():JSX.Element {
         <Form.Group className="DetailedQues" controlId="DQlist">
         <Container className='lowercontainer'>
         <hr/>
-          <Row>
           <text>
           Q1. What activities or tasks make you feel the most energized and fulfilled, and why?
           </text>
+          <Row>
                 <Col>
           <Form.Control
             className='textbox'

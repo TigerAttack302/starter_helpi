@@ -93,15 +93,15 @@
 
 }
 
-.lowerContainer row{
-    border: 1px solid black;
+.lowerContainer Row{
+    border: 2px;
 }
 
 
 .IMG{
     width: 50%;
     height: 200px;
-    transform: translate( 100%, -1%);
+    transform: translate( 75%, -1%);
 }
 
 

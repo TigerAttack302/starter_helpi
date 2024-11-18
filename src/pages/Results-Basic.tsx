@@ -10,6 +10,7 @@ import { keyData } from '../App';
 import './Results.css';
 import './BasicQuestions';
 
+
 async function sendMessage(): Promise<void> {
     const userInput = (document.getElementById('user-input') as HTMLInputElement).value;
     if (!userInput) return;
@@ -34,7 +35,7 @@ async function sendMessage(): Promise<void> {
             }
         );
 
-
+        
         const message = response.data.choices[0].message.content;
         responseElement.innerHTML = message;
     } catch (error) {
