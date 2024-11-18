@@ -49,3 +49,16 @@
     border-style: solid;
     border-radius: 15px;
 }
+
+.progress-section-b-completed {
+    position: fixed;
+    text-align: center;
+    font-size: 20px;
+    right: 1%;
+    padding-top: 0.5%;
+    padding: 1%;
+    background-color: lightgreen;
+    border-color: lightgreen;
+    border-style: solid;
+    border-radius: 15px;
+}
