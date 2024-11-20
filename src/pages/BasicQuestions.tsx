@@ -5,6 +5,14 @@ import Confetti from 'react-confetti'
 
 import './BasicQuestions.css';
 
+import q1pic from './BasicQuestionsPictures/early-college-high-school-placeholder.jpg';
+import q2pic from './BasicQuestionsPictures/college-classes.webp';
+import q3pic from './BasicQuestionsPictures/images.jpg';
+import q4pic from './BasicQuestionsPictures/shutterstock_1464234134-1024x684.jpg';
+import q5pic from './BasicQuestionsPictures/images (1).jpg';
+import q6pic from './BasicQuestionsPictures/20230729_BLP505.webp';
+import q7pic from './BasicQuestionsPictures/1703323776064.jpg';
+
 let finalResponses: string;
 export function getResponse(){
     return finalResponses;
@@ -122,132 +130,146 @@ export function BasicQuestions(): JSX.Element {
                 <progress value={progress} max={100}/>
             </div>
             <div>
-                <div>
-                    <h3>Question 1 out of 7</h3>
-                    <div className='question'>
-                        <h3>Which one of these best describes you?</h3>
-                    </div>
-                    <div className='buttonGroup'>
-                        {q1Arr.map((a: string) => (
-                            <Form.Check
-                                type="radio"
-                                name="q1"
-                                onChange={() => updateAnswer1(a)}
-                                label={a}
-                                key={a}
-                                value={a}
-                            />
-                        ))}
-                    </div>
-                </div>
+            <div>
+    <h3>Question 1 out of 7</h3>
+    <div className='question'>
+        <h3>Which one of these best describes you?</h3>
+        <img src={q1pic} alt="Question 1" className="question-image" />
+    </div>
+    <div className='buttonGroup'>
+        {q1Arr.map((a: string) => (
+            <Form.Check
+                type="radio"
+                name="q1"
+                onChange={() => updateAnswer1(a)}
+                label={a}
+                key={a}
+                value={a}
+            />
+        ))}
+    </div>
+</div>
 
-                <div>
-                    <h3>Question 2 out of 7</h3>
-                    <div className='question'>
-                    <h3>What do you find as your favorite subject?</h3></div>
-                    <div className='buttonGroup'>
-                    {q2Arr.map((a: string) => (
-                            <Form.Check
-                                type="radio"
-                                name="q2"
-                                onChange={() => updateAnswer2(a)}
-                                label={a}
-                                key={a}
-                                value={a}
-                            />
-                        ))}
-                    </div>
-                </div>
+<div>
+    <h3>Question 2 out of 7</h3>
+    <div className='question'>
+        <h3>What do you find as your favorite subject?</h3>
+        <img src={q2pic} alt="Question 2" className="question-image" />
+    </div>
+    <div className='buttonGroup'>
+        {q2Arr.map((a: string) => (
+            <Form.Check
+                type="radio"
+                name="q2"
+                onChange={() => updateAnswer2(a)}
+                label={a}
+                key={a}
+                value={a}
+            />
+        ))}
+    </div>
+</div>
 
-                <div>
-                    <h3>Question 3 of 7</h3>
-                    <div className='question'>
-                    <h3>What do you enjoy doing the most?</h3></div>
-                    <div className='buttonGroup'>
-                    {q3Arr.map((a: string) => (
-                            <Form.Check
-                                type="radio"
-                                name="q3"
-                                onChange={() => updateAnswer3(a)}
-                                label={a}
-                                key={a}
-                                value={a}
-                            />
-                        ))}
-                    </div>
-                </div>
+<div>
+    <h3>Question 3 of 7</h3>
+    <div className='question'>
+        <h3>What do you enjoy doing the most?</h3>
+        <img src={q3pic} alt="Question 3" className="question-image" />
+    </div>
+    <div className='buttonGroup'>
+        {q3Arr.map((a: string) => (
+            <Form.Check
+                type="radio"
+                name="q3"
+                onChange={() => updateAnswer3(a)}
+                label={a}
+                key={a}
+                value={a}
+            />
+        ))}
+    </div>
+</div>
 
-                <div>
-                    <h3>Question 4 out of 7</h3>
-                    <div className='question'>
-                    <h3>Which role do you find yourself in a job?</h3></div>
-                    <div className='buttonGroup'>
-                        {q4Arr.map((a: string) => (
-                            <Form.Check
-                                type="radio"
-                                name="q4"
-                                onChange={() => updateAnswer4(a)}
-                                label={a}
-                                key={a}
-                                value={a}
-                            />
-                        ))}
-                    </div>
-                </div>
+<div>
+    <h3>Question 4 out of 7</h3>
+    <div className='question'>
+        <h3>Which role do you find yourself in a job?</h3>
+        <img src={q4pic} alt="Question 4" className="question-image" />
+    </div>
+    <div className='buttonGroup'>
+        {q4Arr.map((a: string) => (
+            <Form.Check
+                type="radio"
+                name="q4"
+                onChange={() => updateAnswer4(a)}
+                label={a}
+                key={a}
+                value={a}
+            />
+        ))}
+    </div>
+</div>
 
-                <div>
-                    <h3>Question 5 out of 7</h3>
-                    <div className='question'>
-                    <h3>What Best Describes yourself?</h3></div>
-                    <div className='buttonGroup'>
-                        {q5Arr.map((a: string) => (
-                            <Form.Check
-                                type="radio"
-                                name="q5"
-                                onChange={() => updateAnswer5(a)}
-                                label={a}
-                                key={a}
-                                value={a}
-                            />
-                        ))}
-                    </div>
-                </div>
+<div>
+    <h3>Question 5 out of 7</h3>
+    <div className='question'>
+        <h3>What Best Describes yourself?</h3>
+        <img src={q5pic} alt="Question 5" className="question-image" />
+    </div>
+    <div className='buttonGroup'>
+        {q5Arr.map((a: string) => (
+            <Form.Check
+                type="radio"
+                name="q5"
+                onChange={() => updateAnswer5(a)}
+                label={a}
+                key={a}
+                value={a}
+            />
+        ))}
+    </div>
+</div>
 
-                <div>
-                    <h3>Question 6 out of 7</h3>
-                    <div className='question'>
-                    <h3>What type of work environment would you thrive in?</h3></div>
-                    <div className='buttonGroup'>
-                        {q6Arr.map((a: string) => (
-                            <Form.Check
-                                type="radio"
-                                name="q6"
-                                onChange={() => updateAnswer6(a)}
-                                label={a}
-                                key={a}
-                                value={a}
-                            />
-                        ))}
-                    </div>
-                </div>
+<div>
+    <h3>Question 6 out of 7</h3>
+    <div className='question'>
+        <h3>What type of work environment would you thrive in?</h3>
+        <img src={q6pic} alt="Question 6" className="question-image" />
+    </div>
+    <div className='buttonGroup'>
+        {q6Arr.map((a: string) => (
+            <Form.Check
+                type="radio"
+                name="q6"
+                onChange={() => updateAnswer6(a)}
+                label={a}
+                key={a}
+                value={a}
+            />
+        ))}
+    </div>
+</div>
 
-                <div>
-                    <h3>Question 7 out of 7</h3>
-                    <div className='question'>
-                    <h3>What is your first priority in a job?</h3></div>
-                    <div className='buttonGroup'>
-                        {q7Arr.map((a: string) => (
-                            <Form.Check
-                                type="radio"
-                                name="q7"
-                                onChange={() => updateAnswer7(a)}
-                                label={a}
-                                key={a}
-                                value={a}
-                            />
-                        ))}
-                    </div>
-                </div>
+<div>
+    <h3>Question 7 out of 7</h3>
+    <div className='question'>
+        <h3>What is your first priority in a job?</h3>
+        <img src={q7pic} alt="Question 7" className="question-image" />
+    </div>
+    <div className='buttonGroup'>
+        {q7Arr.map((a: string) => (
+            <Form.Check
+                type="radio"
+                name="q7"
+                onChange={() => updateAnswer7(a)}
+                label={a}
+                key={a}
+                value={a}
+            />
+        ))}
+    </div>
+</div>
+
             </div>
             <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>
             <hr/>
