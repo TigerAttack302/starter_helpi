@@ -33,7 +33,7 @@ export function DetailedQuestions():JSX.Element {
     const navigate = useNavigate();
     const [progress, setProgress] = useState<number>(0);
     const [completion, setCompletion] = useState<boolean>(false);
-    const [response, setResponse] = useState<string>("Given the following questions and answers, what is the best career for me? ");
+    const [response, setResponse] = useState<string>("Given the following questions and answers, what is the best career for me? If the answers don't make sense, ask the user to retry the quiz. ");
 
     const [ans1, setAns1] = useState<string>("");
     function UpdateAns1(event: React.ChangeEvent<HTMLInputElement>){
