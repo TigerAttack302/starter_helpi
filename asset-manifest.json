@@ -1,21 +1,27 @@
 {
   "files": {
-    "main.css": "/starter_helpi/static/css/main.8da421df.css",
-    "main.js": "/starter_helpi/static/js/main.8e556e2d.js",
+    "main.css": "/starter_helpi/static/css/main.241c753a.css",
+    "main.js": "/starter_helpi/static/js/main.dd619d82.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
     "static/media/CoffeeBG.jpg": "/starter_helpi/static/media/CoffeeBG.fc50308ebdda524ffe6d.jpg",
     "static/media/earth.jpg": "/starter_helpi/static/media/earth.422f188dec1a06e9952b.jpg",
     "static/media/inspirejpg.jpg": "/starter_helpi/static/media/inspirejpg.842996c3a90b5e75bc69.jpg",
+    "static/media/1703323776064.jpg": "/starter_helpi/static/media/1703323776064.f1d31336fe9bfde68042.jpg",
     "static/media/CareerCafe.png": "/starter_helpi/static/media/CareerCafe.192ba387f295726e1703.png",
+    "static/media/20230729_BLP505.webp": "/starter_helpi/static/media/20230729_BLP505.4f99bc19234bbef78f5d.webp",
+    "static/media/shutterstock_1464234134-1024x684.jpg": "/starter_helpi/static/media/shutterstock_1464234134-1024x684.4fc71e28b3901112c10a.jpg",
+    "static/media/early-college-high-school-placeholder.jpg": "/starter_helpi/static/media/early-college-high-school-placeholder.f31ae38c9f3ac86df944.jpg",
+    "static/media/college-classes.webp": "/starter_helpi/static/media/college-classes.33cd958a091e9d947a09.webp",
     "static/media/stronk.jpg": "/starter_helpi/static/media/stronk.65877191c502610cd860.jpg",
     "static/media/download.jpg": "/starter_helpi/static/media/download.f4291c09f3585a08b396.jpg",
+    "static/media/images.jpg": "/starter_helpi/static/media/images.13892836c6a699b21c39.jpg",
     "index.html": "/starter_helpi/index.html",
-    "main.8da421df.css.map": "/starter_helpi/static/css/main.8da421df.css.map",
-    "main.8e556e2d.js.map": "/starter_helpi/static/js/main.8e556e2d.js.map",
+    "main.241c753a.css.map": "/starter_helpi/static/css/main.241c753a.css.map",
+    "main.dd619d82.js.map": "/starter_helpi/static/js/main.dd619d82.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8da421df.css",
-    "static/js/main.8e556e2d.js"
+    "static/css/main.241c753a.css",
+    "static/js/main.dd619d82.js"
   ]
 }
