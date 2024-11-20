@@ -112,3 +112,13 @@
     font-size: x-small;
     color: gray;
 }
+
+.Popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5%;
+    background-color: rgba(255, 229, 229, 0.5);
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
-import { Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 import full from './DetailedQuestionPictures/images.jpg';
 import principles from './DetailedQuestionPictures/download.jpg';
@@ -13,12 +13,22 @@ import goal from './DetailedQuestionPictures/goal.png';
 import Confetti from 'react-confetti'
 
 import './DetailedQuestions.css';
+import Popup from 'reactjs-popup';
 
 
 let finalResponses: string;
 export function getResponse(){
     return finalResponses;
 }
+
+//local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
+export let keyData = "";
+const saveKeyData = "MYKEY";
+const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
+if (prevKey !== null) {
+  keyData = JSON.parse(prevKey);
+}
+
 export function DetailedQuestions():JSX.Element {
     const navigate = useNavigate();
     const [progress, setProgress] = useState<number>(0);
@@ -107,8 +117,21 @@ export function DetailedQuestions():JSX.Element {
       + "; What kind of impact do you want your work to have on others or the world? " + ans5
       + "; What are your financial goals and lifestyle preferences, and how do they influence your career choices? " + ans6
       + "; How do you define success in your career, and what will make you feel you’ve achieved it? " + ans7);
-      navigate('/results-detailed');
   }
+
+  const [key, setKey] = useState<string>(keyData); //for api key input
+  
+  //sets the local storage item to the api key the user inputed
+  function handleSubmit() {
+    localStorage.setItem(saveKeyData, JSON.stringify(key));
+    navigate('/results-detailed');
+  }
+
+  //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
+  function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
+    setKey(event.target.value);
+  }
+
     return (
     <div className='detailedQuestions'>
       {completion && <Confetti width={window.innerWidth} height={document.body.scrollHeight}/>}
@@ -300,11 +323,22 @@ export function DetailedQuestions():JSX.Element {
           </Container>
       </Form.Group>
         </div>
-        
-
-        <div className='submitButton'>
-        <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>
-        </div>
+        <Popup className='Popup'
+        trigger={<div className='submitButton'><button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
+        position="top center">
+              <p>
+                <br/>
+                Our questions use ChatGPT in order to maximize the accuracy of our assessment and to pick out the perfect
+                career for you. Make sure to input your API key before taking our assessment to ensure ChatGPT can utilize
+                your results.
+              </p>
+            <Form>
+              <Form.Label>API Key:</Form.Label>
+              <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+              <br/>
+                <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+              </Form>
+        </Popup>
         <hr/>
     </div>
 )}
