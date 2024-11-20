@@ -7,6 +7,7 @@ import { BasicQuestions } from './pages/BasicQuestions';
 import { DetailedQuestions } from './pages/DetailedQuestions';
 import { ResultsDetailed } from './pages/Results-Detailed';
 import { ResultsBasic } from './pages/Results-Basic';
+import { ScrollToTop } from './Components/ScrollToTop';
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 export let keyData = "";
@@ -33,6 +34,7 @@ function App() {
   return (
     <div className="App">
       <HashRouter>
+      <ScrollToTop />
         <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/basic-questions" element={<BasicQuestions/>}/>
