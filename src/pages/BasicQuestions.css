@@ -49,3 +49,46 @@
     border-style: solid;
     border-radius: 15px;
 }
+
+.popup-b {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-style: inset;
+    border-radius: 5%;
+    background-color: rgba(254, 187, 187, 0.85);
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: rgb(181, 75, 75);
+    border-color: rgb(181, 75, 75);
+    font-family: 'Dancing Script', cursive;
+}
+
+.popup-header-b {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(156, 35, 35);
+
+}
+
+.popup-desc-b {
+    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.submit-button-b {
+    background-color: rgb(181, 75, 75);
+    border-color: black;
+}
+
+.submit-button-b:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(199, 87, 87, 0.8);
+    background-color: rgb(192, 88, 88);
+    border-color: black;
+}

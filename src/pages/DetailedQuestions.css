@@ -113,12 +113,44 @@
     color: gray;
 }
 
-.Popup {
-    display: flex;
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     justify-content: center;
+    text-align: center;
     align-items: center;
-    border-style: solid;
-    border-color: black;
+    border-style: inset;
     border-radius: 5%;
-    background-color: rgba(255, 229, 229, 0.5);
+    background-color: rgba(254, 187, 187, 0.85);
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-color: rgb(156, 35, 35);
+    font-family: 'Dancing Script', cursive;
+}
+
+.popup-header {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(156, 35, 35);
+}
+
+.popup-desc {
+    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: rgb(156, 35, 35);
+}
+
+.submit-button {
+    background-color: rgb(156, 35, 35);
+    border-color: black;
+}
+
+.submit-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(136, 28, 28, 0.8);
+    background-color: rgb(134, 22, 22);
+    border-color: black;
 }

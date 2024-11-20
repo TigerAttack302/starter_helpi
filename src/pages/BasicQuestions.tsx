@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import Confetti from 'react-confetti'
 
 import './BasicQuestions.css';
+import Popup from 'reactjs-popup';
 
 let finalResponses: string;
 export function getResponse(){
     return finalResponses;
+}
+
+//local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
+export let keyData = "";
+const saveKeyData = "MYKEY";
+const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
+if (prevKey !== null) {
+  keyData = JSON.parse(prevKey);
 }
 
 export function BasicQuestions(): JSX.Element {
@@ -105,7 +114,19 @@ export function BasicQuestions(): JSX.Element {
             + "; I'd describe myself as: " + q5
             + "; Preferred work environment: " + q6
             + "; First priority when choosing a job: " + q7);
-        navigate('/results-basic');
+    }
+
+    const [key, setKey] = useState<string>(keyData); //for api key input
+  
+    //sets the local storage item to the api key the user inputed
+    function handleSubmit() {
+        localStorage.setItem(saveKeyData, JSON.stringify(key));
+        navigate('/results-detailed');
+    }
+
+    //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
+    function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
+        setKey(event.target.value);
     }
 
     return (
@@ -247,8 +268,23 @@ export function BasicQuestions(): JSX.Element {
                     </div>
                 </div>
             </div>
-            <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>
-            <hr/>
+            <Popup trigger={<div className='submitButton'>
+          <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
+          position="top center">
+            <div className='popup-b'>
+              <h1 className='popup-header-b'>Almost Ready!</h1>
+              <p className='popup-desc-b'>
+                Our questions use ChatGPT in order to maximize the accuracy of our assessment and to pick out the perfect
+                career for you. Make sure to input your API key here to ensure ChatGPT can utilize
+                your results.
+              </p>
+            <Form>
+              <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+              <br/>
+                <Button className="submit-button" onClick={handleSubmit}>Submit</Button>
+              </Form>
+            </div>
+        </Popup>
         </div>
     );
 }
