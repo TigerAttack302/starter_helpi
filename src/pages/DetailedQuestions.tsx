@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
@@ -10,7 +9,6 @@ import strong from './DetailedQuestionPictures/stronk.jpg';
 import earth from './DetailedQuestionPictures/earth.jpg';
 import success from './DetailedQuestionPictures/images (1).jpg';
 import goal from './DetailedQuestionPictures/goal.png';
-import Confetti from 'react-confetti'
 
 import './DetailedQuestions.css';
 import Popup from 'reactjs-popup';
@@ -37,68 +35,77 @@ export function DetailedQuestions():JSX.Element {
 
     const [ans1, setAns1] = useState<string>("");
     function UpdateAns1(event: React.ChangeEvent<HTMLInputElement>){
-        setAns1(event.target.value);
-        if (!ans1) {
-          setProgress(progress+14);
-        }
-        updateCompletion();
+      if (ans1 && !event.target.value) {
+        setProgress(progress-14);
+      } else if (!ans1 && event.target.value) {
+        setProgress(progress+14);
+      }
+      setAns1(event.target.value);
     }
 
     const [ans2, setAns2] = useState<string>("");
     function UpdateAns2(event: React.ChangeEvent<HTMLInputElement>){
-        setAns2(event.target.value);
-        if (!ans2) {
-          setProgress(progress+14);
-        }
-        updateCompletion();
+      if (ans2 && !event.target.value) {
+        setProgress(progress-14);
+      } else if (!ans2 && event.target.value) {
+        setProgress(progress+14);
+      }
+      setAns2(event.target.value);
     }
 
     const [ans3, setAns3] = useState<string>("");
     function UpdateAns3(event: React.ChangeEvent<HTMLInputElement>){
-        setAns3(event.target.value);
-        if (!ans3) {
-          setProgress(progress+14);
-        }
-        updateCompletion();
+      if (ans3 && !event.target.value) {
+        setProgress(progress-14);
+      } else if (!ans3 && event.target.value) {
+        setProgress(progress+14);
+      }
+      setAns3(event.target.value);
     }
     const [ans4, setAns4] = useState<string>("");
     function UpdateAns4(event: React.ChangeEvent<HTMLInputElement>){
-        setAns4(event.target.value);
-        if (!ans4) {
-          setProgress(progress+14);
-        }
-        updateCompletion();
+      if (ans4 && !event.target.value) {
+        setProgress(progress-14);
+      } else if (!ans4 && event.target.value) {
+        setProgress(progress+14);
+      }
+      setAns4(event.target.value);
     }
     const [ans5, setAns5] = useState<string>("");
     function UpdateAns5(event: React.ChangeEvent<HTMLInputElement>){
-        setAns5(event.target.value);
-        if (!ans5) {
-          setProgress(progress+14);
-        }
-        updateCompletion();
+      if (ans5 && !event.target.value) {
+        setProgress(progress-14);
+      } else if (!ans5 && event.target.value) {
+        setProgress(progress+14);
+      }
+      setAns5(event.target.value);
     }
     const [ans6, setAns6] = useState<string>("");
     function UpdateAns6(event: React.ChangeEvent<HTMLInputElement>){
-        setAns6(event.target.value);
-        if (!ans6) {
-          setProgress(progress+15);
-        }
-        updateCompletion();
+      if (ans6 && !event.target.value) {
+        setProgress(progress-15);
+      } else if (!ans6 && event.target.value) {
+        setProgress(progress+15);
+      }
+      setAns6(event.target.value);
     }
     const [ans7, setAns7] = useState<string>("");
     function UpdateAns7(event: React.ChangeEvent<HTMLInputElement>){
-        setAns7(event.target.value);
-        if (!ans7) {
-          setProgress(progress+15);
-        }
-        updateCompletion();
+      if (ans7 && !event.target.value) {
+        setProgress(progress-15);
+      } else if (!ans7 && event.target.value) {
+        setProgress(progress+15);
+      }
+      setAns7(event.target.value);
     }
       
-    function updateCompletion() {
-      if (progress >= 85) {
-          setCompletion(true);
+    useEffect(() => {
+      if (progress === 100) {
+        setCompletion(true);
+      } else {
+        setCompletion(false);
       }
-    }
+    }, [progress]);
 
     function submitResults() {
       setResponse(response
@@ -119,6 +126,7 @@ export function DetailedQuestions():JSX.Element {
       + "; How do you define success in your career, and what will make you feel you’ve achieved it? " + ans7);
   }
 
+  
   const [key, setKey] = useState<string>(keyData); //for api key input
   
   //sets the local storage item to the api key the user inputed
@@ -133,14 +141,18 @@ export function DetailedQuestions():JSX.Element {
   }
 
     return (
+
+  const progressSectionClassName = progress === 100 ? 'progress-section-d-completed' : 'progress-section-d';
+
+  return (
+
     <div className='detailedQuestions'>
-      {completion && <Confetti width={window.innerWidth} height={document.body.scrollHeight}/>}
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Go to Home</button>
                 <div className='detailed-header'><h1>Detailed Questions</h1></div>
             </div>
         <div className='ListOQues'>
-            <div className='progress-section-d'>
+            <div className={progressSectionClassName}>
                 <text>Progress:  </text>
                 <progress value={progress} max={100}/>
             </div>
