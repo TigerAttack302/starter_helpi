@@ -4,8 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 
-import { getResponse } from './BasicQuestions';
-import { keyData } from '../App';
+import { getResponse, keyData } from './BasicQuestions';
 
 import './Results.css';
 import './BasicQuestions';
