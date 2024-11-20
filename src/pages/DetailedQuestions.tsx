@@ -326,19 +326,23 @@ export function DetailedQuestions():JSX.Element {
         <Popup trigger={<div className='submitButton'>
           <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
           position="top center">
-            <div className='popup'>
-              <h1 className='popup-header'>Almost Ready!</h1>
-              <p className='popup-desc'>
-                Our questions use ChatGPT in order to maximize the accuracy of our assessment and to pick out the perfect
-                career for you. Make sure to input your API key here to ensure ChatGPT can utilize
-                your results.
-              </p>
+          <div className='popup'>
+            <h1 className='popup-header'>Almost Ready!</h1>
+            <p className='popup-desc'>
+              Our questions use ChatGPT in order to maximize the accuracy of our assessment and to pick out the perfect
+              career for you. Make sure to input your API key here to ensure ChatGPT can utilize
+              your results.
+            </p>
             <Form>
               <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
               <br/>
+              <div className='popup-buttons'>
                 <Button className="submit-button" onClick={handleSubmit}>Submit</Button>
-              </Form>
-            </div>
+                <br></br>
+                <Button className='skip-button' onClick={() => navigate('/results-detailed')}>Skip</Button>
+              </div>
+            </Form>
+          </div>
         </Popup>
     </div>
 )}

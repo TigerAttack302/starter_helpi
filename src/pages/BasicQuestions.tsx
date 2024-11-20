@@ -121,7 +121,7 @@ export function BasicQuestions(): JSX.Element {
     //sets the local storage item to the api key the user inputed
     function handleSubmit() {
         localStorage.setItem(saveKeyData, JSON.stringify(key));
-        navigate('/results-detailed');
+        navigate('/results-basic');
     }
 
     //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
@@ -269,22 +269,26 @@ export function BasicQuestions(): JSX.Element {
                 </div>
             </div>
             <Popup trigger={<div className='submitButton'>
-          <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
-          position="top center">
-            <div className='popup-b'>
-              <h1 className='popup-header-b'>Almost Ready!</h1>
-              <p className='popup-desc-b'>
-                Our questions use ChatGPT in order to maximize the accuracy of our assessment and to pick out the perfect
-                career for you. Make sure to input your API key here to ensure ChatGPT can utilize
-                your results.
-              </p>
-            <Form>
-              <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
-              <br/>
-                <Button className="submit-button" onClick={handleSubmit}>Submit</Button>
-              </Form>
-            </div>
-        </Popup>
+                <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
+                position="top center">
+                <div className='popup-b'>
+                    <h1 className='popup-header-b'>Almost Ready!</h1>
+                    <p className='popup-desc-b'>
+                        Our questions use ChatGPT in order to maximize the accuracy of our assessment and to pick out the perfect
+                        career for you. Make sure to input your API key here to ensure ChatGPT can utilize
+                        your results.
+                    </p>
+                    <Form>
+                        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+                        <br/>
+                        <div className='popup-buttons'>
+                            <Button className="submit-button" onClick={handleSubmit}>Submit</Button>
+                            <br></br>
+                            <Button className='skip-button' onClick={() => navigate('/results-basic')}>Skip</Button>
+                        </div>
+                    </Form>
+                </div>
+            </Popup>
         </div>
     );
 }

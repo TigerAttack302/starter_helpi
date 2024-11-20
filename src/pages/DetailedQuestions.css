@@ -143,9 +143,17 @@
     color: rgb(156, 35, 35);
 }
 
+.popup-buttons {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .submit-button {
     background-color: rgb(156, 35, 35);
     border-color: black;
+    margin-right: 5%;
 }
 
 .submit-button:hover {
@@ -153,4 +161,19 @@
     box-shadow: 0 0 20px rgba(136, 28, 28, 0.8);
     background-color: rgb(134, 22, 22);
     border-color: black;
+}
+
+.skip-button {
+    background-color: lightgrey;
+    border-color: black;
+    color: black;
+    margin-left: 5%;
+}
+
+.skip-button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgb(169, 169, 169);
+    background-color: lightgrey;
+    border-color: black;
+    color: black;
 }
