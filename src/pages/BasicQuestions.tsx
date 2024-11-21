@@ -137,8 +137,7 @@ export function BasicQuestions(): JSX.Element {
         setKey(event.target.value);
     }
 
-    const progressSectionClassName = progress === 100 ? 'progress-section-b-completed' : 'progress-section-b';
-
+    let progressSectionClassName = progress === 100 ? 'progress-section-b-completed' : 'progress-section-b';
 
     return (
         <div>
