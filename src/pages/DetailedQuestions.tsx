@@ -140,9 +140,7 @@ export function DetailedQuestions():JSX.Element {
     setKey(event.target.value);
   }
 
-    return (
-
-  const progressSectionClassName = progress === 100 ? 'progress-section-d-completed' : 'progress-section-d';
+  let progressSectionClassName = progress === 100 ? 'progress-section-d-completed' : 'progress-section-d';
 
   return (
 
