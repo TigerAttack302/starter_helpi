@@ -11,13 +11,13 @@ import './Results.css';
 import './DetailedQuestions';
 
 const messages: Array<{ role: string; content: string }> = [
-    { role: 'system', content: 'You are a Gen Z barista' }, // System message to set behavior
+    { role: 'user', content: getResponse()},
+    { role: 'system', content: 'Always have a rhyming word in each sentence' }, // System message to set behavior
 ];
 
-async function sendMessage(): Promise<void> {
-    const userInput = (document.getElementById('user-input') as HTMLInputElement).value;
+async function sendMessage(userInput: string): Promise<void> {
     if (!userInput) return;
-
+    messages.push({ role: 'user', content: userInput });
 
     const responseElement = document.getElementById('response1')!;
     responseElement.innerHTML = 'Loading...';
@@ -27,8 +27,8 @@ async function sendMessage(): Promise<void> {
         const response = await axios.post(
             'https://api.openai.com/v1/chat/completions',
             {
-                model: 'gpt-3.5-turbo',
-                messages: [{ role: 'user', content: userInput }],
+                model: 'gpt-4o-mini',
+                messages,
             },
             {
                 headers: {
@@ -40,6 +40,7 @@ async function sendMessage(): Promise<void> {
 
 
         const message = response.data.choices[0].message.content;
+        messages.push({ role: 'system', content: message });
         responseElement.innerHTML = message;
     } catch (error) {
         responseElement.innerHTML = 'Error: ' + (error as Error).message;
@@ -53,50 +54,11 @@ async function sendMessage(): Promise<void> {
 
 //------------------------------------------------------------------
 
-
-async function sendAnswers(userInput: string): Promise<void> {
-    // Add the user's input to the conversation history
-    messages.push({ role: 'user', content: userInput });
-
-    try {
-        // Call the OpenAI API
-        const response = await axios.post(
-            'https://api.openai.com/v1/chat/completions',
-            {
-                model: 'gpt-3.5-turbo',
-                messages,
-            },
-            {
-                headers: {
-                    'Authorization': `Bearer ${keyData}`,
-                    'Content-Type': 'application/json',
-                },
-            }
-        );
-
-        // Get the assistant's response
-        const assistantMessage = response.data.choices[0].message.content;
-
-        // Add the assistant's response to the conversation history
-        messages.push({ role: 'assistant', content: assistantMessage });
-
-        // Output the assistant's response
-        console.log(assistantMessage);
-    } catch (error) {
-        console.error('Error:', error);
-    }
-}
-
-// Make the sendAnswers function available globally
-(window as any).sendAnswers = sendAnswers;
-
-//------------------------------------------------------------------
-
 export function ResultsDetailed():JSX.Element {
     const navigate = useNavigate();
 
     useEffect(() => {
-        sendAnswers(getResponse());
+        sendMessage(getResponse());
     }, [])
 
     return (
@@ -105,14 +67,14 @@ export function ResultsDetailed():JSX.Element {
                 <button onClick={() => navigate('/')}>Back to Home</button>
                 <div className='results-header'><h1>Results</h1></div>
             </div>
-        <div className='response'>
+        <div className='CGPTresponse'>
             <h3>ChatGPT response:</h3>
             <div id="response"></div>
         </div>
         <div id="response1"></div>
         <div className='communication'>
             <Form.Control type="textarea" id="user-input" placeholder="Communicate with ChatGPT here..."/>
-            <Button onClick= {() => sendMessage()} className='send-message' >Send</Button>
+            <Button onClick= {() => sendMessage((document.getElementById('user-input') as HTMLInputElement).value)} className='send-message' >Send</Button>
         </div>
         <script src="script.js" defer></script>
         <hr/>
