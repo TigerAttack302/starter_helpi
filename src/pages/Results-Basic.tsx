@@ -11,15 +11,14 @@ import './Results.css';
 import './BasicQuestions';
 
 const messages: Array<{ role: string; content: string }> = [
-    { role: 'user', content: getResponse()},
-    { role: 'system', content: 'Always have a rhyming word in each sentence' }, // System message to set behavior
+    { role: 'system', content: 'Draw comparisons between the user\'s qualities and coffee ingredients or pastry ingredients' }, // System message to set behavior
 ];
 
-async function sendMessage(userInput: string): Promise<void> {
+async function sendMessage(userInput: string, location: string): Promise<void> {
     if (!userInput) return;
     messages.push({ role: 'user', content: userInput });
 
-    const responseElement = document.getElementById('response1')!;
+    const responseElement = document.getElementById(location)!;
     responseElement.innerHTML = 'Loading...';
 
 
@@ -58,7 +57,7 @@ export function ResultsBasic():JSX.Element {
     const navigate = useNavigate();
 
     useEffect(() => {
-        sendMessage(getResponse());
+        sendMessage(getResponse(),'response');
     }, [])
 
     return (
@@ -74,7 +73,7 @@ export function ResultsBasic():JSX.Element {
         <div id="response1"></div>
         <div className='communication'>
             <Form.Control type="textarea" id="user-input" placeholder="Communicate with ChatGPT here..."/>
-            <Button onClick= {() => sendMessage(((document.getElementById('user-input') as HTMLInputElement).value))} className='send-message' >Send</Button>
+            <Button onClick= {() => sendMessage(((document.getElementById('user-input') as HTMLInputElement).value),'response1')} className='send-message' >Send</Button>
         </div>
         <script src="script.js" defer></script>
         <hr/>
