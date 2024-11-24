@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 import full from './DetailedQuestionPictures/images.jpg';
 import principles from './DetailedQuestionPictures/download.jpg';
@@ -11,17 +11,27 @@ import success from './DetailedQuestionPictures/images (1).jpg';
 import goal from './DetailedQuestionPictures/goal.png';
 
 import './DetailedQuestions.css';
+import Popup from 'reactjs-popup';
 
 
 let finalResponses: string;
 export function getResponse(){
     return finalResponses;
 }
+
+//local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
+export let keyData = "";
+const saveKeyData = "MYKEY";
+const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
+if (prevKey !== null) {
+  keyData = JSON.parse(prevKey);
+}
+
 export function DetailedQuestions():JSX.Element {
     const navigate = useNavigate();
     const [progress, setProgress] = useState<number>(0);
     const [completion, setCompletion] = useState<boolean>(false);
-    const [response, setResponse] = useState<string>("Given the following questions and answers, what is the best career for me? ");
+    const [response, setResponse] = useState<string>("Given the following questions and answers, what is the best career for me? If the answers don't make sense, ask the user to retry the quiz. ");
 
     const [ans1, setAns1] = useState<string>("");
     function UpdateAns1(event: React.ChangeEvent<HTMLInputElement>){
@@ -114,12 +124,26 @@ export function DetailedQuestions():JSX.Element {
       + "; What kind of impact do you want your work to have on others or the world? " + ans5
       + "; What are your financial goals and lifestyle preferences, and how do they influence your career choices? " + ans6
       + "; How do you define success in your career, and what will make you feel you’ve achieved it? " + ans7);
-      navigate('/results-detailed');
   }
 
-  const progressSectionClassName = progress === 100 ? 'progress-section-d-completed' : 'progress-section-d';
+  
+  const [key, setKey] = useState<string>(keyData); //for api key input
+  
+  //sets the local storage item to the api key the user inputed
+  function handleSubmit() {
+    localStorage.setItem(saveKeyData, JSON.stringify(key));
+    navigate('/results-detailed');
+  }
+
+  //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
+  function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
+    setKey(event.target.value);
+  }
+
+  let progressSectionClassName = progress === 100 ? 'progress-section-d-completed' : 'progress-section-d';
 
   return (
+
     <div className='detailedQuestions'>
             <div className='home-button'>
                 <button onClick={() => navigate('/')}>Go to Home</button>
@@ -133,10 +157,10 @@ export function DetailedQuestions():JSX.Element {
         <Form.Group className="DetailedQues" controlId="DQlist">
         <Container className='lowercontainer'>
         <hr/>
-          <Row>
           <text>
           Q1. What activities or tasks make you feel the most energized and fulfilled, and why?
           </text>
+          <Row>
                 <Col>
           <Form.Control
             className='textbox'
@@ -309,11 +333,26 @@ export function DetailedQuestions():JSX.Element {
           </Container>
       </Form.Group>
         </div>
-        
-
-        <div className='submitButton'>
-        <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>
-        </div>
-        <hr/>
+        <Popup trigger={<div className='submitButton'>
+          <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
+          position="top center">
+          <div className='popup'>
+            <h1 className='popup-header'>Almost Ready!</h1>
+            <p className='popup-desc'>
+              Our questions use ChatGPT in order to maximize the accuracy of our assessment and to pick out the perfect
+              career for you. Make sure to input your API key here to ensure ChatGPT can utilize
+              your results.
+            </p>
+            <Form>
+              <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+              <br/>
+              <div className='popup-buttons'>
+                <Button className="submit-button" onClick={handleSubmit}>Submit</Button>
+                <br></br>
+                <Button className='skip-button' onClick={() => navigate('/results-detailed')}>Skip</Button>
+              </div>
+            </Form>
+          </div>
+        </Popup>
     </div>
 )}

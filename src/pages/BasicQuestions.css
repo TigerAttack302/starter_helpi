@@ -39,6 +39,7 @@ body {
 .question-image {
     width: 100%;
     max-width: 350px; /* Keeps images manageable */
+    align-items: center;
     height: auto;
     margin: 20px 0;
     border-radius: 10px;
@@ -94,6 +95,71 @@ body {
     border-color: lightblue;
 }
 
+.popup-b {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-style: inset;
+    border-radius: 5%;
+    background-color: rgba(254, 187, 187, 0.85);
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: rgb(181, 75, 75);
+    border-color: rgb(181, 75, 75);
+    font-family: 'Dancing Script', cursive;
+}
+
+.popup-header-b {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(156, 35, 35);
+
+}
+
+.popup-desc-b {
+    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.popup-buttons {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.submit-button-b {
+    background-color: rgb(181, 75, 75);
+    border-color: black;
+    margin-right: 5%;
+}
+
+.submit-button-b:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(199, 87, 87, 0.8);
+    background-color: rgb(192, 88, 88);
+    border-color: black;
+}
+
+.skip-button {
+    background-color: lightgrey;
+    border-color: black;
+    color: black;
+    margin-left: 5%;
+}
+
+.skip-button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgb(169, 169, 169);
+    background-color: lightgrey;
+    border-color: black;
+    color: black;
+}
 .progress-section-b-completed {
     background-color: lightgreen;
     border-color: lightgreen;
@@ -152,3 +218,4 @@ body {
         font-size: 0.9rem;
     }
 }
+

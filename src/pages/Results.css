@@ -1,30 +1,53 @@
 .home-button-results {
-    background-color: lightcoral;
+    background-color: #c67c5a;
+    color: white;
     padding: 1%;
     text-align: left;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.home-button-results:hover {
+    background-color: #8b5a3c;
+    transform: translateY(-2px);
 }
 
 .results-header {
     margin-left: 40%;
     margin-right: 40%;
     text-align: center;
-    color: rgb(0, 119, 255);
-    border-color: rgb(62, 152, 255);
+    color: #4b3832;
+    border-color: #c39e81;
     border-style: solid;
+    border-width: 2px;
     padding: 0.5%;
-    background-color: white;
+    background-color: #fff7eb;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.response {
+.CGPTresponse {
     margin: 2%;
     margin-left: 20%;
     margin-right: 20%;
     padding: 2%;
-    background-color: lightblue;
+    background-color: #e7d3b8;
     border-style: inset;
-    border-color: rgb(120, 47, 255);
-    border-radius: 0%;
-    border-width: 10px;
+    border-color: #c39e81;
+    border-radius: 8px;
+    border-width: 6px;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    color: #4b3832;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .communication {
@@ -32,9 +55,24 @@
     padding-top: 1%;
     padding-right: 40%;
     display: flex;
-    align-items: left;
+    align-items: flex-start;
 }
 
 .send-message {
-    margin-left: 1%
+    margin-left: 1%;
+    padding: 10px 20px;
+    background-color: #c67c5a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.send-message:hover {
+    background-color: #8b5a3c;
+    transform: translateY(-2px);
 }

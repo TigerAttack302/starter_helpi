@@ -1,56 +1,52 @@
-/* General Styling */
 body {
-    font-family: 'Playfair Display', serif; /* Elegant coffee-style font */
-    background-color: #f3e9dc; /* Coffee cream background */
-    color: #4b3832; /* Deep brown text */
+    font-family: 'Playfair Display', serif; 
+    background-color: #f3e9dc; 
+    color: #4b3832; 
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* Improves readability */
+    line-height: 1.6; 
 }
 
-/* Header Section */
 .detailed-header {
-    margin: 0 auto; /* Centers the header */
-    width: 60%; /* Balanced width */
+    margin: 0 auto; 
+    width: 60%;
     text-align: center;
-    color: #4b3832; /* Deep coffee brown */
+    color: #4b3832; 
     border: 2px solid #c67c5a;
     padding: 15px;
-    background-color: #fdf6e3; /* Light cream */
+    background-color: #fdf6e3; 
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
-    font-size: 1.8rem; /* Larger title font */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    font-size: 1.8rem; 
     font-weight: bold;
 }
 
-/* Textbox */
 .textbox {
-    width: 80%; /* Fits nicely within the container */
-    height: 200px; /* Balanced height */
+    width: 80%; 
+    height: 200px; 
     padding: 15px;
-    font-size: 1rem; /* Readable text size */
+    font-size: 1rem; 
     text-align: left;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden; 
+    overflow-y: auto; 
     border: 1px solid #8b5a3c;
     border-radius: 6px;
     background-color: #fff7eb;
     color: #4b3832;
-    margin: 20px auto; /* Center the textbox */
+    margin: 20px auto; 
     display: block;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inset shadow */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-/* Buttons */
 .home-button,
 .submitButton,
 .top button {
-    padding: 12px 20px; /* Nicely sized buttons */
+    padding: 12px 20px; 
     background-color: #c67c5a;
     color: white;
     border: none;
     border-radius: 6px;
-    font-size: 1rem; /* Easy-to-read button text */
+    font-size: 1rem; 
     margin: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -59,40 +55,37 @@ body {
 .home-button:hover,
 .submitButton:hover,
 .top button:hover {
-    background-color: #8b5a3c; /* Darker shade on hover */
-    transform: translateY(-2px); /* Subtle lift effect */
+    background-color: #8b5a3c; 
+    transform: translateY(-2px); 
 }
 
-/* Image Styling */
 .IMG {
-    width: 80%; /* Scales well on all devices */
-    height: auto; /* Keeps aspect ratio */
+    width: 80%; 
+    height: 80%; 
     display: block;
-    margin: 20px auto; /* Centers the image */
-    border-radius: 10px; /* Smooth edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
+    margin: 20px auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* Form Section */
 .listOQues Form {
-    width: 70%; /* Balanced width */
-    margin: 20px auto; /* Centers the form */
+    width: 70%; 
+    margin: 20px auto;
     padding: 20px;
-    background-color: #fff7eb; /* Light cream background */
+    background-color: #fff7eb;
     border: 1px solid #c67c5a;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .listOQues text {
-    font-size: 1.2rem; /* Larger text for clarity */
+    font-size: 1.2rem;
     font-weight: bold;
     color: #4b3832;
     margin-bottom: 10px;
     display: block;
 }
 
-/* Progress Section */
 .progress-section-d,
 .progress-section-d-completed {
     position: fixed;
@@ -100,42 +93,40 @@ body {
     font-size: 1rem;
     left: 1%;
     padding: 10px 15px;
-    background-color: #c67c5a; /* Coffee brown */
+    background-color: #c67c5a;
     color: white;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds depth */
-    width: 200px; /* Uniform width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 200px;
 }
 
 .progress-section-d-completed {
-    background-color: #8b5a3c; /* Darker coffee brown for completed */
+    background-color: #8b5a3c;
 }
 
-/* Lower Container */
 .lowerContainer {
     display: flex;
-    justify-content: space-around; /* Evenly spaced children */
+    justify-content: space-around;
     align-items: center;
     width: 90%;
-    max-width: 1200px; /* Keeps it neat on large screens */
-    height: auto; /* Adjusts height to content */
+    max-width: 1200px;
+    height: auto;
     background-color: #fdf6e3;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     margin: 30px auto;
     padding: 15px;
 }
 
-/* Textbox Indicator */
 .textboxIndicator {
     position: relative;
-    bottom: 10px; /* Adjusted position */
+    bottom: 10px; 
     font-size: 0.8rem;
     color: #8b5a3c;
     text-align: center;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .detailed-header {
         width: 90%;
@@ -160,4 +151,70 @@ body {
         width: 150px;
         font-size: 0.9rem;
     }
+}
+
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-style: inset;
+    border-radius: 5%;
+    background-color: rgba(254, 187, 187, 0.85);
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-color: rgb(156, 35, 35);
+    font-family: 'Dancing Script', cursive;
+}
+
+.popup-header {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(156, 35, 35);
+}
+
+.popup-desc {
+    padding: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: rgb(156, 35, 35);
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: rgb(156, 35, 35);
+    border-color: black;
+    margin-right: 5%;
+}
+
+.submit-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(136, 28, 28, 0.8);
+    background-color: rgb(134, 22, 22);
+    border-color: black;
+}
+
+.skip-button {
+    background-color: lightgrey;
+    border-color: black;
+    color: black;
+    margin-left: 5%;
+}
+
+.skip-button:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgb(169, 169, 169);
+    background-color: lightgrey;
+    border-color: black;
+    color: black;
 }
