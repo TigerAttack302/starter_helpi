@@ -150,15 +150,14 @@ export function BasicQuestions(): JSX.Element {
                     <text>Progress:  </text>
                 <progress value={progress} max={100}/>
             </div>
-            <div>
-            <div>
+        <div>
+
     <h3>Question 1 out of 7</h3>
-    <div className='question'>
-        <h3>Which one of these best describes you?</h3>
-        <img src={q1pic} alt="Question 1" className="question-image" />
-    </div>
-    <div className='buttonGroup'>
-        {q1Arr.map((a: string) => (
+    <div className="question">
+    <h3>Which one of these best describes you?</h3>
+    <img src={q1pic} alt="Question 1" className="question-image" />
+    <div className="buttonGroup">
+        {q1Arr.map((a) => (
             <Form.Check
                 type="radio"
                 name="q1"
@@ -171,14 +170,12 @@ export function BasicQuestions(): JSX.Element {
     </div>
 </div>
 
-<div>
-    <h3>Question 2 out of 7</h3>
-    <div className='question'>
-        <h3>What do you find as your favorite subject?</h3>
-        <img src={q2pic} alt="Question 2" className="question-image" />
-    </div>
-    <div className='buttonGroup'>
-        {q2Arr.map((a: string) => (
+<h3>Question 2 out of 7</h3>
+<div className="question">
+    <h3>What do you find as your favorite subject?</h3>
+    <img src={q2pic} alt="Question 2" className="question-image" />
+    <div className="buttonGroup">
+        {q2Arr.map((a) => (
             <Form.Check
                 type="radio"
                 name="q2"
@@ -191,14 +188,12 @@ export function BasicQuestions(): JSX.Element {
     </div>
 </div>
 
-<div>
-    <h3>Question 3 of 7</h3>
-    <div className='question'>
-        <h3>What do you enjoy doing the most?</h3>
-        <img src={q3pic} alt="Question 3" className="question-image" />
-    </div>
-    <div className='buttonGroup'>
-        {q3Arr.map((a: string) => (
+<h3>Question 3 of 7</h3>
+<div className="question">
+    <h3>What do you enjoy doing the most?</h3>
+    <img src={q3pic} alt="Question 3" className="question-image" />
+    <div className="buttonGroup">
+        {q3Arr.map((a) => (
             <Form.Check
                 type="radio"
                 name="q3"
@@ -211,14 +206,12 @@ export function BasicQuestions(): JSX.Element {
     </div>
 </div>
 
-<div>
-    <h3>Question 4 out of 7</h3>
-    <div className='question'>
-        <h3>Which role do you find yourself in a job?</h3>
-        <img src={q4pic} alt="Question 4" className="question-image" />
-    </div>
-    <div className='buttonGroup'>
-        {q4Arr.map((a: string) => (
+<h3>Question 4 out of 7</h3>
+<div className="question">
+    <h3>Which role do you find yourself in a job?</h3>
+    <img src={q4pic} alt="Question 4" className="question-image" />
+    <div className="buttonGroup">
+        {q4Arr.map((a) => (
             <Form.Check
                 type="radio"
                 name="q4"
@@ -231,14 +224,12 @@ export function BasicQuestions(): JSX.Element {
     </div>
 </div>
 
-<div>
-    <h3>Question 5 out of 7</h3>
-    <div className='question'>
-        <h3>What Best Describes yourself?</h3>
-        <img src={q5pic} alt="Question 5" className="question-image" />
-    </div>
-    <div className='buttonGroup'>
-        {q5Arr.map((a: string) => (
+<h3>Question 5 out of 7</h3>
+<div className="question">
+    <h3>What best describes yourself?</h3>
+    <img src={q5pic} alt="Question 5" className="question-image" />
+    <div className="buttonGroup">
+        {q5Arr.map((a) => (
             <Form.Check
                 type="radio"
                 name="q5"
@@ -251,14 +242,12 @@ export function BasicQuestions(): JSX.Element {
     </div>
 </div>
 
-<div>
-    <h3>Question 6 out of 7</h3>
-    <div className='question'>
-        <h3>What type of work environment would you thrive in?</h3>
-        <img src={q6pic} alt="Question 6" className="question-image" />
-    </div>
-    <div className='buttonGroup'>
-        {q6Arr.map((a: string) => (
+<h3>Question 6 out of 7</h3>
+<div className="question">
+    <h3>What type of work environment would you thrive in?</h3>
+    <img src={q6pic} alt="Question 6" className="question-image" />
+    <div className="buttonGroup">
+        {q6Arr.map((a) => (
             <Form.Check
                 type="radio"
                 name="q6"
@@ -271,14 +260,12 @@ export function BasicQuestions(): JSX.Element {
     </div>
 </div>
 
-<div>
-    <h3>Question 7 out of 7</h3>
-    <div className='question'>
-        <h3>What is your first priority in a job?</h3>
-        <img src={q7pic} alt="Question 7" className="question-image" />
-    </div>
-    <div className='buttonGroup'>
-        {q7Arr.map((a: string) => (
+<h3>Question 7 out of 7</h3>
+<div className="question">
+    <h3>What is your first priority in a job?</h3>
+    <img src={q7pic} alt="Question 7" className="question-image" />
+    <div className="buttonGroup">
+        {q7Arr.map((a) => (
             <Form.Check
                 type="radio"
                 name="q7"
