@@ -72,7 +72,7 @@ All files               |       0 |        0 |       0 |       0 |
  src/Components         |       0 |      100 |       0 |       0 |                   
   ScrollToTop.tsx       |       0 |      100 |       0 |       0 | 5-11              
  src/pages              |       0 |        0 |       0 |       0 |                   
-  BasicQuestions.tsx    |       0 |        0 |       0 |       0 | 19-311            
+  BasicQuestions.tsx    |       0 |        0 |       0 |       0 | 19-298            
   DetailedQuestions.tsx |       0 |        0 |       0 |       0 | 19-352            
   Home.tsx              |       0 |      100 |       0 |       0 | 8-52              
   Results-Basic.tsx     |       0 |        0 |       0 |       0 | 12-75             
@@ -81,5 +81,5 @@ All files               |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        3.958 s
+Time:        4.039 s
 Ran all test suites.
