@@ -91,7 +91,7 @@ body {
     position: fixed;
     text-align: center;
     font-size: 1rem;
-    left: 1%;
+    right: 1%;
     padding: 10px 15px;
     background-color: #c67c5a;
     color: white;

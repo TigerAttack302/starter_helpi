@@ -84,15 +84,15 @@ body {
     font-size: 1rem;
     right: 1%;
     padding: 10px 15px;
-    border-radius: 15px;
-    width: 200px; /* Consistent width */
+    background-color: #c67c5a;
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 200px;
 }
 
-.progress-section-b {
-    background-color: lightblue;
-    border-color: lightblue;
+.progress-section-b-completed {
+    background-color: #8b5a3c;
 }
 
 .popup-b {
@@ -159,10 +159,6 @@ body {
     background-color: lightgrey;
     border-color: black;
     color: black;
-}
-.progress-section-b-completed {
-    background-color: lightgreen;
-    border-color: lightgreen;
 }
 
 /* Submit Button */

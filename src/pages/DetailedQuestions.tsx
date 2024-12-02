@@ -352,6 +352,8 @@ export function DetailedQuestions():JSX.Element {
                 <Button className='skip-button' onClick={() => navigate('/results-detailed')}>Skip</Button>
               </div>
             </Form>
+            <br/>
+            <p>**Do not hit skip unless you've already submitted your API key this session</p>
           </div>
         </Popup>
     </div>
