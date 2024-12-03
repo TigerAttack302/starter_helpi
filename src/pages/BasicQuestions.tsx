@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import Confetti from 'react-confetti'
 
@@ -152,28 +152,36 @@ export function BasicQuestions(): JSX.Element {
             </div>
         <div>
 
+    <Form.Group className='BQlist'>
+        <Container className='QuesContainer'>
     <h3>Question 1 out of 7</h3>
     <div className="question">
     <h3>Which one of these best describes you?</h3>
-    <img src={q1pic} alt="Question 1" className="question-image" />
-    <div className="buttonGroup">
-        {q1Arr.map((a) => (
-            <Form.Check
-                type="radio"
-                name="q1"
-                onChange={() => updateAnswer1(a)}
-                label={a}
-                key={a}
-                value={a}
-            />
-        ))}
-    </div>
+    <Row>
+        <Col>
+            <div className="buttonGroup">
+                {q1Arr.map((a) => (
+                    <Form.Check
+                        type="radio"
+                        name="q1"
+                        onChange={() => updateAnswer1(a)}
+                        label={a}
+                        key={a}
+                        value={a}
+                    />
+                ))}
+            </div>
+        </Col>
+        <Col>
+            <img src={q1pic} alt="Question 1" className="question-image" />
+        </Col>
+    </Row>
 </div>
-
 <h3>Question 2 out of 7</h3>
 <div className="question">
     <h3>What do you find as your favorite subject?</h3>
-    <img src={q2pic} alt="Question 2" className="question-image" />
+    <Row>
+    <Col>
     <div className="buttonGroup">
         {q2Arr.map((a) => (
             <Form.Check
@@ -186,12 +194,18 @@ export function BasicQuestions(): JSX.Element {
             />
         ))}
     </div>
+    </Col>
+        <Col>
+    <img src={q2pic} alt="Question 2" className="question-image" />
+    </Col>
+    </Row>
 </div>
 
 <h3>Question 3 of 7</h3>
 <div className="question">
     <h3>What do you enjoy doing the most?</h3>
-    <img src={q3pic} alt="Question 3" className="question-image" />
+    <Row>
+    <Col>
     <div className="buttonGroup">
         {q3Arr.map((a) => (
             <Form.Check
@@ -204,12 +218,18 @@ export function BasicQuestions(): JSX.Element {
             />
         ))}
     </div>
+    </Col>
+    <Col>
+    <img src={q3pic} alt="Question 3" className="question-image" />
+    </Col>
+    </Row>
 </div>
 
 <h3>Question 4 out of 7</h3>
 <div className="question">
     <h3>Which role do you find yourself in a job?</h3>
-    <img src={q4pic} alt="Question 4" className="question-image" />
+    <Row>
+    <Col>
     <div className="buttonGroup">
         {q4Arr.map((a) => (
             <Form.Check
@@ -222,12 +242,18 @@ export function BasicQuestions(): JSX.Element {
             />
         ))}
     </div>
+    </Col>
+    <Col>
+    <img src={q4pic} alt="Question 4" className="question-image" />
+    </Col>
+    </Row>
 </div>
 
 <h3>Question 5 out of 7</h3>
 <div className="question">
     <h3>What best describes yourself?</h3>
-    <img src={q5pic} alt="Question 5" className="question-image" />
+    <Row>
+    <Col>
     <div className="buttonGroup">
         {q5Arr.map((a) => (
             <Form.Check
@@ -240,12 +266,18 @@ export function BasicQuestions(): JSX.Element {
             />
         ))}
     </div>
+    </Col>
+    <Col>
+    <img src={q5pic} alt="Question 5" className="question-image" />
+    </Col>
+    </Row>
 </div>
 
 <h3>Question 6 out of 7</h3>
 <div className="question">
     <h3>What type of work environment would you thrive in?</h3>
-    <img src={q6pic} alt="Question 6" className="question-image" />
+    <Row>
+    <Col>
     <div className="buttonGroup">
         {q6Arr.map((a) => (
             <Form.Check
@@ -258,12 +290,18 @@ export function BasicQuestions(): JSX.Element {
             />
         ))}
     </div>
+    </Col>
+    <Col>
+    <img src={q6pic} alt="Question 6" className="question-image" />
+    </Col>
+    </Row>
 </div>
 
 <h3>Question 7 out of 7</h3>
 <div className="question">
     <h3>What is your first priority in a job?</h3>
-    <img src={q7pic} alt="Question 7" className="question-image" />
+    <Row>
+    <Col>
     <div className="buttonGroup">
         {q7Arr.map((a) => (
             <Form.Check
@@ -276,7 +314,14 @@ export function BasicQuestions(): JSX.Element {
             />
         ))}
     </div>
+    </Col>
+    <Col>
+    <img src={q7pic} alt="Question 7" className="question-image" />
+    </Col>
+    </Row>
 </div>
+    </Container>
+</Form.Group>
 
             </div>
             <Popup trigger={<div className='submitButton'>
