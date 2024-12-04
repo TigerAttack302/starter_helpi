@@ -76,3 +76,42 @@
     background-color: #8b5a3c;
     transform: translateY(-2px);
 }
+
+
+.error-handling {
+    margin: 2%;
+    margin-top: 1%;
+    padding: 1%;
+    padding-bottom: .5%;
+    background-color: #f5eadc;
+    border-style: inset;
+    border-color: #c39e81;
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 14px;
+    font-family: 'Georgia', serif;
+    color: #4b3832;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.suggestions {
+    text-align: left;
+    white-space: nowrap;
+    margin: 2%;
+    margin-top: 1%;
+    padding: 1%;
+    padding-bottom: .5%;
+    background-color: #f5eadc;
+    border-style: inset;
+    border-color: #c39e81;
+    border-radius: 5px;
+    border-width: 3px;
+    font-size: 14px;
+    font-family: 'Georgia', serif;
+    color: #4b3832;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.results-row {
+    display:flex;
+}
