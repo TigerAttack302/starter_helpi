@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import { useNavigate } from 'react-router-dom';
@@ -54,6 +54,18 @@ async function sendMessage(userInput: string, location: string): Promise<void> {
 
 export function ResultsDetailed():JSX.Element {
     const navigate = useNavigate();
+    const [inputValue, setInputValue] = useState<string>('');
+
+    const clearInput = () => {
+        setInputValue('');
+    };
+
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter') {
+        setInputValue('');
+        sendMessage(((document.getElementById('user-input') as HTMLInputElement).value),'response1');
+        }
+    };
 
     useEffect(() => {
         sendMessage(getResponse(),'response');
@@ -66,13 +78,22 @@ export function ResultsDetailed():JSX.Element {
                 <div className='results-header'><h1>Results</h1></div>
             </div>
             <div className='CGPTresponse'>
-                <h3>ChatGPT response:</h3>
+                <h3 className='your-brew'>Your Brew:</h3>
                 <div id="response"></div>
             </div>
             <div id="response1"></div>
             <div className='communication'>
-                <Form.Control type="textarea" id="user-input" placeholder="Communicate with ChatGPT here..."/>
-                <Button onClick= {() => sendMessage((document.getElementById('user-input') as HTMLInputElement).value,'response1')} className='send-message' >Send</Button>
+                <Form.Control type="textarea"
+                id="user-input"
+                placeholder="Communicate with ChatGPT here..."
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyDown={handleKeyDown}/>
+                <Button onClick= {() => {
+                    sendMessage(((document.getElementById('user-input') as HTMLInputElement).value),'response1');
+                    clearInput();}
+                    }
+                    className='send-message' >Send</Button>
             </div>
             <script src="script.js" defer></script>
             <div className='results-row'>

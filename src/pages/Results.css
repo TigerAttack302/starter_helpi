@@ -39,6 +39,7 @@
     margin-left: 20%;
     margin-right: 20%;
     padding: 2%;
+    padding-top: 1%;
     background-color: #e7d3b8;
     border-style: inset;
     border-color: #c39e81;
@@ -56,6 +57,13 @@
     padding-right: 40%;
     display: flex;
     align-items: flex-start;
+}
+
+.your-brew {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, cursive;
+    font-style: italic;
+    font-size: 40px;
+    padding-bottom: 1%;
 }
 
 .send-message {
