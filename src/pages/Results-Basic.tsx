@@ -81,7 +81,7 @@ export function ResultsBasic():JSX.Element {
                 <h3 className='your-brew'>Your Brew:</h3>
                 <div id="response"></div>
             </div>
-            <div id="response1"></div>
+            <div id="response1">Start you conversation here!</div>
             <div className='communication'>
                 <Form.Control type="textarea"
                 id="user-input"
