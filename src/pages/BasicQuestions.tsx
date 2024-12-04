@@ -279,8 +279,9 @@ export function BasicQuestions(): JSX.Element {
 </div>
 
             </div>
-            <Popup trigger={<div className='submitButton'>
-                <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
+            <div className='submitButton'>
+            <Popup trigger={
+                <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>}
                 position="top center">
                 <div className='popup-b'>
                     <h1 className='popup-header-b'>Almost Ready!</h1>
@@ -298,8 +299,11 @@ export function BasicQuestions(): JSX.Element {
                             <Button className='skip-button' onClick={() => navigate('/results-basic')}>Skip</Button>
                         </div>
                     </Form>
+                    <br/>
+                    <p className='popup-aside'>**Do not hit skip unless you've already submitted your API key this session</p>
                 </div>
             </Popup>
+            </div>
         </div>
     );
 }

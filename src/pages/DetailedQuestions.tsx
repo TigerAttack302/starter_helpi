@@ -333,8 +333,9 @@ export function DetailedQuestions():JSX.Element {
           </Container>
       </Form.Group>
         </div>
-        <Popup trigger={<div className='submitButton'>
-          <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
+        <div className='submitButton'>
+        <Popup trigger={
+          <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>}
           position="top center">
           <div className='popup'>
             <h1 className='popup-header'>Almost Ready!</h1>
@@ -353,8 +354,9 @@ export function DetailedQuestions():JSX.Element {
               </div>
             </Form>
             <br/>
-            <p>**Do not hit skip unless you've already submitted your API key this session</p>
+            <p className='popup-aside'>**Do not hit skip unless you've already submitted your API key this session</p>
           </div>
         </Popup>
+        </div>
     </div>
 )}

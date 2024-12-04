@@ -133,6 +133,10 @@ body {
     text-align: center;
 }
 
+.popup-aside {
+    color: black;
+}
+
 .submit-button-b {
     background-color: rgb(181, 75, 75);
     border-color: black;
