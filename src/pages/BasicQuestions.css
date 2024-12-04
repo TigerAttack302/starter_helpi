@@ -95,6 +95,12 @@ body {
     background-color: #8b5a3c;
 }
 
+.submitButtonHolder {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
 .popup-b {
     position: fixed;
     top: 50%;

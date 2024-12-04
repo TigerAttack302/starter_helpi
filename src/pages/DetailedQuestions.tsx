@@ -334,8 +334,7 @@ export function DetailedQuestions():JSX.Element {
       </Form.Group>
         </div>
         <div className='submitButton'>
-        <Popup trigger={
-          <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>}
+        <Popup trigger={<div className='submitButtonHolder'><button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
           position="top center">
           <div className='popup'>
             <h1 className='popup-header'>Almost Ready!</h1>

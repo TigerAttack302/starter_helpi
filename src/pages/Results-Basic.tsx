@@ -10,7 +10,7 @@ import './Results.css';
 import './BasicQuestions';
 
 const messages: Array<{ role: string; content: string }> = [
-    { role: 'system', content: 'Draw comparisons between the user\'s qualities and coffee ingredients or pastry ingredients' }, // System message to set behavior
+    { role: 'system', content: 'Give responses in a generally concise manner' }, // System message to set behavior
 ];
 
 async function sendMessage(userInput: string, location: string): Promise<void> {

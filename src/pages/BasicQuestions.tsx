@@ -280,8 +280,7 @@ export function BasicQuestions(): JSX.Element {
 
             </div>
             <div className='submitButton'>
-            <Popup trigger={
-                <button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button>}
+            <Popup trigger={<div className='submitButtonHolder'><button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
                 position="top center">
                 <div className='popup-b'>
                     <h1 className='popup-header-b'>Almost Ready!</h1>
