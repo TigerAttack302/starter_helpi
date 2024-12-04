@@ -59,6 +59,14 @@ body {
     transform: translateY(-2px); 
 }
 
+.home-button {
+    padding-bottom: 1%;
+}
+
+.detailed-header {
+    margin-top: 1%;
+}
+
 .IMG {
     width: 80%; 
     height: 80%; 
