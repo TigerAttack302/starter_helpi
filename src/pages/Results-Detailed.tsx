@@ -10,7 +10,7 @@ import './Results.css';
 import './DetailedQuestions';
 
 const messages: Array<{ role: string; content: string }> = [
-    { role: 'system', content: 'Give responses in a generally concise manner' }, // System message to set behavior
+    { role: 'system', content: 'List the best career for them, and give a brief description of what that career entails. Do this in a paragraph with no line breaks' }, // System message to set behavior
 ];
 
 async function sendMessage(userInput: string, location: string): Promise<void> {
