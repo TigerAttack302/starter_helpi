@@ -59,6 +59,20 @@ body {
     transform: translateY(-2px); 
 }
 
+.submitButtonHolder {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.home-button {
+    padding-bottom: 1%;
+}
+
+.detailed-header {
+    margin-top: 1%;
+}
+
 .IMG {
     width: 80%; 
     height: 80%; 
@@ -91,7 +105,7 @@ body {
     position: fixed;
     text-align: center;
     font-size: 1rem;
-    left: 1%;
+    right: 1%;
     padding: 10px 15px;
     background-color: #c67c5a;
     color: white;
