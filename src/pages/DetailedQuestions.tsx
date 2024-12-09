@@ -108,7 +108,7 @@ export function DetailedQuestions():JSX.Element {
     }
       
     useEffect(() => {
-      if (progress === 100) {
+      if (progress === 7) {
         setCompletion(true);
       } else {
         setCompletion(false);
