@@ -146,61 +146,62 @@ export function BasicQuestions(): JSX.Element {
                 <div className="basic-header">
                     <h1>Basic Questions</h1>
                 </div>
-            <div className='progress-section-b'>
-                <img src={checkProgress()} alt="progress" className="progress-gif"></img>
-            </div>
-            <Form.Group className="BQlist">
-                <Container className="QuesContainer">
-                    {[q1Arr, q2Arr, q3Arr, q4Arr, q5Arr, q6Arr, q7Arr].map((options, idx) => (
-                        <div key={`question-${idx + 1}`}>
-                            <h3>Question {idx + 1} out of 7</h3>
-                            <div className="question">
-                                <h3>{[`Which one of these best describes you?`, `What do you find as your favorite subject?`, `What do you enjoy doing the most?`, `Which role do you find yourself in a job?`, `What best describes yourself?`, `What type of work environment would you thrive in?`, `What is your first priority in a job?`][idx]}</h3>
-                                <Row className='quesRow'>
-                                    <Col>{renderButtons(options, idx + 1)}</Col>
-                                    <Col>
-                                        <img
-                                            src={[q1pic, q2pic, q3pic, q4pic, q5pic, q6pic, q7pic][idx]}
-                                            alt={`Question ${idx + 1}`}
-                                            className="question-image"
-                                        />
-                                    </Col>
-                                </Row>
-                            </div>
-                        </div>
-                    ))}
-                </Container>
-            </Form.Group>
-            <div className='submitButton'>
-            <Popup trigger={<div className='submitButtonHolder'><button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
-                position="top center">
-                <div className='popup-b'>
-                    <h1 className='popup-header-b'>Almost Ready!</h1>
-                    <p className='popup-desc-b'>
-                        Our questions use ChatGPT to maximize the accuracy of our assessment and pick out the perfect
-                        career for you. Please input your API key here to ensure ChatGPT can utilize your results.
-                    </p>
-                    <Form>
-                        <Form.Control
-                            type="password"
-                            placeholder="Insert API Key Here"
-                            onChange={changeKey}
-                        />
-                        <br />
-                        <div className="popup-buttons">
-                            <Button className="submit-button" onClick={handleSubmit}>
-                                Submit
-                            </Button>
-                            <br />
-                            <Button className="skip-button" onClick={() => navigate('/results-basic')}>
-                                Skip
-                            </Button>
-                        </div>
-                    </Form>
-                    <br/>
-                    <p className='popup-aside'>**Do not hit skip unless you've already submitted your API key this session</p>
+                <div className='progress-section-b'>
+                    <img src={checkProgress()} alt="progress" className="progress-gif"></img>
                 </div>
-            </Popup>
+                <Form.Group className="BQlist">
+                    <Container className="QuesContainer">
+                        {[q1Arr, q2Arr, q3Arr, q4Arr, q5Arr, q6Arr, q7Arr].map((options, idx) => (
+                            <div key={`question-${idx + 1}`}>
+                                <h3>Question {idx + 1} out of 7</h3>
+                                <div className="question">
+                                    <h3>{[`Which one of these best describes you?`, `What do you find as your favorite subject?`, `What do you enjoy doing the most?`, `Which role do you find yourself in a job?`, `What best describes yourself?`, `What type of work environment would you thrive in?`, `What is your first priority in a job?`][idx]}</h3>
+                                    <Row className='quesRow'>
+                                        <Col>{renderButtons(options, idx + 1)}</Col>
+                                        <Col>
+                                            <img
+                                                src={[q1pic, q2pic, q3pic, q4pic, q5pic, q6pic, q7pic][idx]}
+                                                alt={`Question ${idx + 1}`}
+                                                className="question-image"
+                                            />
+                                        </Col>
+                                    </Row>
+                                </div>
+                            </div>
+                        ))}
+                    </Container>
+                </Form.Group>
+                <div className='submitButton'>
+                <Popup trigger={<div className='submitButtonHolder'><button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
+                    position="top center">
+                    <div className='popup-b'>
+                        <h1 className='popup-header-b'>Almost Ready!</h1>
+                        <p className='popup-desc-b'>
+                            Our questions use ChatGPT to maximize the accuracy of our assessment and pick out the perfect
+                            career for you. Please input your API key here to ensure ChatGPT can utilize your results.
+                        </p>
+                        <Form>
+                            <Form.Control
+                                type="password"
+                                placeholder="Insert API Key Here"
+                                onChange={changeKey}
+                            />
+                            <br />
+                            <div className="popup-buttons">
+                                <Button className="submit-button" onClick={handleSubmit}>
+                                    Submit
+                                </Button>
+                                <br />
+                                <Button className="skip-button" onClick={() => navigate('/results-basic')}>
+                                    Skip
+                                </Button>
+                            </div>
+                            </Form>
+                            <br/>
+                            <p className='popup-aside'>**Do not hit skip unless you've already submitted your API key this session</p>
+                        </div>
+                    </Popup>
+                </div>
             </div>
         </div>
     );
