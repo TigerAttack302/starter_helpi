@@ -139,6 +139,26 @@ body {
     text-align: center;
 }
 
+.question {
+    font-size: 1.2em;
+    margin: 20px auto; /* Centers the text */
+    padding: 10px 15px;
+    width: 80%;
+    background-color: #fff7eb; /* Light cream background for contrast */
+    border: 1px solid #c39e81;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.quesRow{
+        font-size: 1.2em;
+    margin: 20px auto; /* Centers the text */
+    padding: 10px 15px;
+    width: 80%;
+    background-color: #fff7eb; /* Light cream background for contrast */
+    border: 1px solid #c39e81;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 
 @media (max-width: 768px) {
     .detailed-header {
