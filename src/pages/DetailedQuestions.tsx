@@ -157,10 +157,10 @@ export function DetailedQuestions():JSX.Element {
         <Form.Group className="DetailedQues" controlId="DQlist">
         <Container className='lowercontainer'>
         <hr/>
-          <text>
+          <h3>
           Q1. What activities or tasks make you feel the most energized and fulfilled, and why?
-          </text>
-          <Row>
+          </h3>
+          <Row className='quesRow'>
                 <Col>
           <Form.Control
             className='textbox'
@@ -182,10 +182,11 @@ export function DetailedQuestions():JSX.Element {
                 </Col> 
               </Row>
             <hr/>
+            
             <text>
             Q2. What are your top three strengths or skills, and how do you apply them in your daily life?
             </text>
-              <Row>
+              <Row className='quesRow'>
                 <Col>
                   <Form.Control
                     className='textbox'
@@ -211,7 +212,7 @@ export function DetailedQuestions():JSX.Element {
             <text>
             Q3. What are the values or principles that are most important to you in a work environment?
             </text>
-            <Row>
+            <Row className='quesRow'>
                 <Col>
             <Form.Control
               as="textarea"
@@ -235,7 +236,7 @@ export function DetailedQuestions():JSX.Element {
             <text>
             Q4. What types of challenges or problems do you enjoy solving, and what makes them appealing?
             </text>
-            <Row>
+            <Row className='quesRow'>
                 <Col>
             <Form.Control
               className='textbox'
@@ -259,7 +260,7 @@ export function DetailedQuestions():JSX.Element {
             <text>
             Q5. What kind of impact do you want your work to have on others or the world?
             </text>
-            <Row>
+            <Row className='quesRow'>
                 <Col>
             <Form.Control
               className='textbox'
@@ -284,7 +285,7 @@ export function DetailedQuestions():JSX.Element {
             <text>
             Q6. What are your financial goals and lifestyle preferences, and how do they influence your career choices?
             </text>
-            <Row>
+            <Row className='quesRow'>
                 <Col>
             <Form.Control
               className='textbox'
@@ -309,7 +310,7 @@ export function DetailedQuestions():JSX.Element {
             <text>
             Q7. How do you define success in your career, and what will make you feel you’ve achieved it?
             </text>
-            <Row>
+            <Row className='quesRow'>
                 <Col>
             <Form.Control
               className='textbox'
