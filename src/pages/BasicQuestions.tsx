@@ -13,6 +13,14 @@ import q4pic from './BasicQuestionsPictures/shutterstock_1464234134-1024x684.jpg
 import q5pic from './BasicQuestionsPictures/images (1).jpg';
 import q6pic from './BasicQuestionsPictures/20230729_BLP505.webp';
 import q7pic from './BasicQuestionsPictures/1703323776064.jpg';
+import p0 from './ProgressBarPictures/CoffeeEmpty.png';
+import p1 from './ProgressBarPictures/Coffee1.png';
+import p2 from './ProgressBarPictures/Coffee2.png';
+import p3 from './ProgressBarPictures/Coffee3.png';
+import p4 from './ProgressBarPictures/Coffee4.png';
+import p5 from './ProgressBarPictures/Coffee5.png';
+import p6 from './ProgressBarPictures/Coffee6.png';
+import p7 from './ProgressBarPictures/Coffee7.png';
 
 let finalResponses: string;
 export function getResponse(){
@@ -50,56 +58,56 @@ export function BasicQuestions(): JSX.Element {
 
     function updateAnswer1(a: string) {
         if (!q1) {
-            setProgress(progress+14);
+            setProgress(progress+1);
             updateCompletion();
         }
         setq1(a);
     }
     function updateAnswer2(a: string) {
         if (!q2) {
-            setProgress(progress+14);
+            setProgress(progress+1);
             updateCompletion();
         }
         setq2(a);
     }
     function updateAnswer3(a: string) {
         if (!q3) {
-            setProgress(progress+14);
+            setProgress(progress+1);
             updateCompletion();
         }
         setq3(a);
     }
     function updateAnswer4(a: string) {
         if (!q4) {
-            setProgress(progress+14);
+            setProgress(progress+1);
             updateCompletion();
         }
         setq4(a);
     }
     function updateAnswer5(a: string) {
         if (!q5) {
-            setProgress(progress+14);
+            setProgress(progress+1);
             updateCompletion();
         }
         setq5(a);
     }
     function updateAnswer6(a: string) {
         if (!q6) {
-            setProgress(progress+15);
+            setProgress(progress+1);
             updateCompletion();
         }
         setq6(a);
     }
     function updateAnswer7(a: string) {
         if (!q7) {
-            setProgress(progress+15);
+            setProgress(progress+1);
             updateCompletion();
         }
         setq7(a);
     }
 
     function updateCompletion() {
-        if (progress >= 85) {
+        if (progress >= 6) {
             setCompletion(true);
         }
     }
@@ -137,7 +145,30 @@ export function BasicQuestions(): JSX.Element {
         setKey(event.target.value);
     }
 
-    let progressSectionClassName = progress === 100 ? 'progress-section-b-completed' : 'progress-section-b';
+    function checkProgress() {
+        if (progress === 1) {
+            return p1;
+        }
+        if (progress === 2) {
+            return p2;
+        }
+        if (progress === 3) {
+            return p3;
+        }
+        if (progress === 4) {
+            return p4;
+        }
+        if (progress === 5) {
+            return p5;
+        }
+        if (progress === 6) {
+            return p6;
+        }
+        if (progress === 7) {
+            return p7;
+        }
+        return p0;
+    }
 
     return (
         <div>
@@ -146,9 +177,8 @@ export function BasicQuestions(): JSX.Element {
                 <button onClick={() => navigate('/')}>Go to Home</button>
                 <div className='basic-header'><h1>Basic Questions</h1></div>
             </div>
-            <div className={progressSectionClassName}>
-                    <text>Progress:  </text>
-                <progress value={progress} max={100}/>
+            <div className='progress-section-b'>
+                <img src={checkProgress()} alt="progress" className="progress-gif"></img>
             </div>
         <div>
 
