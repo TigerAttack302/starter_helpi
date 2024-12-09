@@ -146,6 +146,7 @@ export function BasicQuestions(): JSX.Element {
                 <div className="basic-header">
                     <h1>Basic Questions</h1>
                 </div>
+            </div>
                 <div className='progress-section-b'>
                     <img src={checkProgress()} alt="progress" className="progress-gif"></img>
                 </div>
@@ -203,6 +204,5 @@ export function BasicQuestions(): JSX.Element {
                     </Popup>
                 </div>
             </div>
-        </div>
     );
 }
