@@ -1,13 +1,21 @@
 {
   "files": {
-    "main.css": "/starter_helpi/static/css/main.d930034d.css",
-    "main.js": "/starter_helpi/static/js/main.a8ab5d4a.js",
+    "main.css": "/starter_helpi/static/css/main.ffd29dba.css",
+    "main.js": "/starter_helpi/static/js/main.3bc1dcdd.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
     "static/media/CoffeeBG.jpg": "/starter_helpi/static/media/CoffeeBG.fc50308ebdda524ffe6d.jpg",
     "static/media/earth.jpg": "/starter_helpi/static/media/earth.422f188dec1a06e9952b.jpg",
     "static/media/inspirejpg.jpg": "/starter_helpi/static/media/inspirejpg.842996c3a90b5e75bc69.jpg",
+    "static/media/Coffee6.png": "/starter_helpi/static/media/Coffee6.c6c447d964cb6bc6f4a6.png",
+    "static/media/Coffee3.png": "/starter_helpi/static/media/Coffee3.4cf3a46ce8e6d443ae72.png",
+    "static/media/Coffee5.png": "/starter_helpi/static/media/Coffee5.0debdf1296ec0ad19f4d.png",
+    "static/media/Coffee7.png": "/starter_helpi/static/media/Coffee7.0eb7376fee4be6692f23.png",
+    "static/media/Coffee2.png": "/starter_helpi/static/media/Coffee2.6dc53cdccb26e3976a3c.png",
+    "static/media/Coffee1.png": "/starter_helpi/static/media/Coffee1.2e16f197f3e1bdd5304e.png",
     "static/media/1703323776064.jpg": "/starter_helpi/static/media/1703323776064.f1d31336fe9bfde68042.jpg",
+    "static/media/Coffee4.png": "/starter_helpi/static/media/Coffee4.f03514b8b80fbd79d5a9.png",
     "static/media/CareerCafe.png": "/starter_helpi/static/media/CareerCafe.192ba387f295726e1703.png",
+    "static/media/CoffeeEmpty.png": "/starter_helpi/static/media/CoffeeEmpty.bac1a305d12647307451.png",
     "static/media/20230729_BLP505.webp": "/starter_helpi/static/media/20230729_BLP505.4f99bc19234bbef78f5d.webp",
     "static/media/shutterstock_1464234134-1024x684.jpg": "/starter_helpi/static/media/shutterstock_1464234134-1024x684.4fc71e28b3901112c10a.jpg",
     "static/media/early-college-high-school-placeholder.jpg": "/starter_helpi/static/media/early-college-high-school-placeholder.f31ae38c9f3ac86df944.jpg",
@@ -16,12 +24,12 @@
     "static/media/download.jpg": "/starter_helpi/static/media/download.f4291c09f3585a08b396.jpg",
     "static/media/images.jpg": "/starter_helpi/static/media/images.13892836c6a699b21c39.jpg",
     "index.html": "/starter_helpi/index.html",
-    "main.d930034d.css.map": "/starter_helpi/static/css/main.d930034d.css.map",
-    "main.a8ab5d4a.js.map": "/starter_helpi/static/js/main.a8ab5d4a.js.map",
+    "main.ffd29dba.css.map": "/starter_helpi/static/css/main.ffd29dba.css.map",
+    "main.3bc1dcdd.js.map": "/starter_helpi/static/js/main.3bc1dcdd.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d930034d.css",
-    "static/js/main.a8ab5d4a.js"
+    "static/css/main.ffd29dba.css",
+    "static/js/main.3bc1dcdd.js"
   ]
 }
