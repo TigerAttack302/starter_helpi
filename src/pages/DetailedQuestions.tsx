@@ -9,6 +9,14 @@ import strong from './DetailedQuestionPictures/stronk.jpg';
 import earth from './DetailedQuestionPictures/earth.jpg';
 import success from './DetailedQuestionPictures/images (1).jpg';
 import goal from './DetailedQuestionPictures/goal.png';
+import p0 from './ProgressBarPictures/CoffeeEmpty.png';
+import p1 from './ProgressBarPictures/Coffee1.png';
+import p2 from './ProgressBarPictures/Coffee2.png';
+import p3 from './ProgressBarPictures/Coffee3.png';
+import p4 from './ProgressBarPictures/Coffee4.png';
+import p5 from './ProgressBarPictures/Coffee5.png';
+import p6 from './ProgressBarPictures/Coffee6.png';
+import p7 from './ProgressBarPictures/Coffee7.png';
 
 import './DetailedQuestions.css';
 import Popup from 'reactjs-popup';
@@ -36,9 +44,9 @@ export function DetailedQuestions():JSX.Element {
     const [ans1, setAns1] = useState<string>("");
     function UpdateAns1(event: React.ChangeEvent<HTMLInputElement>){
       if (ans1 && !event.target.value) {
-        setProgress(progress-14);
+        setProgress(progress-1);
       } else if (!ans1 && event.target.value) {
-        setProgress(progress+14);
+        setProgress(progress+1);
       }
       setAns1(event.target.value);
     }
@@ -46,9 +54,9 @@ export function DetailedQuestions():JSX.Element {
     const [ans2, setAns2] = useState<string>("");
     function UpdateAns2(event: React.ChangeEvent<HTMLInputElement>){
       if (ans2 && !event.target.value) {
-        setProgress(progress-14);
+        setProgress(progress-1);
       } else if (!ans2 && event.target.value) {
-        setProgress(progress+14);
+        setProgress(progress+1);
       }
       setAns2(event.target.value);
     }
@@ -56,51 +64,51 @@ export function DetailedQuestions():JSX.Element {
     const [ans3, setAns3] = useState<string>("");
     function UpdateAns3(event: React.ChangeEvent<HTMLInputElement>){
       if (ans3 && !event.target.value) {
-        setProgress(progress-14);
+        setProgress(progress-1);
       } else if (!ans3 && event.target.value) {
-        setProgress(progress+14);
+        setProgress(progress+1);
       }
       setAns3(event.target.value);
     }
     const [ans4, setAns4] = useState<string>("");
     function UpdateAns4(event: React.ChangeEvent<HTMLInputElement>){
       if (ans4 && !event.target.value) {
-        setProgress(progress-14);
+        setProgress(progress-1);
       } else if (!ans4 && event.target.value) {
-        setProgress(progress+14);
+        setProgress(progress+1);
       }
       setAns4(event.target.value);
     }
     const [ans5, setAns5] = useState<string>("");
     function UpdateAns5(event: React.ChangeEvent<HTMLInputElement>){
       if (ans5 && !event.target.value) {
-        setProgress(progress-14);
+        setProgress(progress-1);
       } else if (!ans5 && event.target.value) {
-        setProgress(progress+14);
+        setProgress(progress+1);
       }
       setAns5(event.target.value);
     }
     const [ans6, setAns6] = useState<string>("");
     function UpdateAns6(event: React.ChangeEvent<HTMLInputElement>){
       if (ans6 && !event.target.value) {
-        setProgress(progress-15);
+        setProgress(progress-1);
       } else if (!ans6 && event.target.value) {
-        setProgress(progress+15);
+        setProgress(progress+1);
       }
       setAns6(event.target.value);
     }
     const [ans7, setAns7] = useState<string>("");
     function UpdateAns7(event: React.ChangeEvent<HTMLInputElement>){
       if (ans7 && !event.target.value) {
-        setProgress(progress-15);
+        setProgress(progress-1);
       } else if (!ans7 && event.target.value) {
-        setProgress(progress+15);
+        setProgress(progress+1);
       }
       setAns7(event.target.value);
     }
       
     useEffect(() => {
-      if (progress === 100) {
+      if (progress === 7) {
         setCompletion(true);
       } else {
         setCompletion(false);
@@ -140,7 +148,30 @@ export function DetailedQuestions():JSX.Element {
     setKey(event.target.value);
   }
 
-  let progressSectionClassName = progress === 100 ? 'progress-section-d-completed' : 'progress-section-d';
+  function checkProgress() {
+    if (progress === 1) {
+        return p1;
+    }
+    if (progress === 2) {
+        return p2;
+    }
+    if (progress === 3) {
+        return p3;
+    }
+    if (progress === 4) {
+        return p4;
+    }
+    if (progress === 5) {
+        return p5;
+    }
+    if (progress === 6) {
+        return p6;
+    }
+    if (progress === 7) {
+        return p7;
+    }
+    return p0;
+  }
 
   return (
 
@@ -150,9 +181,8 @@ export function DetailedQuestions():JSX.Element {
                 <div className='detailed-header'><h1>Detailed Questions</h1></div>
             </div>
         <div className='ListOQues'>
-            <div className={progressSectionClassName}>
-                <text>Progress:  </text>
-                <progress value={progress} max={100}/>
+            <div className='progress-section-d'>
+              <img src={checkProgress()} alt="progress" className="progress-gif"></img>
             </div>
         <Form.Group className="DetailedQues" controlId="DQlist">
         <Container className='lowercontainer'>

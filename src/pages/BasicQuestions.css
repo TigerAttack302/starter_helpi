@@ -77,22 +77,21 @@ body {
 }
 
 /* Progress Section */
-.progress-section-b,
-.progress-section-b-completed {
+.progress-section-b {
     position: fixed;
-    text-align: center;
-    font-size: 1rem;
-    right: 1%;
-    padding: 10px 15px;
-    background-color: #c67c5a;
-    color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    width: 200px;
+    right: 8%;
+    margin-left: 75%;
+    display:inline-block;
+    width: 10%;
+    height: 25%;
 }
 
-.progress-section-b-completed {
-    background-color: #8b5a3c;
+.progress-gif {
+    display: block;
+    height: auto;
+    width: auto;
+    object-fit: cover;
+    max-width: 100%;
 }
 
 .submitButtonHolder {
