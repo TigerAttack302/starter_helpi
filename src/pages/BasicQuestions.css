@@ -112,22 +112,27 @@ body {
 }
 
 /* Progress Section */
-.progress-section-b,
-.progress-section-b-completed {
+.progress-section-b {
     position: fixed;
-    text-align: center;
-    font-size: 1rem;
-    right: 1%;
-    padding: 10px 15px;
-    border-radius: 15px;
-    width: 200px; /* Consistent width */
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    right: 8%;
+    margin-left: 75%;
+    display:inline-block;
+    width: 10%;
+    height: 25%;
 }
 
-.progress-section-b {
-    background-color: lightblue;
-    border-color: lightblue;
+.progress-gif {
+    display: block;
+    height: auto;
+    width: auto;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.submitButtonHolder {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 
 .popup-b {
@@ -168,6 +173,10 @@ body {
     text-align: center;
 }
 
+.popup-aside {
+    color: black;
+}
+
 .submit-button-b {
     background-color: rgb(181, 75, 75);
     border-color: black;
@@ -194,10 +203,6 @@ body {
     background-color: lightgrey;
     border-color: black;
     color: black;
-}
-.progress-section-b-completed {
-    background-color: lightgreen;
-    border-color: lightgreen;
 }
 
 /* Submit Button */

@@ -59,6 +59,20 @@ body {
     transform: translateY(-2px); 
 }
 
+.submitButtonHolder {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.home-button {
+    padding-bottom: 1%;
+}
+
+.detailed-header {
+    margin-top: 1%;
+}
+
 .IMG {
     width: 80%; 
     height: 80%; 
@@ -86,22 +100,21 @@ body {
     display: block;
 }
 
-.progress-section-d,
-.progress-section-d-completed {
+.progress-section-d {
     position: fixed;
-    text-align: center;
-    font-size: 1rem;
-    left: 1%;
-    padding: 10px 15px;
-    background-color: #c67c5a;
-    color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    width: 200px;
+    right: 8%;
+    margin-left: 75%;
+    display:inline-block;
+    width: 10%;
+    height: 25%;
 }
 
-.progress-section-d-completed {
-    background-color: #8b5a3c;
+.progress-gif {
+    display: block;
+    height: auto;
+    width: auto;
+    object-fit: cover;
+    max-width: 100%;
 }
 
 .lowerContainer {

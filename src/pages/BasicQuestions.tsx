@@ -13,6 +13,14 @@ import q4pic from './BasicQuestionsPictures/shutterstock_1464234134-1024x684.jpg
 import q5pic from './BasicQuestionsPictures/images (1).jpg';
 import q6pic from './BasicQuestionsPictures/20230729_BLP505.webp';
 import q7pic from './BasicQuestionsPictures/1703323776064.jpg';
+import p0 from './ProgressBarPictures/CoffeeEmpty.png';
+import p1 from './ProgressBarPictures/Coffee1.png';
+import p2 from './ProgressBarPictures/Coffee2.png';
+import p3 from './ProgressBarPictures/Coffee3.png';
+import p4 from './ProgressBarPictures/Coffee4.png';
+import p5 from './ProgressBarPictures/Coffee5.png';
+import p6 from './ProgressBarPictures/Coffee6.png';
+import p7 from './ProgressBarPictures/Coffee7.png';
 
 let finalResponses: string;
 export function getResponse() {
@@ -52,14 +60,14 @@ export function BasicQuestions(): JSX.Element {
     function updateAnswer(a: string, question: number) {
         const setAnswer = [setq1, setq2, setq3, setq4, setq5, setq6, setq7][question - 1];
         if (![q1, q2, q3, q4, q5, q6, q7][question - 1]) {
-            setProgress(progress + (question < 6 ? 14 : 15));
+            setProgress(progress + 1);
             updateCompletion();
         }
         setAnswer(a);
     }
 
     function updateCompletion() {
-        if (progress >= 85) {
+        if (progress >= 6) {
             setCompletion(true);
         }
     }
@@ -105,6 +113,30 @@ export function BasicQuestions(): JSX.Element {
         );
     };
     
+    function checkProgress() {
+        if (progress === 1) {
+            return p1;
+        }
+        if (progress === 2) {
+            return p2;
+        }
+        if (progress === 3) {
+            return p3;
+        }
+        if (progress === 4) {
+            return p4;
+        }
+        if (progress === 5) {
+            return p5;
+        }
+        if (progress === 6) {
+            return p6;
+        }
+        if (progress === 7) {
+            return p7;
+        }
+        return p0;
+    }
 
     return (
         <div>
@@ -114,10 +146,8 @@ export function BasicQuestions(): JSX.Element {
                 <div className="basic-header">
                     <h1>Basic Questions</h1>
                 </div>
-            </div>
-            <div className={progress === 100 ? 'progress-section-b-completed' : 'progress-section-b'}>
-                <text>Progress: </text>
-                <progress value={progress} max={100} />
+            <div className='progress-section-b'>
+                <img src={checkProgress()} alt="progress" className="progress-gif"></img>
             </div>
             <Form.Group className="BQlist">
                 <Container className="QuesContainer">
@@ -141,19 +171,12 @@ export function BasicQuestions(): JSX.Element {
                     ))}
                 </Container>
             </Form.Group>
-            <Popup
-                trigger={
-                    <div className="submitButton">
-                        <button onClick={submitResults} disabled={!completion}>
-                            Get Your Results Here!
-                        </button>
-                    </div>
-                }
-                position="top center"
-            >
-                <div className="popup-b">
-                    <h1 className="popup-header-b">Almost Ready!</h1>
-                    <p className="popup-desc-b">
+            <div className='submitButton'>
+            <Popup trigger={<div className='submitButtonHolder'><button onClick={submitResults} disabled={!completion}>Get Your Results Here!</button></div>}
+                position="top center">
+                <div className='popup-b'>
+                    <h1 className='popup-header-b'>Almost Ready!</h1>
+                    <p className='popup-desc-b'>
                         Our questions use ChatGPT to maximize the accuracy of our assessment and pick out the perfect
                         career for you. Please input your API key here to ensure ChatGPT can utilize your results.
                     </p>
@@ -174,8 +197,11 @@ export function BasicQuestions(): JSX.Element {
                             </Button>
                         </div>
                     </Form>
+                    <br/>
+                    <p className='popup-aside'>**Do not hit skip unless you've already submitted your API key this session</p>
                 </div>
             </Popup>
+            </div>
         </div>
     );
 }
