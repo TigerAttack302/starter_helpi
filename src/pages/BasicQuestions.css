@@ -34,8 +34,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-
-
 /* Image for Question */
 .question-image {
     width: 100%;
@@ -52,39 +50,47 @@ body {
 .buttonGroup {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Space between buttons */
-    margin: 20px auto;
-    padding: 0 8%;
+    gap: 20px; /* Space between buttons */
+    margin: 5px auto;
+    padding: 0 5%;
+    height: 80%;
     width: 80%; /* Centers and keeps buttons aligned */
 }
-.buttonGroup input[type="radio"] {
-    display: none;
+
+.selected-button {
+    background-color: #c39e81;
+    color: black;
+    border-color: #c39e81;
 }
 
-.buttonGroup label {
+.selected-button:hover {
+    background-color: rgb(192, 88, 88);;
+    color: black;
+    border-color: rgb(192, 88, 88);;
+}
+
+.selected-button:focus {
+    background-color: rgb(192, 88, 88);;
+    color: black;
+    border-color: rgb(192, 88, 88);;
+}
+
+
+
+.unselected-button {
+    background-color: #4b3832;
+    border-color: #4b3832;
+    color: white;
+}
+
+
+.unselected-button:hover{
     cursor:pointer;
-    display: inline-block;
-    padding-left: 25px; 
-    position: relative;
+    background-color: rgb(192, 88, 88);;
+    border-color: rgb(192, 88, 88);;
 }
 
-.buttonGroup label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    border: 2px solid #007bff;
-    border-radius: 50%;
-    background-color: white;
-}
 
-.buttonGroup input[type="radio"]:checked + label::before {
-    background-color: #007bff;
-    border-color: #007bff;
-}
 
 /* Individual Buttons */
 .button {

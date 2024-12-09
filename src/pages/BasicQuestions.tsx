@@ -87,19 +87,24 @@ export function BasicQuestions(): JSX.Element {
         setKey(event.target.value);
     }
 
-    const renderButtons = (options: string[], questionNumber: number) => (
-        <div className="buttonGroup">
-            {options.map((option) => (
-                <Button
-                    key={option}
-                    onClick={() => updateAnswer(option, questionNumber)}
-                    variant={[q1, q2, q3, q4, q5, q6, q7][questionNumber - 1] === option ? 'primary' : 'outline-primary'}
-                >
-                    {option}
-                </Button>
-            ))}
-        </div>
-    );
+    const renderButtons = (options: string[], questionNumber: number) => {
+        const selectedValue = [q1, q2, q3, q4, q5, q6, q7][questionNumber - 1];
+    
+        return (
+            <div className="buttonGroup">
+                {options.map((option) => (
+                    <Button
+                        key={option}
+                        onClick={() => updateAnswer(option, questionNumber)}
+                        className={selectedValue === option ? 'selected-button' : 'unselected-button'}
+                    >
+                        {option}
+                    </Button>
+                ))}
+            </div>
+        );
+    };
+    
 
     return (
         <div>
