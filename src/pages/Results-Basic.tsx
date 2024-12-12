@@ -8,12 +8,14 @@ import { getResponse, keyData } from './BasicQuestions';
 
 import './Results.css';
 import './BasicQuestions';
-// the messages array and the sendMessages function were sent in from chatGPT, we didn't know how to implement it and thought that chatGPT would know
-// The sendMessages array was modified by hand to make sure that there was a different location of where the output would be.
+// This creates an object array that holds a role and a content.
+// In this case the role is assigned to the system and the content is used to detail to ChatGPT how it is supposed to act
 const messages: Array<{ role: string; content: string }> = [
     { role: 'system', content: 'List the best career for them, and give a brief description of what that career entails. Do this in a paragraph with no line breaks' }, // System message to set behavior
 ];
 
+// This sends in the messages array to ChatGPT and it uses a try catch to make sure that it can communicate with CHatGPT and if there is a proper key
+//  as well as detailing the elementID that the response from ChatGPT will be
 async function sendMessage(userInput: string, location: string): Promise<void> {
     if (!userInput) return;
     messages.push({ role: 'user', content: userInput });
@@ -46,8 +48,7 @@ async function sendMessage(userInput: string, location: string): Promise<void> {
     }
 }
 
-// below is also chat GPT the one before the bar of dashes
-// Make the sendMessage function available globally
+// This is made to allow for sendMessage to be used globally or across any file that has this imported
 (window as any).sendMessage = sendMessage;
 
 
@@ -78,7 +79,6 @@ export function ResultsBasic():JSX.Element {
                 <button onClick={() => navigate('/')}>Back to Home</button>
                 <div className='results-header'><h1 className='results-header-text'>Results</h1></div>
             </div>
-            {/* There was some use of chatGPT here although it was modified by hand to add in  */}
             <div className='CGPTresponse'>
                 <h3 className='your-brew'>Your Brew:</h3>
                 <div id="response"></div>

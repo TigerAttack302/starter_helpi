@@ -57,6 +57,7 @@ export function BasicQuestions(): JSX.Element {
 
     const [key, setKey] = useState<string>(keyData);
 
+// This function just updates the results of the questions and if the question didn't have an answer before it changes the progress as well as checking the completion of the quiz
     function updateAnswer(a: string, question: number) {
         const setAnswer = [setq1, setq2, setq3, setq4, setq5, setq6, setq7][question - 1];
         if (![q1, q2, q3, q4, q5, q6, q7][question - 1]) {
@@ -94,7 +95,8 @@ export function BasicQuestions(): JSX.Element {
     function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
         setKey(event.target.value);
     }
-// This function was also added by ChatGPT to change the radio buttons so that they were react buttons that acted like radio buttons
+
+// This function uses a map function to to display all of the options for the question in a format of a button which has the className of selected or unselected button
     const renderButtons = (options: string[], questionNumber: number) => {
         const selectedValue = [q1, q2, q3, q4, q5, q6, q7][questionNumber - 1];
     
@@ -152,8 +154,9 @@ export function BasicQuestions(): JSX.Element {
                 </div>
                 <Form.Group className="BQlist">
                     <Container className="QuesContainer">
-                        {/* The code below was modified by chatGPT as there was a need to update the buttons from radio buttons to typescript buttons that act like radio buttons
-                        The original intention is that it would just change the buttons from radio to normal buttons but after feeding the entire code into ChatGPT it sent this back*/}
+
+                        {/* This uses a map function to display the questions as well as using the index in the map function to grab the correct element in the array of questions and pictures
+                        This is all while using the index of the map function to create the correct alt text that shows up if the pictures don't load and the correct key name for each question */}
                         {[q1Arr, q2Arr, q3Arr, q4Arr, q5Arr, q6Arr, q7Arr].map((options, idx) => (
                             <div key={`question-${idx + 1}`}>
                                 <h3>Question {idx + 1} out of 7</h3>
@@ -172,7 +175,6 @@ export function BasicQuestions(): JSX.Element {
                                 </div>
                             </div>
                         ))}
-                        {/*I believe that the code above is also part of the code that was modified by ChatGPT.*/}
                     </Container>
                 </Form.Group>
                 <div className='submitButton'>

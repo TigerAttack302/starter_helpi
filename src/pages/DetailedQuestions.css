@@ -138,7 +138,7 @@ body {
     color: #8b5a3c;
     text-align: center;
 }
-/* I think that .question and .quesRow was there from previous iterations where we used chatGPT although I still don't think that it is used by anything in DetailedQuestions.tsx */
+/* .question and quesRow was created to help specifiy the location of the question and it's associated picture as well as centering any text at the top of each question */
 .question {
     font-size: 1.2em;
     margin: 20px auto; /* Centers the text */
