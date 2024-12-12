@@ -186,6 +186,7 @@ export function DetailedQuestions():JSX.Element {
             </div>
         <Form.Group className="DetailedQues" controlId="DQlist">
         <Container className='lowercontainer'>
+          {/* The questions that were asked were questions that were pulled off of chatGPT */}
         <hr/>
           <h3>
           Q1. What activities or tasks make you feel the most energized and fulfilled, and why?

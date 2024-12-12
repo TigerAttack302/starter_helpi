@@ -45,7 +45,8 @@ body {
     display: block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Adds depth to images */
 }
-
+/* Button group was largely created by ChatGPT and so was the .selected-button and .unselected buttons
+ although the inputs for those were modified so it wasn't what the original input was*/
 /* Button Group for Choices */
 .buttonGroup {
     display: flex;
@@ -91,7 +92,8 @@ body {
 }
 
 
-
+/* This was chatGPT code that might have been left in from past iterations That being for both the button and the button hover.
+I looked in the code for className="button" I couldn't finde it using ctrl f */
 /* Individual Buttons */
 .button {
     padding: 12px 20px;

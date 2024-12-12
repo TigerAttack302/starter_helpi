@@ -94,7 +94,7 @@ export function BasicQuestions(): JSX.Element {
     function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
         setKey(event.target.value);
     }
-
+// This function was also added by ChatGPT to change the radio buttons so that they were react buttons that acted like radio buttons
     const renderButtons = (options: string[], questionNumber: number) => {
         const selectedValue = [q1, q2, q3, q4, q5, q6, q7][questionNumber - 1];
     
@@ -112,7 +112,7 @@ export function BasicQuestions(): JSX.Element {
             </div>
         );
     };
-    
+    // --------------------------------------------------------------------------------------------------------------------------------------
     function checkProgress() {
         if (progress === 1) {
             return p1;
@@ -152,6 +152,8 @@ export function BasicQuestions(): JSX.Element {
                 </div>
                 <Form.Group className="BQlist">
                     <Container className="QuesContainer">
+                        {/* The code below was modified by chatGPT as there was a need to update the buttons from radio buttons to typescript buttons that act like radio buttons
+                        The original intention is that it would just change the buttons from radio to normal buttons but after feeding the entire code into ChatGPT it sent this back*/}
                         {[q1Arr, q2Arr, q3Arr, q4Arr, q5Arr, q6Arr, q7Arr].map((options, idx) => (
                             <div key={`question-${idx + 1}`}>
                                 <h3>Question {idx + 1} out of 7</h3>
@@ -170,6 +172,7 @@ export function BasicQuestions(): JSX.Element {
                                 </div>
                             </div>
                         ))}
+                        {/*I believe that the code above is also part of the code that was modified by ChatGPT.*/}
                     </Container>
                 </Form.Group>
                 <div className='submitButton'>

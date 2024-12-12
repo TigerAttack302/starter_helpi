@@ -9,6 +9,8 @@ import { getResponse, keyData } from './DetailedQuestions';
 import './Results.css';
 import './DetailedQuestions';
 
+// the messages array and the sendMessages function were sent in from chatGPT, we didn't know how to implement it and thought that chatGPT would know
+// The sendMessages array was modified by hand to make sure that there was a different location of where the output would be.
 const messages: Array<{ role: string; content: string }> = [
     { role: 'system', content: 'List the best career for them, and give a brief description of what that career entails. Do this in a paragraph with no line breaks' }, // System message to set behavior
 ];
@@ -45,12 +47,12 @@ async function sendMessage(userInput: string, location: string): Promise<void> {
     }
 }
 
-
+// below is also chat GPT the one before the bar of dashes
 // Make the sendMessage function available globally
 (window as any).sendMessage = sendMessage;
 
 
-//------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------
 
 export function ResultsDetailed():JSX.Element {
     const navigate = useNavigate();
