@@ -9,10 +9,14 @@ import { getResponse, keyData } from './DetailedQuestions';
 import './Results.css';
 import './DetailedQuestions';
 
+// This creates an object array that holds a role and a content.
+// In this case the role is assigned to the system and the content is used to detail to ChatGPT how it is supposed to act
 const messages: Array<{ role: string; content: string }> = [
     { role: 'system', content: 'List the best career for them, and give a brief description of what that career entails. Do this in a paragraph with no line breaks' }, // System message to set behavior
 ];
 
+// This sends in the messages array to ChatGPT and it uses a try catch to make sure that it can communicate with CHatGPT and if there is a proper key
+//  as well as detailing the elementID that the response from ChatGPT will be
 async function sendMessage(userInput: string, location: string): Promise<void> {
     if (!userInput) return;
     messages.push({ role: 'user', content: userInput });
@@ -45,12 +49,11 @@ async function sendMessage(userInput: string, location: string): Promise<void> {
     }
 }
 
-
-// Make the sendMessage function available globally
+// This is made to allow for sendMessage to be used globally or across any file that has this imported
 (window as any).sendMessage = sendMessage;
 
 
-//------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------
 
 export function ResultsDetailed():JSX.Element {
     const navigate = useNavigate();

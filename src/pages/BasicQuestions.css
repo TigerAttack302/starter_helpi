@@ -45,7 +45,7 @@ body {
     display: block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Adds depth to images */
 }
-
+/* This aligns the group of buttons so that they are placed in a column with proper spacing.
 /* Button Group for Choices */
 .buttonGroup {
     display: flex;
@@ -91,7 +91,7 @@ body {
 }
 
 
-
+/* This is the styling for other buttons not associated with the buttons in the question */
 /* Individual Buttons */
 .button {
     padding: 12px 20px;
