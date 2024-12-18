@@ -49,8 +49,7 @@ async function sendMessage(userInput: string, location: string): Promise<void> {
     }
 }
 
-// This is made to allow for sendMessage to be used globally or across any file that has this imported
-(window as any).sendMessage = sendMessage;
+
 
 
 //------------------------------------------------------------------------------------------------------------------------
